@@ -31,7 +31,8 @@ const copyrightYear = new Date().getFullYear();
           class="flex-none text-xl font-semibold text-teal-700 focus:opacity-80 focus:outline-hidden"
           aria-label="{companyName} Homepage"
         >
-          {companyName} {/* Updated to use teal color like Navbar logo */}
+          {companyName}
+          {/* Updated to use teal color like Navbar logo */}
         </a>
         <p class="mt-5 text-pretty text-slate-600 lg:w-5/12 xl:w-10/12">
           {companyDescription}
@@ -40,28 +41,39 @@ const copyrightYear = new Date().getFullYear();
 
       {/* Placeholder for Social Links */}
       <div class="col-span-1 md:col-span-2 xl:col-span-1 xl:col-start-3">
-        <h4 class="text-sm font-semibold uppercase text-slate-900">Follow Us</h4>
+        <h4 class="text-sm font-semibold text-slate-900 uppercase">
+          Follow Us
+        </h4>
         <div class="mt-3 grid space-y-3">
-          <p><a class="inline-flex gap-x-2 text-slate-600 hover:text-slate-800 focus:outline-none focus:ring-1 focus:ring-slate-300" href="#">LinkedIn (TODO)</a></p>
-          <p><a class="inline-flex gap-x-2 text-slate-600 hover:text-slate-800 focus:outline-none focus:ring-1 focus:ring-slate-300" href="#">GitHub (TODO)</a></p>
+          <p>
+            <a
+              class="inline-flex gap-x-2 text-slate-600 hover:text-slate-800 focus:ring-1 focus:ring-slate-300 focus:outline-none"
+              href="#">LinkedIn (TODO)</a>
+          </p>
+          <p>
+            <a
+              class="inline-flex gap-x-2 text-slate-600 hover:text-slate-800 focus:ring-1 focus:ring-slate-300 focus:outline-none"
+              href="https://github.com/alan-turing-institute/cvd-net-website"
+              >GitHub</a>
+          </p>
           {/* Add other social links as needed */}
         </div>
       </div>
 
       {/* Empty div to maintain grid structure, replacing newsletter */}
-      <div class="col-span-2 md:col-span-3 xl:col-span-2">
-      </div>
+      <div class="col-span-2 md:col-span-3 xl:col-span-2"></div>
     </div>
 
     {/* Divider before footer's bottom section */}
-    <hr class="mb-5 mt-10 border-slate-200" />
+    <hr class="mt-10 mb-5 border-slate-200" />
 
     <div
       class="grid gap-y-2 sm:flex sm:items-center sm:justify-between sm:gap-y-0"
     >
       {/* Copyright and Crafted By Section */}
       <p class="text-sm text-slate-500">
-        &copy; {copyrightYear} {companyName}. All rights reserved.
+        &copy; {copyrightYear}
+        {companyName}. All rights reserved.
       </p>
 
       {/* Trademark Notice */}
