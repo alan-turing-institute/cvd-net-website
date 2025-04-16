@@ -1,0 +1,156 @@
+---
+import BaseLayout from "../../layout/BaseLayout.astro";
+import teamData from "../../data/team.json";
+
+// Group team members by section
+const groupedTeam = teamData.reduce(
+	(acc, member) => {
+		const section = member.section || "Other"; // Default section if missing
+		if (!acc[section]) {
+			acc[section] = [];
+		}
+		acc[section].push(member);
+		return acc;
+	},
+	{} as Record<string, typeof teamData>
+);
+
+// Define the order of sections
+const sectionOrder = [
+	"Leadership Team",
+	"Research Team",
+	"Operational Team",
+	"Partners",
+]; // Add "Partners" even if empty for now
+
+const pageTitle = "Project Team | CVD-Net";
+const pageDescription =
+	"Meet the dedicated team behind the CVD-Net project, including leadership, researchers, and operational staff.";
+---
+
+<style>
+/* Team member card styles */
+.team-role {
+  color: var(--color-teal-600);
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.team-info {
+  color: #4B5563; /* Equivalent to slate-600 */
+  font-size: 0.875rem;
+}
+</style>
+
+<BaseLayout seo={{ title: pageTitle, description: pageDescription }}>
+	<div class="container mx-auto max-w-6xl px-4 py-12">
+		<h1 class="mb-12 text-center text-4xl font-bold text-slate-800">
+			Meet the Team
+		</h1>
+
+		{
+			sectionOrder.map(
+				(section) =>
+					groupedTeam[section] &&
+					groupedTeam[section].length > 0 && (
+						<section class="mb-16">
+							<h2 class="mb-8 border-b pb-2 text-3xl font-semibold text-gray-700 dark:text-gray-300">
+								{section}
+							</h2>
+							<div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4">
+								{groupedTeam[section].map((member) => (
+									<div class="flex flex-col rounded-lg bg-white p-6 shadow-md transition-transform hover:shadow-lg dark:bg-gray-800">
+										<a
+											href={member.profileURL || "#"}
+											target={
+												member.profileURL
+													? "_blank"
+													: undefined
+											}
+											rel={
+												member.profileURL
+													? "noopener noreferrer"
+													: undefined
+											}
+											class="group relative mb-4 overflow-hidden rounded-full"
+										>
+											<div class="mx-auto h-40 w-40 overflow-hidden rounded-full">
+												<img
+													src={
+														member.photoUrl ||
+														"/images/team/team-placeholder.jpeg"
+													}
+													alt={`Photo of ${member.name}`}
+													class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+													loading="lazy"
+													width="160"
+													height="160"
+												/>
+											</div>
+											{member.profileURL && (
+												<div class="absolute inset-0 flex items-center justify-center rounded-full bg-blue-500/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+													<span class="text-sm font-medium text-white">
+														View Profile
+													</span>
+												</div>
+											)}
+										</a>
+										<div class="flex grow flex-col text-center">
+											<h3 class="mb-1 text-xl font-semibold text-gray-900 dark:text-gray-100">
+												{member.title &&
+													`${member.title} `}
+												{member.name}
+											</h3>
+											{member.role && (
+												<p class="team-role">
+													{member.role}
+												</p>
+											)}
+											{(member.position ||
+												member.affiliation) && (
+												<p class="team-info">
+													{member.position && (
+														<span>
+															{member.position}
+														</span>
+													)}
+													{member.position &&
+														member.affiliation && (
+															<span>
+																<br />
+															</span>
+														)}
+													{member.affiliation && (
+														<span>
+															{member.affiliation}
+														</span>
+													)}
+												</p>
+											)}
+										</div>
+									</div>
+								))}
+							</div>
+						</section>
+					)
+			)
+		}
+
+		{
+			/* Optional: Add a section for Partners if they are added to team.json later */
+		}
+		{
+			!groupedTeam["Partners"] && sectionOrder.includes("Partners") && (
+				<section class="mb-16">
+					<h2 class="mb-8 border-b pb-2 text-3xl font-semibold text-gray-700 dark:text-gray-300">
+						Partners
+					</h2>
+					<p class="text-gray-600 dark:text-gray-400">
+						Information about project partners will be added soon.
+					</p>
+				</section>
+			)
+		}
+	</div>
+</BaseLayout>

@@ -1,0 +1,80 @@
+---
+import { type CollectionEntry, getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import BaseLayout from '../../layout/BaseLayout.astro';
+import { formatDate } from '../../utils/utils';
+import { getReadingTime } from '@utils/reading-time'; // Import the reading time utility
+
+// Define the props expected by this page component
+interface Props {
+  post: CollectionEntry<'blog'>;
+}
+
+// Generate static paths for each blog post
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+// Get the post data from props passed by getStaticPaths
+const { post } = Astro.props;
+const { Content } = await post.render(); // Render the Markdown content
+
+// Calculate reading time
+const estimatedReadingTime = getReadingTime(post.body); // Pass the raw Markdown body
+
+// Define SEO properties for this specific post
+const seo = {
+  title: `${post.data.title} | CVD-Net Blog`,
+  description: post.data.description || `Read the blog post: ${post.data.title}`,
+  // Optionally add image for social sharing if coverImage exists
+  // image: post.data.coverImage ? new URL(post.data.coverImage, Astro.url.origin).toString() : undefined,
+};
+---
+<BaseLayout seo={seo}>
+  <article class="container py-16 lg:py-20">
+    <div class="mx-auto max-w-3xl">
+      <!-- Post Header -->
+      <header class="mb-8 text-center">
+        <h1 class="mb-4 text-4xl font-bold lg:text-5xl">{post.data.title}</h1>
+        <div class="text-sm text-muted-foreground">
+          <span>Published on {formatDate(post.data.publishDate)}</span>
+          {post.data.author && <span> by {post.data.author}</span>}
+          <span class="mx-2">|</span>
+          <span>{estimatedReadingTime}</span>
+        </div>
+      </header>
+
+      <!-- Optional Cover Image -->
+      {post.data.coverImage && (
+        <div class="mb-8 overflow-hidden rounded-lg shadow-lg">
+          <Image
+            src={post.data.coverImage}
+            alt={post.data.title + ' cover image'}
+            width={1200}
+            height={600}
+            format="webp"
+            quality={80}
+            class="aspect-video w-full object-cover"
+          />
+          <!-- TODO: Add image credit/caption if needed -->
+        </div>
+      )}
+
+      <!-- Post Content -->
+      <div class="prose prose-lg mx-auto max-w-none dark:prose-invert
+                  prose-headings:font-semibold prose-a:text-primary hover:prose-a:underline
+                  prose-img:rounded-lg prose-img:shadow-md">
+        <Content />
+      </div>
+
+      <!-- TODO: Add author bio section? -->
+      <!-- TODO: Add social sharing buttons? -->
+      <!-- TODO: Add related posts section? -->
+
+    </div>
+  </article>
+</BaseLayout>

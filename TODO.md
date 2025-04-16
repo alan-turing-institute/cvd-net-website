@@ -1,0 +1,6 @@
+- [ ] Add hero image to `index.astro`
+- [x] Change cards used in `work-packages.astro`
+- [ ] Upload images for project team
+- [ ] Update `team.json` with all project team members
+- [ ] Ensure footer is sticky and always located at bottom of viewport (see `modularcirc.astro` page for an example of the issue)
+- [ ] Update social buttons (and icons) at the bottom of the page

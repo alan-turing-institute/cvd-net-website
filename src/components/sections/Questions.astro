@@ -1,0 +1,83 @@
+---
+import Icon from "@ui/icons/Icon.astro";
+import Button from "@ui/Button.astro";
+
+// Content for the section title and subtitle
+const title = "What is Pulmonary Arterial Hypertension?";
+const subTitle =
+	"Pulmonary Arterial Hypertension (PAH) is a type of pulmonary hypertension (PH)—a serious condition affecting the arteries in the lungs and the right side of the heart. In PAH, these arteries become narrowed or blocked, increasing the pressure and forcing the heart to work harder, which can eventually lead to heart failure.";
+
+const title2 = "Why focus on PAH?";
+const subTitle2 =
+	"It's a life-threatening condition with high mortality and frequent clinical worsening events. This makes it a critical area for improvement and a vital opportunity for the CVD-Net project to develop and rigorously test the forecasting capabilities of our digital twin technology.";
+
+// Call-to-action configuration for the tertiary button
+const tertiaryCTA = { text: "Learn More", href: "/about/project-overview" };
+---
+
+<section
+	class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 md:py-14 lg:px-8 lg:py-20"
+>
+	<div
+		class="relative isolate overflow-hidden rounded-3xl bg-teal-400 px-6 py-12 shadow-xl sm:px-16 lg:px-24"
+	>
+		{/* Background Circle SVG */}
+		<svg
+			viewBox="0 0 1024 1024"
+			class="absolute top-1/2 left-1/2 -z-10 size-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0"
+			aria-hidden="true"
+		>
+			<circle
+				cx="512"
+				cy="512"
+				r="512"
+				fill="url(#gradient_2)"
+				fill-opacity="0.7"></circle>
+			<defs>
+				<radialGradient id="gradient_2">
+					<stop offset="0" stop-color="#087F7F"></stop>
+					<stop offset="1" stop-color="#087F7F"></stop>
+				</radialGradient>
+			</defs>
+		</svg>
+
+		<div class="flex flex-col space-y-10">
+			{/* Two column layout for titles and subtitles */}
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full">
+				{/* First column */}
+				<div class="text-left">
+					<h2
+						class="text-2xl font-semibold tracking-tight text-balance text-slate-800 md:text-3xl md:leading-tight"
+					>
+						{title}
+					</h2>
+					<p class="mt-6 text-lg/8 text-pretty text-slate-700">
+						{subTitle}
+					</p>
+				</div>
+
+				{/* Second column */}
+				<div class="text-left">
+					<h2
+						class="text-2xl font-semibold tracking-tight text-balance text-slate-800 md:text-3xl md:leading-tight"
+					>
+						{title2}
+					</h2>
+					<p class="mt-6 text-lg/8 text-pretty text-slate-700">
+						{subTitle2}
+					</p>
+				</div>
+			</div>
+
+			{/* CTA button (right aligned) */}
+			<div class="flex justify-end w-full">
+				<Button
+					href={tertiaryCTA.href}
+					variant="tertiary"
+					className="group inline-flex items-center justify-center gap-x-2 py-2.5! pr-4 pl-5 text-slate-700"
+					>{tertiaryCTA.text}<Icon name="chevronRight" /></Button
+				>
+			</div>
+		</div>
+	</div>
+</section>

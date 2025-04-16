@@ -1,0 +1,108 @@
+---
+import Icon from "@ui/icons/Icon.astro";
+
+// Content for the section title and subtitle
+const title =
+	'What are the goals of <span class="text-teal-700">CVD-</span><span class="font-normal text-slate-400">Net?</span>';
+const subTitle =
+	"Experience the perfect balance of power and simplicity in data analytics. From startups to enterprises, DataNova empowers teams to extract meaningful insights from their data while maintaining seamless integration with existing workflows. Transform the way you analyze, visualize, and act on your data.";
+
+const goals = [
+	{
+		borderClasses: "md:border-l md:border-r",
+		gradientClasses: "bg-linear-to-l/oklch from-teal-200 to-transparent",
+		icon: "mdi:graph-timeline-variant",
+		heading: "Developing Networked Digital Twins",
+		description:
+			"Creating advanced computer models (digital twins) that represent individual patients' cardiovascular health and connecting them in a secure, networked virtual environment.",
+	},
+	{
+		borderClasses: "border-b border-t md:border-b-0",
+		gridClasses: "md:col-start-2 md:col-end-3",
+		gradientClasses: "bg-linear-to-t/oklch from-teal-200 to-transparent",
+		icon: "mdi:chart-line",
+		heading: "Improving Monitoring & Prediction",
+		description:
+			"Using these digital twins to better track disease progression and predict future health events and treatment responses for Pulmonary Arterial Hypertension (PAH).",
+	},
+	{
+		borderClasses: "md:border-l md:border-r md:border-t",
+		gridClasses: "md:col-end-4",
+		gradientClasses: "bg-linear-to-tl/oklch from-teal-200 to-transparent",
+		icon: "mdi:account-heart",
+		heading: "Personalising Care",
+		description:
+			"Enabling more timely, tailored, and effective healthcare decisions based on an individual's personalised digital twin.",
+	},
+	{
+		borderClasses: "md:border-l md:border-r md:border-t",
+		gridClasses: "md:col-span-1 md:col-start-1 md:col-end-2 md:row-start-3",
+		gradientClasses: "bg-linear-to-tr/oklch from-teal-200 to-transparent",
+		icon: "mdi:tools",
+		heading: "Advancing Engineering Science",
+		description:
+			"Creating the underlying technology for connected digital twins, allowing them to learn from each other, making them more robust, scalable, and mitigating biases.",
+	},
+	{
+		borderClasses: "md:border-l md:border-r md:border-t",
+		gridClasses: "md:col-span-1 md:col-start-2 md:col-end-3 md:row-start-3",
+		gradientClasses: "bg-linear-to-b/oklch from-teal-200 to-transparent",
+		icon: "mdi:medical-bag",
+		heading: "Building a Demonstrator Pathway",
+		description:
+			"Creating a proof-of-principle digital twin care pathway within a healthcare pathway, paving the way for future adoption.",
+	},
+];
+---
+
+<section
+	class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 md:py-14 lg:px-8 lg:py-20"
+>
+	<div
+		class="grid grid-flow-row-dense grid-cols-1 md:grid-cols-3 md:grid-rows-3"
+	>
+		{/* Section container for the title and subtitle */}
+		<div
+			class="mx-auto max-w-lg pb-5 text-center md:col-span-2 lg:mx-0 lg:flex-auto lg:text-left"
+		>
+			<h2
+				class="text-2xl font-semibold tracking-tight text-balance text-slate-800 md:text-3xl md:leading-tight"
+			>
+				<Fragment set:html={title} />
+			</h2>
+			<p
+				class="mt-6 text-start text-lg/8 text-pretty text-slate-700 sm:text-center md:text-start"
+			>
+				{subTitle}
+			</p>
+		</div>
+
+		{/* Feature Cards */}
+		{
+			goals &&
+				goals.map((goal) => (
+					<div
+						class={`group relative mx-auto flex flex-col border-dashed border-slate-400 py-10 ${goal.borderClasses} ${goal.gridClasses}`}
+					>
+						<div
+							class={`group pointer-events-none absolute inset-0 h-full w-full ${goal.gradientClasses} opacity-0 transition duration-300 group-hover:opacity-100`}
+						/>
+						<div class="relative z-10 mb-4 px-10">
+							<Icon
+								name={goal.icon}
+								class="size-6 text-slate-600"
+							/>
+						</div>
+						<div class="relative z-10 mb-2 px-10 text-lg font-semibold">
+							<span class="inline-block text-balance text-slate-800 transition duration-300 group-hover:translate-x-2">
+								{goal.heading}
+							</span>
+						</div>
+						<p class="z-10 max-w-sm px-4 text-sm text-pretty text-slate-700 sm:max-w-lg md:mx-auto">
+							{goal.description}
+						</p>
+					</div>
+				))
+		}
+	</div>
+</section>

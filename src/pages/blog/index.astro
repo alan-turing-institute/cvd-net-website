@@ -1,0 +1,49 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layout/BaseLayout.astro';
+import { formatDate } from '../../utils/utils'; // Assuming formatDate is in utils.ts
+
+const seo = {
+  title: 'Blog | CVD-Net',
+  description: 'Read the latest updates and insights from the CVD-Net project team.',
+};
+
+// Fetch blog posts, sort by publish date (newest first)
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+);
+---
+<BaseLayout seo={seo}>
+  <section class="container py-16 lg:py-20">
+    <div class="mx-auto max-w-3xl text-center">
+      <h1 class="mb-8 text-4xl font-bold lg:text-5xl">Blog</h1>
+    </div>
+
+    <div class="mx-auto max-w-3xl">
+      <ul class="space-y-8">
+        {posts.map((post) => (
+          <li class="rounded-lg border border-border bg-card p-6 shadow-sm transition-shadow hover:shadow-md">
+            <h2 class="mb-2 text-2xl font-semibold">
+              <a href={`/blog/${post.slug}/`} class="text-primary hover:underline">
+                {post.data.title}
+              </a>
+            </h2>
+            <div class="mb-3 text-sm text-muted-foreground">
+              <span>Published on {formatDate(post.data.publishDate)}</span>
+              {post.data.author && <span> by {post.data.author}</span>}
+            </div>
+            {post.data.description && (
+              <p class="mb-4 text-foreground/80">{post.data.description}</p>
+            )}
+            <a href={`/blog/${post.slug}/`} class="text-sm font-medium text-primary hover:underline">
+              Read more &rarr;
+            </a>
+          </li>
+        ))}
+      </ul>
+      {posts.length === 0 && (
+        <p class="text-center text-lg text-foreground/80">No blog posts found yet. Check back soon!</p>
+      )}
+    </div>
+  </section>
+</BaseLayout>

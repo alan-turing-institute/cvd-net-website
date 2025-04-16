@@ -1,0 +1,46 @@
+---
+import imperialLogo from "../../assets/images/imperial-logo.png";
+import turingLogo from "../../assets/images/turing-logo.png";
+import sheffieldLogo from "../../assets/images/sheffield-logo.png";
+import nottinghamLogo from "../../assets/images/nottingham-logo.webp";
+
+const title = "Partner Organisations and Funding";
+const subTitle =
+	"The Networks of Cardiovascular Digital Twins (CVD-Net) project is a collaboration between Imperial College London, the Alan Turing Institute, University of Sheffield, and University of Nottingham. The project is funded by the UKRI Engineering and Physical Sciences Research Council (EPSRC) via grant (EP/Z531297/1) awarded to Professor Steven Niederer.";
+---
+
+<!-- Organisation and Partner Logos Section -->
+<section
+	class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 md:py-14 lg:px-8 lg:py-20"
+>
+	<div class="mx-auto mb-10 max-w-3xl text-center lg:mb-14">
+		<h2 class="text-4xl text-balance text-slate-800 sm:text-5xl">
+			<Fragment set:html={title} />
+		</h2>
+		<p class="text-lg\/8 mt-5 pb-8 text-pretty text-slate-600">
+			{subTitle}
+		</p>
+		<div class="flex flex-wrap items-center justify-center gap-8 md:gap-12">
+			<img
+				src={imperialLogo.src}
+				alt="Imperial College London Logo"
+				class="h-16 object-contain"
+			/>
+			<img
+				src={turingLogo.src}
+				alt="The Alan Turing Institute Logo"
+				class="h-16 object-contain"
+			/>
+			<img
+				src={sheffieldLogo.src}
+				alt="University of Sheffield Logo"
+				class="h-16 object-contain"
+			/>
+			<img
+				src={nottinghamLogo.src}
+				alt="University of Nottingham Logo"
+				class="h-16 object-contain"
+			/>
+		</div>
+	</div>
+</section>

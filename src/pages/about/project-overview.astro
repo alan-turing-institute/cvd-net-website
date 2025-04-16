@@ -1,0 +1,156 @@
+---
+import BaseLayout from "../../layout/BaseLayout.astro";
+
+import imperialLogo from "../../assets/images/imperial-logo.png";
+import turingLogo from "../../assets/images/turing-logo.png";
+import sheffieldLogo from "../../assets/images/sheffield-logo.png";
+import nottinghamLogo from "../../assets/images/nottingham-logo.webp";
+
+const title = "Partner Organisations and Funding";
+const subTitle =
+	"The Networks of Cardiovascular Digital Twins (CVD-Net) project is a collaboration between Imperial College London, the Alan Turing Institute, University of Sheffield, and University of Nottingham. The project is funded by the UKRI Engineering and Physical Sciences Research Council (EPSRC) via grant (EP/Z531297/1) awarded to Professor Steven Niederer.";
+
+const challengeContent = `Clinical decisions in healthcare are often based on studies of large patient groups that may not perfectly match an individual patient. Care is frequently scheduled at fixed intervals rather than when it's most needed, and clinicians must synthesise vast amounts of complex data (from tests, scans, and patient reports) into a treatment plan. This can lead to variations in care and outcomes.<br/><br/>As such, there's a pressing need for computational tools and methods that can integrate all this diverse data and information, in order to track changes in health and well-being, predict future changes, and provide personalised decision support that truly improves patient care and quality of life.`;
+
+const visionContent = `Our long-term vision is to see these DTs used across multiple diseases and throughout a person's life to improve prevention, diagnosis, treatment, and healthy ageing, ultimately becoming a part of routine health care.<br/><br/>CVD-Net aims to create interconnected cardiac DTs, focusing specifically on pulmonary arterial hypertension—a life-threatening condition with high mortality and frequent clinical worsening events. This makes it a critical area for improvement and provides a vital opportunity to develop and rigorously test the forecasting capabilities of digital twinning technology.`;
+
+const whatIsDtContent = `Imagine a dynamic, digital copy of your heart and circulatory system that lives in a computer. This is a <em>patient digital twin</em>.<br/><br/>A cardiac digital twin (DT) is a dynamic computer model of a specific person's cardiovascular system, regularly updated with their real-world health data. It continuously integrates data from various sources, such as hospital tests, wearable sensors, implanted devices, and patient-reported symptoms. Using advanced physics-based models and machine learning, the DT doesn't just represent the <em>current</em> state; it can help researchers and healthcare professionals track disease progression, forecast potential future health events, predict how a patient might respond to different treatments, and allow doctors to test 'what-if?' scenarios safely and securely within a virtual environment.`;
+
+const whyNetworkContent = `Creating and running a highly detailed digital twin for every single patient is computationally expensive and technically challenging. CVD-Net introduces a novel approach: <em>networking</em> these digital twins.<br/><br/>We believe that the calibration, forecasts, and simulations from one patient's twin can inform (and be informed by) the twins of other similar patients. By adopting techniques from digital twins from manufacturing and engineering, we aim to connect DTs using population graphs and knowledge graphs, we can:`;
+
+const whyNetworkList = [
+	"<strong>Share Learning:</strong> Leverage techniques like federated and transfer learning to share insights across the network.",
+	"<strong>Improve Accuracy & Resilience:</strong> Make forecasts more precise and robust, even when some data is missing for an individual.",
+	"<strong>Increase Efficiency:</strong> Speed up the creation and updating of twins, reducing computational costs.",
+	"<strong>Gain Population Insights:</strong> Understand health trends and treatment effects across groups of patients.",
+];
+
+const approachContent = `We are starting by focusing on Pulmonary Arterial Hypertension (PAH), a serious cardiovascular condition where effective forecasting is crucial. We are adopting an iterative 'learn by doing' approach:`;
+
+const approachList = [
+	"<strong>Develop a Prototype:</strong> Build an initial version of the DT and recruit a patient cohort.",
+	"<strong>Test, Optimise, Evaluate:</strong> Run three major design cycles, continuously testing, improving, and evaluating the DT demonstrator pathway using real-world data and clinical timelines.",
+	"<strong>Co-Creation:</strong> Work closely with patients, clinicians, and pharmacologists from the start to ensure our digital twins address real concerns, are acceptable, and provide genuine value. Patient input, including quality of life measures, is integral to the design.",
+];
+
+const impactContent = `CVD-Net aims to provide a roadmap for implementing DT care pathways in the NHS. By integrating vast amounts of data and providing personalised forecasts, we believe networked DTs can lead to more timely interventions, optimised treatment plans, empowered patients, reduced hospital admissions, and ultimately, better health outcomes.`;
+---
+
+<BaseLayout
+	seo={{
+		title: "Project Overview - CVD-Net",
+		description:
+			"Overview of the CVD-Net project: Challenge, Vision, Approach, and Impact.",
+	}}
+>
+	<div class="container mx-auto max-w-4xl px-4 py-12">
+		<h1 class="mb-8 text-center text-4xl font-bold text-slate-800">
+			Project Overview
+		</h1>
+
+		<section class="mb-12">
+			<h2 class="mb-4 text-3xl font-semibold text-slate-700">
+				The Challenge: Improving Cardiovascular Care
+			</h2>
+			<p
+				class="text-lg leading-relaxed text-slate-600"
+				set:html={challengeContent}
+			/>
+		</section>
+
+		<section class="mb-12">
+			<h2 class="mb-4 text-3xl font-semibold text-slate-700">
+				Our Vision: Networks of Cardiovascular Digital Twins
+			</h2>
+			<p
+				class="text-lg leading-relaxed text-slate-600"
+				set:html={visionContent}
+			/>
+		</section>
+
+		<section class="mb-12">
+			<h2 class="mb-4 text-3xl font-semibold text-slate-700">
+				What is a Cardiovascular Digital Twin?
+			</h2>
+			<p
+				class="text-lg leading-relaxed text-slate-600"
+				set:html={whatIsDtContent}
+			/>
+		</section>
+
+		<section class="mb-12">
+			<h2 class="mb-4 text-3xl font-semibold text-slate-700">
+				Why a Network of Digital Twins? The CVD-Net Innovation
+			</h2>
+			<p
+				class="mb-4 text-lg leading-relaxed text-slate-600"
+				set:html={whyNetworkContent}
+			/>
+			<ul class="list-inside list-disc space-y-2 text-lg text-slate-600">
+				{whyNetworkList.map((item) => <li set:html={item} />)}
+			</ul>
+		</section>
+
+		<section class="mb-12">
+			<h2 class="mb-4 text-3xl font-semibold text-slate-700">
+				Our Approach: Learning by Doing with Patient Focus
+			</h2>
+			<p class="mb-4 text-lg leading-relaxed text-slate-600">
+				{approachContent}
+			</p>
+			<ol
+				class="list-inside list-decimal space-y-2 text-lg text-slate-600"
+			>
+				{approachList.map((item) => <li set:html={item} />)}
+			</ol>
+			<div
+				class="mt-6 border border-dashed border-slate-400 p-4 text-center text-slate-500"
+			>
+				<!-- TODO: Insert revised graphic from funding proposal -->
+				Placeholder for revised graphic
+			</div>
+		</section>
+
+		<section class="mb-12">
+			<h2 class="mb-4 text-3xl font-semibold text-slate-700">
+				Expected Impact
+			</h2>
+			<p class="text-lg leading-relaxed text-slate-600">
+				{impactContent}
+			</p>
+		</section>
+
+		<section class="mb-4">
+			<h2 class="mb-4 text-3xl font-semibold text-slate-700">
+				{title}
+			</h2>
+			<p class="mb-12 text-lg leading-relaxed text-slate-600">
+				{subTitle}
+			</p>
+			<div
+				class="flex flex-wrap items-center justify-center gap-8 md:gap-12"
+			>
+				<img
+					src={imperialLogo.src}
+					alt="Imperial College London Logo"
+					class="h-16 object-contain"
+				/>
+				<img
+					src={turingLogo.src}
+					alt="The Alan Turing Institute Logo"
+					class="h-16 object-contain"
+				/>
+				<img
+					src={sheffieldLogo.src}
+					alt="University of Sheffield Logo"
+					class="h-16 object-contain"
+				/>
+				<img
+					src={nottinghamLogo.src}
+					alt="University of Nottingham Logo"
+					class="h-16 object-contain"
+				/>
+			</div>
+		</section>
+	</div>
+</BaseLayout>

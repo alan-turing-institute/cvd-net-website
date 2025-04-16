@@ -1,0 +1,138 @@
+---
+import Icon from "@ui/icons/Icon.astro";
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+import { blogMenuStatic } from "@utils/megaMenu/blog"; // Import static menu items
+
+const currentPath = Astro.url.pathname;
+
+// 1. Fetch and sort blog posts
+const allPosts = await getCollection("blog", () => {
+	// Removed unused 'data' parameter
+	// Filter out drafts if necessary, assuming a 'draft' property exists
+	// return data.draft !== true;
+	return true; // Include all for now
+});
+
+const sortedPosts = allPosts.sort(
+	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+);
+
+const latestPost = sortedPosts.length > 0 ? sortedPosts[0] : null;
+
+// 2. Prepare dynamic "Latest Post" item if it exists
+let latestPostItem = null;
+// Removed latestPostImage variable
+
+if (latestPost && latestPost.data.coverImage) {
+	// Use coverImage directly from data (contains metadata from image() helper)
+	latestPostItem = {
+		title: latestPost.data.title,
+		description: latestPost.data.description,
+		href: `/blog/${latestPost.slug}`,
+		image: latestPost.data.coverImage, // Pass the metadata object
+	};
+} else if (latestPost) {
+	// Fallback if post exists but has no cover image
+	// Fallback if post exists but has no cover image (or image() failed silently)
+	latestPostItem = {
+		title: latestPost.data.title,
+		description: latestPost.data.description,
+		href: `/blog/${latestPost.slug}`,
+		icon: "mdi:text-box-multiple-outline", // Fallback icon
+	};
+}
+
+// 3. Combine dynamic and static items into sections
+const combinedMenu = [];
+if (latestPostItem) {
+	combinedMenu.push({
+		sectionTitle: "Featured", // Section for the dynamic post
+		items: [latestPostItem],
+	});
+}
+// Add static sections/items
+combinedMenu.push(...blogMenuStatic);
+---
+
+<div
+	class="hs-dropdown [--adaptive:none] [--is-collapse:true] [--strategy:static] xl:[--is-collapse:false] xl:[--strategy:absolute] xl:[--trigger:hover]"
+>
+	<button
+		id="mega-menu-blog"
+		type="button"
+		class={`hs-dropdown-toggle flex w-full items-center rounded-lg p-2 font-medium text-slate-800 hover:bg-slate-100 focus:bg-slate-100 focus:outline-hidden ${
+			currentPath.startsWith("/blog")
+				? "underline underline-offset-4"
+				: ""
+		}`}
+		aria-haspopup="menu"
+		aria-expanded="false"
+		aria-label="Blog Mega Menu"
+	>
+		Blog <Icon name="mdi:chevron-down" class="size-4 ml-1" />
+	</button>
+
+	<div
+		class="hs-dropdown-menu hs-dropdown-open:opacity-100 relative start-0 top-full z-10 mt-2 hidden w-full max-w-(--breakpoint-md) min-w-60 opacity-0 transition-[opacity,margin] duration-150 before:absolute before:start-0 before:-top-5 before:h-5 before:w-full xl:left-1/2 xl:-translate-x-1/2 xl:duration-300"
+		role="menu"
+		aria-orientation="vertical"
+		aria-labelledby="mega-menu-blog"
+	>
+		<div
+			class="from-teal-100 via-transparent to-white px-4 py-2 lg:mx-8 xl:mx-6 xl:rounded-lg xl:bg-white xl:bg-linear-to-t/oklch xl:px-16 xl:py-10 xl:shadow-lg xl:ring-1 xl:ring-teal-950/5"
+		>
+			{/* Apply grid layout to the container of sections */}
+			<div
+				class="gap-x-8 gap-y-4 md:grid md:grid-cols-2 xl:grid-cols-1 2xl:grid-cols-2"
+			>
+				{
+					combinedMenu.map((section) => (
+						<div class="flex flex-col">
+							{/* Optional: Render section title */}
+							<p class="text-sm font-semibold text-slate-600">
+								{section.sectionTitle}
+							</p>
+							<hr class="mt-1 mb-3 w-3/4 border border-teal-300" />
+							{/* Adjust inner grid/layout for items within a section */}
+							<div class="flex flex-col gap-y-1">
+								{" "}
+								{/* Simple flex column for items */}
+								{section.items.map((item) => (
+									<a
+										class="group flex flex-col gap-y-2 rounded-lg p-3 transition hover:bg-slate-100 focus:bg-slate-100 focus:outline-hidden"
+										href={item.href}
+									>
+										{/* Simplified Conditional Rendering using Ternary */}
+										{item.image ? (
+											<Image
+												class="aspect-video w-full rounded-xl object-cover transition-transform duration-500 ease-in-out group-hover:scale-105 group-focus:scale-105"
+												src={item.image}
+												alt={item.title}
+												width={300}
+											/>
+										) : item.icon ? (
+											<Icon
+												name={item.icon}
+												class="mt-1 size-5 shrink-0 text-slate-800"
+											/>
+										) : null}
+
+										<div class="grow">
+											<p class="text-sm font-medium text-slate-800">
+												{item.title}
+											</p>
+											<p class="mt-1 text-sm text-slate-500">
+												{item.description}
+											</p>
+										</div>
+									</a>
+								))}
+							</div>
+						</div>
+					))
+				}
+			</div>
+		</div>
+	</div>
+</div>

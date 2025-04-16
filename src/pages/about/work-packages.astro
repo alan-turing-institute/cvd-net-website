@@ -1,0 +1,179 @@
+---
+import BaseLayout from "../../layout/BaseLayout.astro";
+import teamData from "../../data/team.json";
+
+const pageTitle = "Work Packages | CVD-Net";
+const pageDescription =
+	"Explore the different work packages that structure the research and development activities within the CVD-Net project.";
+
+// Get team data for WP leads
+const getTeamMemberByName = (name: string) => {
+	return teamData.find((member) => member.name.includes(name)) || null;
+};
+
+const workPackages = [
+	{
+		id: "WP1",
+		title: "Work Package 1: Data Collection and Curation",
+		goal: "Gathering and preparing the essential patient data needed to build, train, and test the digital twins.",
+		purpose: [
+			"Bring together existing (retrospective) data from large international, national, and local patient databases and registries for Pulmonary Arterial Hypertension, alongside general population data (e.g., UK Biobank).",
+			"Run a dedicated prospective clinical study to collect new, detailed data from PAH patients over time, using standard care methods, intensive hospital/remote monitoring (e.g. wearables, MRI), and even embedded monitors.",
+			"This real-world data collection is vital for driving and evaluating the DT demonstrator.",
+		],
+		leads: ["Alex Rothman", "Martin Wilkins"],
+		currentFocus: "TODO",
+	},
+	{
+		id: "WP2",
+		title: "Work Package 2: Data Management",
+		goal: "Building the secure and efficient digital environment where patient data is stored, analysed, and linked together to form the network of digital twins.",
+		purpose: [
+			"Create the core technical framework and infrastructure, such as a secure research environment (SRE).",
+			"Develop the 'digital thread' for each patient (containing all their data, simulations, forecasts) and weave these threads together into a 'digital tapestry'.",
+			"Utilize relational databases, imaging databases, automated data analysis pipelines (for imaging, wearables), population graphs, and knowledge graphs to structure the data and represent relationships between patients, enabling the network functionality of WPs 3-5.",
+			"Develop user interfaces for clinicians and potentially patients.",
+		],
+		leads: ["Wenjia Bai", "Camila Rangel Smith"],
+		currentFocus: "TODO",
+	},
+	{
+		id: "WP3",
+		title: "Work Package 3: Creating and Calibrating the Digital Twin",
+		goal: "Developing the methods to create individual digital twins and ensure they accurately reflect each patient's unique cardiovascular physiology.",
+		purpose: [
+			"Implement a range of computational models (from simpler lumped parameter models to complex multi-physics heart models).",
+			"Develop robust and efficient methods to calibrate these models (e.g. using AI, surrogate models, variational inference), adjusting parameters so outputs match specific patient data.",
+			"Focus on making calibration scalable (handling many patients), fast (for timely updates), and able to leverage prior information from the network.",
+		],
+		leads: ["Richard Wilkinson", "David Wagg"],
+		currentFocus: "TODO",
+	},
+	{
+		id: "WP4",
+		title: "Work Package 4: Digital Twin Forecasts and 'What-If' Testing",
+		goal: "Developing the tools to use the calibrated digital twins to predict future health outcomes and test the potential impact of different scenarios or treatments.",
+		purpose: [
+			"Build on calibrated twins (from WP3) to provide sufficient and reliable predictive power.",
+			"Develop and evaluate novel forecasting techniques (e.g., NARX models, Transformer-based approaches, mixed-effects models) to predict clinical worsening events and changes in clinical measurements over 6-12 months.",
+			"Enable 'what-if?' testing to simulate patient responses to different treatments or physiological changes.",
+		],
+		leads: ["Richard Clayton", "David Wagg"],
+		currentFocus: "TODO",
+	},
+	{
+		id: "WP5",
+		title: "Work Package 5: Population Calibration",
+		goal: "Developing and applying methods to leverage the entire network of digital twins to improve the performance and efficiency of individual twins.",
+		purpose: [
+			"Explore the unique benefits of an interconnected population of DTs.",
+			"Test methods like Transfer Learning, Multi-task Learning, Ensembles, developing similarity metrics, and using geometric data transforms.",
+			"Reduce the cost and improve the accuracy of calibrating and forecasting DTs by exploiting collective information within the network.",
+		],
+		leads: ["Lizzy Cross", "Keith Worden"],
+		currentFocus: "TODO",
+	},
+	{
+		id: "WP6",
+		title: "Work Package 6: Engagement, Evaluation, Assurance, and Responsible Research and Innovation",
+		goal: "Ensuring the digital twin technology is ethically developed, addresses real needs, is ready for adoption, and engages effectively with all stakeholders.",
+		purpose: [
+			"Evaluate and assure the DT demonstrator using frameworks like NASSS and the TEA Platform to identify barriers and facilitators to adoption.",
+			"Conduct ongoing engagement with patients and clinicians through focus groups and co-design sessions.",
+			"Actively map and address ethical considerations (data ownership, algorithmic bias, transparency) through systematic research.",
+			"Manage public communication, patient engagement, and community building, ensuring integration with other work packages.",
+		],
+		leads: ["Christopher Burr", "Tim Chico", "Ellen Dowell"],
+		currentFocus: "TODO",
+	},
+];
+---
+
+<BaseLayout seo={{ title: pageTitle, description: pageDescription }}>
+	<div class="container mx-auto max-w-4xl px-4 py-12">
+		<h1 class="mb-8 text-center text-4xl font-bold text-slate-800">
+			Work Packages
+		</h1>
+
+		<div class="grid grid-cols-1 gap-8">
+			{
+				workPackages.map((wp) => (
+					<div class="flex flex-col rounded-lg bg-white p-6 shadow-md dark:bg-gray-800">
+						<div class="flex flex-col md:flex-row">
+							<div class="flex-grow md:pr-4">
+								<h2 class="mb-3 text-2xl font-semibold text-blue-700 dark:text-blue-400">
+									{wp.title}
+								</h2>
+
+								<div class="mb-4">
+									<h3 class="mb-1 text-lg font-semibold text-gray-700 dark:text-gray-300">
+										Goal
+									</h3>
+									<p class="text-sm text-gray-600 dark:text-gray-400">
+										{wp.goal}
+									</p>
+								</div>
+
+								<div class="mb-4">
+									<h3 class="mb-1 text-lg font-semibold text-gray-700 dark:text-gray-300">
+										Purpose & Research Questions
+									</h3>
+									<ul class="list-inside list-disc space-y-1 text-sm text-gray-600 dark:text-gray-400">
+										{wp.purpose.map((item) => (
+											<li>{item}</li>
+										))}
+									</ul>
+								</div>
+
+								<div class="mb-4">
+									<h3 class="mb-1 text-lg font-semibold text-gray-700 dark:text-gray-300">
+										Current Focus
+									</h3>
+									<p class="text-sm text-gray-500 italic dark:text-gray-500">
+										{wp.currentFocus}
+									</p>
+								</div>
+
+								<div class="mt-2">
+									<h3 class="mb-2 text-lg font-semibold text-gray-700 dark:text-gray-300">
+										Leads
+									</h3>
+									<div class="flex flex-wrap gap-3">
+										{wp.leads.map((lead) => {
+											const teamMember =
+												getTeamMemberByName(lead);
+											return (
+												<div class="flex items-center gap-2">
+													<div class="h-10 w-10 overflow-hidden rounded-full">
+														<img
+															src={
+																teamMember?.photoUrl ||
+																"/images/team/team-placeholder.jpeg"
+															}
+															alt={`Photo of ${lead}`}
+															class="h-full w-full object-cover"
+														/>
+													</div>
+													<span class="text-sm text-gray-600 dark:text-gray-400">
+														{lead}
+													</span>
+												</div>
+											);
+										})}
+									</div>
+								</div>
+							</div>
+							<div class="mt-4 flex-shrink-0 md:mt-0 md:w-1/4">
+								<img
+									src="/images/placeholder.svg"
+									alt={`${wp.id} illustration`}
+									class="h-auto w-full"
+								/>
+							</div>
+						</div>
+					</div>
+				))
+			}
+		</div>
+	</div>
+</BaseLayout>
