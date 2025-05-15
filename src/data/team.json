@@ -5,19 +5,19 @@
     "affiliation": "Imperial College London",
     "position": "Chair in Biomechanical Engineering",
     "role": "Principal Investigator",
-    "profileURL": "https://www.turing.ac.uk/people/researchers/steven-niederer",
+    "profileURL": "https://scholar.google.com/citations?user=rtBzy78AAAAJ&hl=en",
     "photoUrl": "/images/team/steve-niederer.jpg",
     "section": "Leadership Team"
   },
   {
     "name": "Alex Rothman",
-    "title": "Dr.",
+    "title": "Prof.",
     "affiliation": "University of Sheffield",
-    "position": "Chair in Biomechanical Engineering",
+    "position": "Professor of Cardiology",
     "role": "Co-Investigator",
     "work_package": 1,
     "WP_lead": true,
-    "profileURL": "https://profiles.imperial.ac.uk/m.wilkins",
+    "profileURL": "https://www.sheffield.ac.uk/smph/people/academic/clinical-medicine/alex-rothman",
     "photoUrl": "/images/team/team-placeholder.jpeg",
     "section": "Leadership Team"
   },
@@ -30,7 +30,7 @@
     "work_package": 1,
     "WP_lead": true,
     "profileURL": "https://profiles.imperial.ac.uk/m.wilkins",
-    "photoUrl": "/images/team/team-placeholder.jpeg",
+    "photoUrl": "/images/team/martin-wilkins.jpg",
     "section": "Leadership Team"
   },
   {
@@ -42,7 +42,7 @@
     "work_package": 2,
     "WP_lead": true,
     "profileURL": "https://profiles.imperial.ac.uk/w.bai",
-    "photoUrl": "/images/team/team-placeholder.jpeg",
+    "photoUrl": "/images/team/wenjia-bai.jpg",
     "section": "Leadership Team"
   },
   {
@@ -78,7 +78,7 @@
     "work_package": 4,
     "WP_lead": true,
     "profileURL": "https://www.nottingham.ac.uk/cmmb/people/r.d.wilkinson",
-    "photoUrl": "/images/team/team-placeholder.jpeg",
+    "photoUrl": "/images/team/richard-wilkinson.jpg",
     "section": "Leadership Team"
   },
   {
@@ -122,7 +122,7 @@
     "title": "Dr.",
     "affiliation": "Alan Turing Institute",
     "position": "Senior Researcher in Trustworthy Systems",
-    "role": "Co-Investigator",
+    "role": "WP6 Co-Lead",
     "work_package": 6,
     "WP_lead": true,
     "photoUrl": "/images/team/chris-burr.webp",
@@ -175,10 +175,111 @@
     "section": "Research Team"
   },
   {
+    "name": "Fay Frost",
+    "title": "Dr.",
+    "affiliation": "University of Nottingham",
+    "position": "Research Fellow",
+    "role": "Post Doc",
+    "work_package": 3,
+    "profileURL": "https://www.nottingham.ac.uk/mathematics/people/fay.frost",
+    "photoUrl": "/images/team/fay-frost.jpg",
+    "section": "Research Team"
+  },
+  {
     "name": "Mojiba Khanum",
+    "title": "Ms",
     "affiliation": "Imperial College London",
-    "role": "Project Manager",
-    "photoUrl": "/images/team/team-placeholder.jpeg",
+    "position": "Project Manager",
+    "role": "Imperial Project Manager",
+    "photoUrl": "/images/team/mojiba-khanum.jpg",
     "section": "Operational Team"
+  },
+  {
+    "name": "May Yong",
+    "title": "",
+    "affiliation": "Alan Turing Institute",
+    "position": "Lead Research Software Engineer",
+    "role": "Research Engineering Group",
+    "profileURL": "https://www.turing.ac.uk/people/researchers/may-yong",
+    "photoUrl": "/images/team/may-yong.jpg",
+    "section": "Research Team"
+  },
+  {
+    "name": "James Robinson",
+    "title": "",
+    "affiliation": "Alan Turing Institute",
+    "position": "",
+    "role": "Research Engineering Group",
+    "photoUrl": "/images/team/james-robinson.jpg",
+    "section": "Research Team"
+  },
+  {
+    "name": "Mahwish Mohammad",
+    "title": "Ms",
+    "affiliation": "Alan Turing Institute",
+    "position": "Data Wrangler",
+    "role": "Data Wrangler, Research Engineering Group",
+    "profileURL": "https://www.turing.ac.uk/people/mahwish-mohammad",
+    "photoUrl": "/images/team/mahwish-mohammad.jpg",
+    "section": "Research Team"
+  },
+  {
+    "name": "Carlos Gavidia-Calderon",
+    "title": "Dr.",
+    "affiliation": "Alan Turing Institute",
+    "position": "Research Software Engineer",
+    "role": "Research Engineering Group",
+    "profileURL": "https://www.turing.ac.uk/people/research-engineering/carlos-gavidia-calderon",
+    "photoUrl": "/images/team/carlos-gavidia-calderon.jpg",
+    "section": "Research Team"
+  },
+  {
+    "name": "Karen de Cesare",
+    "title": "",
+    "affiliation": "Alan Turing Institute",
+    "position": "Research Project Manager",
+    "role": "Turing Project Manager",
+    "profileURL": "https://www.turing.ac.uk/people/business-team/karen-de-cesare",
+    "photoUrl": "/images/team/karen-de-cesare.jpg",
+    "section": "Operational Team"
+  },
+  {
+    "name": "Andy Swift",
+    "title": "",
+    "affiliation": "University of Sheffield",
+    "position": "",
+    "role": "Collaborator",
+    "profileURL": "https://www.sheffield.ac.uk/smph/people/clinical-medicine/andy-swift",
+    "photoUrl": "/images/team/andy-swift.jpg",
+    "section": "Research Team"
+  },
+  {
+    "name": "Frankie Varian",
+    "title": "",
+    "affiliation": "University of Sheffield",
+    "position": "",
+    "role": "Collaborator",
+    "profileURL": "https://www.sheffield.ac.uk/smph/people/clinical-medicine/frances-varian",
+    "photoUrl": "/images/team/frankie-varian.jpg",
+    "section": "Research Team"
+  },
+  {
+    "name": "Hamza Zafar",
+    "title": "",
+    "affiliation": "University of Sheffield",
+    "position": "",
+    "role": "Collaborator",
+    "profileURL": "https://www.sheffield.ac.uk/smph/people/clinical-medicine/hamza-zafar",
+    "photoUrl": "/images/team/hamza-zafar.jpg",
+    "section": "Research Team"
+  },
+  {
+    "name": "Ellen Dowell",
+    "title": "Ms",
+    "affiliation": "Imperial College London",
+    "position": "Creative Director",
+    "role": "Patient Engagement and Involvement",
+    "photoUrl": "/images/team/ellen-dowell.jpg",
+    "section": "Research Team"
   }
 ]
