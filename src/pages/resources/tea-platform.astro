@@ -6,14 +6,71 @@ const seo = {
   description: 'Information about the TEA Platform resource from the CVD-Net project.',
 };
 ---
-<!-- TODO: Add content for TEA Platform resource page. -->
 <BaseLayout seo={seo}>
-  <section class="container py-16 lg:py-20">
-    <div class="mx-auto max-w-2xl text-center">
+  <div class="container mx-auto max-w-4xl px-4 py-12">
+    <div class="text-center mb-12">
       <h1 class="mb-4 text-4xl font-bold lg:text-5xl">TEA Platform</h1>
-      <p class="text-lg text-foreground/80">
-        Detailed information about the TEA Platform resource will be available here soon.
-      </p>
+      <div class="flex flex-wrap justify-center gap-2 mb-6">
+        <a href="https://github.com/alan-turing-institute/AssurancePlatform" target="_blank" rel="noopener noreferrer">
+          <img src="https://img.shields.io/badge/GitHub-TEA_Platform-blue?logo=github" alt="GitHub Repository" />
+        </a>
+        <a href="https://doi.org/10.5281/zenodo.8198986" target="_blank" rel="noopener noreferrer">
+          <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.8198986.svg" alt="DOI" />
+        </a>
+        <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener noreferrer">
+          <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" />
+        </a>
+        <a href="https://app.travis-ci.com/alan-turing-institute/AssurancePlatform" target="_blank" rel="noopener noreferrer">
+          <img src="https://app.travis-ci.com/alan-turing-institute/AssurancePlatform.svg?branch=MVP" alt="Build Status" />
+        </a>
+        <a href="https://assuranceplatform.azurewebsites.net/" target="_blank" rel="noopener noreferrer">
+          <img src="https://img.shields.io/badge/Go%20to%20the%20TEA%20Platform-0F76B8?style=flat" alt="Go to the TEA Platform" />
+        </a>
+      </div>
     </div>
-  </section>
+    <div class="mb-10">
+      <img src="/images/tea-platform.png" alt="TEA Platform hero image" class="w-full h-auto rounded-lg shadow-md" />
+    </div>
+
+    <div class="prose prose-lg mx-auto">
+      <p>
+        The Trustworthy and Ethical Assurance (TEA) platform, developed by researchers at The Alan Turing Institute and University of York, is an open-source, community-focused initiative. It's designed to help anyone involved in creating or using data-driven technologies – from developers to the public – confidently demonstrate that these technologies uphold important ethical principles like fairness, explainability, or safety. The platform tackles the complex challenge of how project teams can provide clear, justified evidence that such principles have been considered and met throughout a technology's entire lifecycle, from initial design to deployment.
+      </p>
+      
+      <p>
+        The TEA platform offers a systematic way to address these challenges through three core components. Firstly, the <strong>TEA Tool</strong> is an interactive, graphical software that helps teams build "assurance cases." Think of an assurance case as a structured argument, clearly showing the ethical goals of a technology, the specific properties that support these goals, and the evidence backing up these claims. Secondly, the <strong>TEA Framework</strong> provides learning resources and guidance, making the process of creating these assurance cases more accessible to people from various backgrounds, regardless of their technical expertise.
+      </p>
+      
+      <p>
+        Finally, the <strong>TEA Community</strong> fosters collaboration and shared learning. Developing ethical technology is not a solo effort; it benefits immensely from diverse perspectives. The community aspect helps in identifying key ethical concerns, sharing best practices and examples, collectively evaluating the strength of assurance arguments, and continuously improving the TEA platform itself. By bringing together these tools, resources, and a collaborative environment, the TEA platform aims to make the development and communication of trustworthy and ethical technology more robust, transparent, and inclusive.
+      </p>
+
+      <h2>Key Components</h2>
+      <ul>
+        <li><strong>TEA Tool</strong>: Interactive software for building structured assurance cases</li>
+        <li><strong>TEA Framework</strong>: Learning resources and guidance for creating effective assurance cases</li>
+        <li><strong>TEA Community</strong>: Collaborative environment for sharing knowledge and best practices</li>
+      </ul>
+      
+      <h2>Resources & Access</h2>
+      <p>
+        The TEA platform is available as a research preview and continues to evolve with community input. For more information or to access the platform, you can:
+      </p>
+      <ul>
+        <li>Visit the <a href="https://assuranceplatform.azurewebsites.net/" target="_blank" rel="noopener noreferrer">TEA Platform website</a></li>
+        <li>Explore the <a href="https://alan-turing-institute.github.io/AssurancePlatform" target="_blank" rel="noopener noreferrer">documentation site</a></li>
+        <li>Access the <a href="https://github.com/alan-turing-institute/AssurancePlatform" target="_blank" rel="noopener noreferrer">GitHub repository</a> for code and development</li>
+      </ul>
+      
+      <h2>Further Reading</h2>
+      <p>
+        For more detailed information on the TEA framework and methodology, consider these resources:
+      </p>
+      <ul>
+        <li><a href="https://doi.org/10.5281/zenodo.10532573" target="_blank" rel="noopener noreferrer">Trustworthy and Ethical Assurance of Digital Health and Healthcare</a></li>
+        <li><a href="https://doi.org/10.1007/s43681-023-00297-2" target="_blank" rel="noopener noreferrer">A principles-based ethics assurance argument pattern for AI and autonomous systems</a></li>
+        <li><a href="https://doi.org/10.5281/zenodo.7107200" target="_blank" rel="noopener noreferrer">Trustworthy Assurance of Digital Mental Healthcare</a></li>
+      </ul>
+    </div>
+  </div>
 </BaseLayout>
