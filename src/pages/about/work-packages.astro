@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layout/BaseLayout.astro";
 import teamData from "../../data/team.json";
+import Icon from "../../components/ui/icons/Icon.astro";
 
 const pageTitle = "Work Packages | CVD-Net";
 const pageDescription =
@@ -8,13 +9,26 @@ const pageDescription =
 
 // Get team data for WP leads
 const getTeamMemberByName = (name: string) => {
-	return teamData.find((member) => member.name.includes(name)) || null;
+	return (
+		teamData.find((member) =>
+			member.name.toLowerCase().includes(name.toLowerCase())
+		) || null
+	);
+};
+
+const workPackageIcons: { [key: string]: string } = {
+	WP1: "ph:database-duotone",
+	WP2: "ph:plugs-connected-duotone",
+	WP3: "ph:heartbeat-duotone",
+	WP4: "ph:chart-line-up-duotone",
+	WP5: "ph:users-three-duotone",
+	WP6: "ph:handshake-duotone",
 };
 
 const workPackages = [
 	{
 		id: "WP1",
-		title: "Work Package 1: Data Collection and Curation",
+		title: "Data Collection and Curation",
 		goal: "Gathering and preparing the essential patient data needed to build, train, and test the digital twins.",
 		purpose: [
 			"Bring together existing (retrospective) data from large international, national, and local patient databases and registries for Pulmonary Arterial Hypertension, alongside general population data (e.g., UK Biobank).",
@@ -22,11 +36,12 @@ const workPackages = [
 			"This real-world data collection is vital for driving and evaluating the DT demonstrator.",
 		],
 		leads: ["Alex Rothman", "Martin Wilkins"],
-		// currentFocus: "TODO",
+		currentFocus:
+			"Establishing data sharing agreements and initiating prospective data collection protocols.",
 	},
 	{
 		id: "WP2",
-		title: "Work Package 2: Data Management",
+		title: "Data Management",
 		goal: "Building the secure and efficient digital environment where patient data is stored, analysed, and linked together to form the network of digital twins.",
 		purpose: [
 			"Create the core technical framework and infrastructure, such as a secure research environment (SRE).",
@@ -35,11 +50,12 @@ const workPackages = [
 			"Develop user interfaces for clinicians and potentially patients.",
 		],
 		leads: ["Wenjia Bai", "Camila Rangel Smith"],
-		// currentFocus: "TODO",
+		currentFocus:
+			"Deployment of the Secure Research Environment and development of initial data ingestion pipelines.",
 	},
 	{
 		id: "WP3",
-		title: "Work Package 3: Creating and Calibrating the Digital Twin",
+		title: "Creating and Calibrating the Digital Twin",
 		goal: "Developing the methods to create individual digital twins and ensure they accurately reflect each patient's unique cardiovascular physiology.",
 		purpose: [
 			"Implement a range of computational models (from simpler lumped parameter models to complex multi-physics heart models).",
@@ -47,11 +63,12 @@ const workPackages = [
 			"Focus on making calibration scalable (handling many patients), fast (for timely updates), and able to leverage prior information from the network.",
 		],
 		leads: ["Richard Wilkinson"],
-		// currentFocus: "TODO",
+		currentFocus:
+			"Developing baseline cardiovascular models and initial calibration algorithms using synthetic data.",
 	},
 	{
 		id: "WP4",
-		title: "Work Package 4: Digital Twin Forecasts and 'What-If' Testing",
+		title: "Digital Twin Forecasts and 'What-If' Testing",
 		goal: "Developing the tools to use the calibrated digital twins to predict future health outcomes and test the potential impact of different scenarios or treatments.",
 		purpose: [
 			"Build on calibrated twins (from WP3) to provide sufficient and reliable predictive power.",
@@ -59,23 +76,25 @@ const workPackages = [
 			"Enable 'what-if?' testing to simulate patient responses to different treatments or physiological changes.",
 		],
 		leads: ["Richard Clayton", "David Wagg"],
-		currentFocus: "Building decision support tools",
+		currentFocus:
+			"Exploring predictive modeling techniques and designing frameworks for 'what-if' scenario testing.",
 	},
 	{
 		id: "WP5",
-		title: "Work Package 5: Population Calibration",
+		title: "Population Calibration",
 		goal: "Developing and applying methods to leverage the entire network of digital twins to improve the performance and efficiency of individual twins.",
 		purpose: [
 			"Explore the unique benefits of an interconnected population of DTs.",
 			"Test methods like Transfer Learning, Multi-task Learning, Ensembles, developing similarity metrics, and using geometric data transforms.",
 			"Reduce the cost and improve the accuracy of calibrating and forecasting DTs by exploiting collective information within the network.",
 		],
-		leads: ["Lizzy Cross", "Keith Worden"],
-		// currentFocus: "TODO",
+		leads: ["Elizabeth Cross", "Keith Worden"],
+		currentFocus:
+			"Researching methodologies for federated learning and defining similarity metrics for patient cohorts.",
 	},
 	{
 		id: "WP6",
-		title: "Work Package 6: Engagement, Evaluation, Assurance, and Responsible Research and Innovation",
+		title: "Engagement, Assurance, and Ethics",
 		goal: "Ensuring the digital twin technology is ethically developed, addresses real needs, is ready for adoption, and engages effectively with all stakeholders.",
 		purpose: [
 			"Evaluate and assure the DT demonstrator using frameworks like NASSS and the TEA Platform to identify barriers and facilitators to adoption.",
@@ -85,94 +104,126 @@ const workPackages = [
 		],
 		leads: ["Christopher Burr", "Tim Chico"],
 		currentFocus:
-			"Stakeholder engagement for trustworthy and ethical assurance of cardiac digital twins.",
+			"Stakeholder engagement for trustworthy and ethical assurance of cardiac digital twins. Initial patient and clinician focus groups.",
 	},
 ];
 ---
 
 <BaseLayout seo={{ title: pageTitle, description: pageDescription }}>
-	<div class="container mx-auto max-w-4xl px-4 py-12">
-		<h1 class="mb-8 text-center text-4xl font-bold text-slate-800">
-			Work Packages
-		</h1>
+	<div class="container mx-auto max-w-5xl px-4 py-12 md:py-16 lg:py-20">
+		<header class="mb-12 text-center">
+			<h1 class="text-4xl font-bold text-slate-800 sm:text-5xl">
+				Work Packages
+			</h1>
+			<p class="mx-auto mt-4 max-w-3xl text-lg text-slate-600">
+				The CVD-Net project is structured into several interconnected
+				Work Packages, each addressing key aspects of developing and
+				implementing Networks of Cardiovascular Digital Twins.
+			</p>
+		</header>
 
-		<div class="grid grid-cols-1 gap-8">
+		<div class="space-y-10">
 			{
 				workPackages.map((wp) => (
-					<div class="flex flex-col rounded-lg bg-white p-6 shadow-md dark:bg-gray-800">
-						<div class="flex flex-col md:flex-row">
-							<div class="flex-grow md:pr-4">
-								<h2 class="mb-3 text-2xl font-semibold text-blue-700 dark:text-blue-400">
-									{wp.title}
-								</h2>
+					<article class="rounded-xl bg-white p-6 shadow-xl ring-1 ring-slate-900/5 md:p-8">
+						{/* Card Header: Icon and Title */}
+						<header class="mb-6">
+							<h2 class="flex items-center text-2xl font-bold text-blue-700 sm:text-3xl">
+								<Icon
+									name={
+										workPackageIcons[wp.id] ||
+										"mdi:package-variant"
+									}
+									size="40px"
+									class="mr-3 text-blue-600"
+								/>
+								{wp.id}: {wp.title}
+							</h2>
+						</header>
 
-								<div class="mb-4">
-									<h3 class="mb-1 text-lg font-semibold text-gray-700 dark:text-gray-300">
-										Goal
-									</h3>
-									<p class="text-sm text-gray-600 dark:text-gray-400">
-										{wp.goal}
-									</p>
-								</div>
+						{/* Goal Section */}
+						<section class="mb-6">
+							<h3 class="mb-2 text-xl font-semibold text-slate-800">
+								Goal
+							</h3>
+							<p class="leading-relaxed text-slate-600">
+								{wp.goal}
+							</p>
+						</section>
 
-								<div class="mb-4">
-									<h3 class="mb-1 text-lg font-semibold text-gray-700 dark:text-gray-300">
-										Purpose & Research Questions
-									</h3>
-									<ul class="list-inside list-disc space-y-1 text-sm text-gray-600 dark:text-gray-400">
-										{wp.purpose.map((item) => (
-											<li>{item}</li>
-										))}
-									</ul>
-								</div>
+						{/* Purpose & Research Questions Section */}
+						<section class="mb-6">
+							<h3 class="mb-3 text-xl font-semibold text-slate-800">
+								Purpose & Research Questions
+							</h3>
+							<ul class="list-disc space-y-2 pl-5 text-slate-600">
+								{wp.purpose.map((item) => (
+									<li class="leading-relaxed">{item}</li>
+								))}
+							</ul>
+						</section>
 
-								<div class="mb-4">
-									<h3 class="mb-1 text-lg font-semibold text-gray-700 dark:text-gray-300">
+						{/* Current Focus Section - only if focus is not "TODO" or empty */}
+						{wp.currentFocus &&
+							wp.currentFocus.toLowerCase() !== "todo" && (
+								<section class="mb-6 rounded-lg border border-teal-200 bg-teal-50 p-4">
+									<h3 class="mb-2 flex items-center text-xl font-semibold text-teal-700">
+										<Icon
+											name="mdi:target-arrow"
+											size="24px"
+											class="mr-2 text-teal-700"
+										/>
 										Current Focus
 									</h3>
-									<p class="text-sm text-gray-500 italic dark:text-gray-500">
+									<p class="text-teal-600 italic">
 										{wp.currentFocus}
 									</p>
-								</div>
+								</section>
+							)}
 
-								<div class="mt-2">
-									<h3 class="mb-2 text-lg font-semibold text-gray-700 dark:text-gray-300">
-										Leads
-									</h3>
-									<div class="flex flex-wrap gap-3">
-										{wp.leads.map((lead) => {
-											const teamMember =
-												getTeamMemberByName(lead);
-											return (
-												<div class="flex items-center gap-2">
-													<div class="h-10 w-10 overflow-hidden rounded-full">
-														<img
-															src={
-																teamMember?.photoUrl ||
-																"/images/team/team-placeholder.jpeg"
+						{/* Leads Section */}
+						{wp.leads && wp.leads.length > 0 && (
+							<section>
+								<h3 class="mb-3 text-xl font-semibold text-slate-800">
+									Leads
+								</h3>
+								<div class="flex flex-wrap gap-x-6 gap-y-4">
+									{wp.leads.map((leadName) => {
+										const teamMember =
+											getTeamMemberByName(leadName);
+										return (
+											<div class="flex items-center gap-3">
+												<img
+													src={
+														teamMember?.photoUrl ||
+														"/images/team/team-placeholder.jpeg"
+													}
+													alt={`Photo of ${leadName}`}
+													class="size-12 rounded-full border-2 border-slate-200 object-cover"
+													loading="lazy"
+													width="48"
+													height="48"
+												/>
+												<div class="text-sm">
+													<p class="font-medium text-slate-700">
+														{teamMember?.title}{" "}
+														{leadName}
+													</p>
+													{teamMember?.affiliation && (
+														<p class="text-xs text-slate-500">
+															{
+																teamMember.affiliation
 															}
-															alt={`Photo of ${lead}`}
-															class="h-full w-full object-cover"
-														/>
-													</div>
-													<span class="text-sm text-gray-600 dark:text-gray-400">
-														{lead}
-													</span>
+														</p>
+													)}
 												</div>
-											);
-										})}
-									</div>
+											</div>
+										);
+									})}
 								</div>
-							</div>
-							<div class="mt-4 flex-shrink-0 md:mt-0 md:w-1/4">
-								<img
-									src="/images/placeholder.svg"
-									alt={`${wp.id} illustration`}
-									class="h-auto w-full"
-								/>
-							</div>
-						</div>
-					</div>
+							</section>
+						)}
+					</article>
 				))
 			}
 		</div>

@@ -17,7 +17,6 @@
     "@astrojs/svelte": "^7.0.10",
     "@iconify-json/carbon": "^1.2.8",
     "@iconify-json/healthicons": "^1.2.8",
-    "@iconify-json/mdi": "^1.2.3",
     "@iconify-json/tabler": "^1.2.17",
     "@tailwindcss/vite": "^4.1.4",
     "@types/react": "^19.1.4",
@@ -39,6 +38,8 @@
     "typescript": "^5.8.3"
   },
   "devDependencies": {
+    "@iconify-json/mdi": "^1.2.3",
+    "@iconify-json/ph": "^1.2.2",
     "@tailwindcss/forms": "^0.5.9",
     "@tailwindcss/typography": "^0.5.15",
     "mdast-util-from-markdown": "^2.0.2",
