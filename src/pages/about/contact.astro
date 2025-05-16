@@ -1,17 +1,16 @@
 ---
 import BaseLayout from "../../layout/BaseLayout.astro";
-import Icon from "../../components/ui/icons/Icon.astro"; // Corrected path based on tsconfig
-import ContactForm from "../../components/ui/forms/ContactForm.astro"; // Corrected path
+import Icon from "../../components/ui/icons/Icon.astro";
+// import { Image } from "astro:assets"; // Only needed if images are in src/assets and need optimization
 
 const pageTitle = "Contact Us | CVD-Net";
 const pageDescription =
-	"Get in touch with the CVD-Net project team via email, contact form, or connect with us on social media.";
+	"Get in touch with the CVD-Net project team via email. Social media links will be available soon.";
 
 const imperialEmail = "m.khanum@imperial.ac.uk";
 const turingEmail = "kdecesare@turing.ac.uk";
 
-// Updated social media links with appropriate Iconify icons
-// TODO: Update URLs from "#" to actual social media profile URLs when available.
+// Social links definition (kept for when they are ready)
 const socialLinks = [
 	{ name: "LinkedIn", url: "#", icon: "mdi:linkedin" },
 	{
@@ -19,8 +18,6 @@ const socialLinks = [
 		url: "https://github.com/alan-turing-institute/cvd-net-website",
 		icon: "mdi:github",
 	},
-	// Add other social media links here if needed, e.g.,
-	// { name: "Twitter", url: "#", icon: "mdi:twitter" },
 ];
 
 const keyContacts = [
@@ -29,14 +26,14 @@ const keyContacts = [
 		role: "General Enquiries",
 		affiliation: "Imperial College London",
 		email: imperialEmail,
-		icon: "mdi:account-tie-woman", // Example icon
+		photoUrl: "/images/team/mojiba-khanum.jpg", // Path to image in /public
 	},
 	{
 		name: "Karen de Cesare",
 		role: "Alan Turing Institute Enquiries",
 		affiliation: "The Alan Turing Institute",
 		email: turingEmail,
-		icon: "mdi:account-tie-woman", // Example icon
+		photoUrl: "/images/team/karen-de-cesare.jpg", // Path to image in /public
 	},
 ];
 ---
@@ -47,29 +44,32 @@ const keyContacts = [
 			<h1 class="text-4xl font-bold text-slate-800 sm:text-5xl">
 				Contact Us
 			</h1>
-			<p class="mt-4 text-lg text-slate-600">
-				We'd love to hear from you. Please use the details below to get
-				in touch with the CVD-Net project team.
+			<p class="mx-auto mt-4 max-w-3xl text-lg text-slate-600">
+				We'd love to hear from you. Please use the email addresses below
+				for general project enquiries.
 			</p>
 		</header>
 
-		<div class="grid grid-cols-1 gap-10 md:grid-cols-5 lg:gap-16">
-			<!-- Key Contacts Section -->
-			<section class="space-y-8 md:col-span-2">
-				<h2 class="text-2xl font-semibold text-slate-700">
-					Project Management Contacts
-				</h2>
+		<!-- Key Contacts Section -->
+		<section class="mb-16">
+			<div
+				class="mx-auto grid max-w-4xl grid-cols-1 gap-8 md:grid-cols-2"
+			>
 				{
 					keyContacts.map((contact) => (
-						<div class="rounded-lg border border-slate-200 bg-white p-6 shadow-sm transition-all hover:shadow-md">
-							<div class="flex items-start gap-4">
-								<div class="mt-1 flex-shrink-0">
-									<Icon
-										name={contact.icon}
-										class="size-8 text-teal-600"
-									/>
-								</div>
-								<div>
+						<div class="flex flex-col rounded-lg border border-slate-200 bg-white p-6 shadow-sm transition-all hover:shadow-md">
+							<div class="mb-6 flex items-center gap-4">
+								{" "}
+								{/* Increased bottom margin */}
+								<img
+									src={contact.photoUrl}
+									alt={`Photo of ${contact.name}`}
+									class="size-20 flex-shrink-0 rounded-full border-2 border-slate-100 object-cover"
+									width="80"
+									height="80"
+									loading="lazy"
+								/>
+								<div class="flex-grow">
 									<h3 class="text-xl font-semibold text-slate-800">
 										{contact.name}
 									</h3>
@@ -79,65 +79,50 @@ const keyContacts = [
 									<p class="mt-1 text-sm text-slate-600">
 										{contact.role}
 									</p>
-									<a
-										href={`mailto:${contact.email}`}
-										class="mt-2 inline-flex items-center gap-2 text-sm font-medium text-teal-700 transition-colors hover:text-teal-600"
-									>
-										<Icon
-											name="mdi:email-outline"
-											class="size-4"
-										/>
-										<span>{contact.email}</span>
-									</a>
 								</div>
 							</div>
+							<a
+								href={`mailto:${contact.email}`}
+								class="mt-auto inline-flex items-center justify-center gap-2 rounded-md bg-teal-50 px-4 py-3 text-sm font-medium text-teal-700 transition-colors hover:bg-teal-100 focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 focus:outline-none"
+							>
+								<Icon name="mdi:email-outline" class="size-5" />
+								<span>Send Email</span>{" "}
+								{/* Email to First Name */}
+							</a>
 						</div>
 					))
 				}
-			</section>
-
-			<!-- Contact Form Section -->
-			<section class="md:col-span-3">
-				<h2 class="mb-6 text-2xl font-semibold text-slate-700">
-					Send Us a Message
-				</h2>
-				<div
-					class="rounded-lg border border-slate-200 bg-white p-2 shadow-sm sm:p-6"
-				>
-					<ContactForm />
-				</div>
-			</section>
-		</div>
+			</div>
+		</section>
 
 		<!-- Social Media Section -->
-		<section class="mt-16 border-t border-slate-200 pt-12">
-			<h2 class="mb-6 text-center text-2xl font-semibold text-slate-700">
+		<section class="border-t border-slate-200 pt-16">
+			<h2 class="mb-6 text-center text-3xl font-semibold text-slate-700">
 				Follow Us
 			</h2>
 			<p class="mb-8 text-center text-slate-600">
 				Connect with the CVD-Net project on social media.
 				<br />
-				<span class="text-sm italic">(Social links coming soon!)</span>
+				<span class="text-sm italic">(Links coming soon!)</span>
 			</p>
-			<!-- <div class="flex flex-wrap justify-center gap-6">
+			<!--
+			<div class="flex flex-wrap justify-center gap-6">
 				{
 					socialLinks.map((link) => (
 						<a
 							href={link.url}
 							target={link.url === "#" ? "_self" : "_blank"}
 							rel="noopener noreferrer"
-							class="group flex flex-col items-center gap-2 rounded-lg p-4 text-slate-600 transition-all hover:bg-slate-100 hover:text-teal-700 focus:bg-slate-100 focus:text-teal-700 focus:outline-none"
+							class="group flex flex-col items-center gap-2 rounded-lg p-4 text-slate-600 transition-all w-32 hover:bg-slate-100 hover:text-teal-700 focus:bg-slate-100 focus:text-teal-700 focus:outline-none"
 							aria-label={`Visit CVD-Net on ${link.name}`}
 						>
-							<Icon
-								name={link.icon}
-								class="size-8 transition-transform group-hover:scale-110"
-							/>
+							<Icon name={link.icon} class="size-8 transition-transform group-hover:scale-110" />
 							<span class="text-sm font-medium">{link.name}</span>
 						</a>
 					))
 				}
-			</div> -->
+			</div>
+			-->
 		</section>
 	</div>
 </BaseLayout>
