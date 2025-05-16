@@ -137,9 +137,3 @@ const primaryCTA = { text: "Contact", href: "/about/contact" };
   </nav>
 </header>
 
-<script>
-  document.addEventListener("astro:page-load", async () => {
-    const preline = await import("preline/preline.js");
-    preline.HSStaticMethods.autoInit();
-  });
-</script>

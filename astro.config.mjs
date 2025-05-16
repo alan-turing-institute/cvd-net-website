@@ -6,21 +6,16 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  // The `site` property specifies the base URL for your site.
-  // Be sure to update this to your own domain (e.g., "https://yourdomain.com") before deploying.
-  site: "https://cvd-net.com",
+  site: "https://alan-turing-institute.github.io",
+  base: "/cvd-net-website",
   prefetch: true,
   trailingSlash: "never",
   experimental: {
     clientPrerender: true,
   },
-  integrations: [
-    react(),
-    markdoc(),
-    icon(),
-  ],
+  integrations: [react(), markdoc(), icon()],
   vite: {
     plugins: [tailwindcss()],
   },
-  output: 'static',
+  output: "static",
 });
