@@ -1,75 +1,143 @@
 ---
 import BaseLayout from "../../layout/BaseLayout.astro";
+import Icon from "../../components/ui/icons/Icon.astro"; // Corrected path based on tsconfig
+import ContactForm from "../../components/ui/forms/ContactForm.astro"; // Corrected path
 
 const pageTitle = "Contact Us | CVD-Net";
 const pageDescription =
-	"Get in touch with the CVD-Net project team via email or connect with us on social media.";
+	"Get in touch with the CVD-Net project team via email, contact form, or connect with us on social media.";
 
-// TODO: Replace with actual email address
 const imperialEmail = "m.khanum@imperial.ac.uk";
 const turingEmail = "kdecesare@turing.ac.uk";
 
-// TODO: Define actual social media URLs and potentially add specific icons if available
+// Updated social media links with appropriate Iconify icons
+// TODO: Update URLs from "#" to actual social media profile URLs when available.
 const socialLinks = [
-	{ name: "LinkedIn", url: "#", icon: "world" }, // Using 'world' as a generic placeholder icon
-	{ name: "GitHub", url: "#", icon: "code" }, // No 'code' icon, using text for now
+	{ name: "LinkedIn", url: "#", icon: "mdi:linkedin" },
+	{
+		name: "GitHub",
+		url: "https://github.com/alan-turing-institute/cvd-net-website",
+		icon: "mdi:github",
+	},
+	// Add other social media links here if needed, e.g.,
+	// { name: "Twitter", url: "#", icon: "mdi:twitter" },
+];
+
+const keyContacts = [
+	{
+		name: "Mojiba Khanum",
+		role: "General Enquiries",
+		affiliation: "Imperial College London",
+		email: imperialEmail,
+		icon: "mdi:account-tie-woman", // Example icon
+	},
+	{
+		name: "Karen de Cesare",
+		role: "Alan Turing Institute Enquiries",
+		affiliation: "The Alan Turing Institute",
+		email: turingEmail,
+		icon: "mdi:account-tie-woman", // Example icon
+	},
 ];
 ---
 
 <BaseLayout seo={{ title: pageTitle, description: pageDescription }}>
-	<div class="container mx-auto px-4 py-12">
-		<h1
-			class="mb-8 text-center text-4xl font-bold text-gray-800 dark:text-white"
-		>
-			Contact Us
-		</h1>
-
-		<div
-			class="mx-auto max-w-2xl rounded-lg bg-white p-8 shadow-md dark:bg-gray-800"
-		>
-			<h2
-				class="mb-4 text-2xl font-semibold text-gray-700 dark:text-gray-300"
-			>
-				Get in Touch
-			</h2>
-			<p class="mb-6 text-gray-600 dark:text-gray-400">
-				For inquiries about the CVD-Net project, please contact our
-				project management team: Mojiba Khanum:
-				<a
-					href={`mailto:${imperialEmail}`}
-					class="break-words text-blue-600 hover:underline dark:text-blue-400"
-				>
-					{imperialEmail}
-				</a>
-				<!-- TODO: Confirm and replace placeholder email address -->
+	<div class="container mx-auto max-w-6xl px-4 py-16 lg:py-20">
+		<header class="mb-12 text-center">
+			<h1 class="text-4xl font-bold text-slate-800 sm:text-5xl">
+				Contact Us
+			</h1>
+			<p class="mt-4 text-lg text-slate-600">
+				We'd love to hear from you. Please use the details below to get
+				in touch with the CVD-Net project team.
 			</p>
+		</header>
 
-			<h2
-				class="mb-4 border-t border-gray-200 pt-6 text-2xl font-semibold text-gray-700 dark:border-gray-700 dark:text-gray-300"
-			>
+		<div class="grid grid-cols-1 gap-10 md:grid-cols-5 lg:gap-16">
+			<!-- Key Contacts Section -->
+			<section class="space-y-8 md:col-span-2">
+				<h2 class="text-2xl font-semibold text-slate-700">
+					Project Management Contacts
+				</h2>
+				{
+					keyContacts.map((contact) => (
+						<div class="rounded-lg border border-slate-200 bg-white p-6 shadow-sm transition-all hover:shadow-md">
+							<div class="flex items-start gap-4">
+								<div class="mt-1 flex-shrink-0">
+									<Icon
+										name={contact.icon}
+										class="size-8 text-teal-600"
+									/>
+								</div>
+								<div>
+									<h3 class="text-xl font-semibold text-slate-800">
+										{contact.name}
+									</h3>
+									<p class="text-sm text-slate-500">
+										{contact.affiliation}
+									</p>
+									<p class="mt-1 text-sm text-slate-600">
+										{contact.role}
+									</p>
+									<a
+										href={`mailto:${contact.email}`}
+										class="mt-2 inline-flex items-center gap-2 text-sm font-medium text-teal-700 transition-colors hover:text-teal-600"
+									>
+										<Icon
+											name="mdi:email-outline"
+											class="size-4"
+										/>
+										<span>{contact.email}</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					))
+				}
+			</section>
+
+			<!-- Contact Form Section -->
+			<section class="md:col-span-3">
+				<h2 class="mb-6 text-2xl font-semibold text-slate-700">
+					Send Us a Message
+				</h2>
+				<div
+					class="rounded-lg border border-slate-200 bg-white p-2 shadow-sm sm:p-6"
+				>
+					<ContactForm />
+				</div>
+			</section>
+		</div>
+
+		<!-- Social Media Section -->
+		<section class="mt-16 border-t border-slate-200 pt-12">
+			<h2 class="mb-6 text-center text-2xl font-semibold text-slate-700">
 				Follow Us
 			</h2>
-			<p class="mb-4 text-gray-600 dark:text-gray-400">
-				Connect with the project on social media (links coming soon):
-				<!-- TODO: Update social media links and icons -->
+			<p class="mb-8 text-center text-slate-600">
+				Connect with the CVD-Net project on social media.
+				<br />
+				<span class="text-sm italic">(Social links coming soon!)</span>
 			</p>
-			<div class="flex space-x-4">
+			<!-- <div class="flex flex-wrap justify-center gap-6">
 				{
 					socialLinks.map((link) => (
 						<a
 							href={link.url}
-							target="_blank"
+							target={link.url === "#" ? "_self" : "_blank"}
 							rel="noopener noreferrer"
-							class="flex items-center space-x-1 text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400"
+							class="group flex flex-col items-center gap-2 rounded-lg p-4 text-slate-600 transition-all hover:bg-slate-100 hover:text-teal-700 focus:bg-slate-100 focus:text-teal-700 focus:outline-none"
 							aria-label={`Visit CVD-Net on ${link.name}`}
 						>
-							{/* Conditionally render icon if one exists, otherwise just text */}
-							{/* {link.icon && <Icon name={link.icon} class="size-5" />} */}
-							<span>{link.name}</span>
+							<Icon
+								name={link.icon}
+								class="size-8 transition-transform group-hover:scale-110"
+							/>
+							<span class="text-sm font-medium">{link.name}</span>
 						</a>
 					))
 				}
-			</div>
-		</div>
+			</div> -->
+		</section>
 	</div>
 </BaseLayout>
