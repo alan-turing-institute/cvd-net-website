@@ -125,6 +125,7 @@
     "role": "WP6 Co-Lead",
     "work_package": 6,
     "WP_lead": true,
+    "profileURL": "https://portfolio.chrisdburr.com/",
     "photoUrl": "/images/team/chris-burr.webp",
     "section": "Leadership Team"
   },
@@ -210,6 +211,7 @@
     "affiliation": "Alan Turing Institute",
     "position": "",
     "role": "Research Engineering Group",
+    "profileURL": "https://www.turing.ac.uk/people/researchers/james-robinson",
     "photoUrl": "/images/team/james-robinson.jpg",
     "section": "Research Team"
   },
@@ -279,6 +281,7 @@
     "affiliation": "Imperial College London",
     "position": "Creative Director",
     "role": "Patient Engagement and Involvement",
+    "profileURL": "https://www.linkedin.com/in/ellen-dowell-42553233/?originalSubdomain=uk",
     "photoUrl": "/images/team/ellen-dowell.jpg",
     "section": "Research Team"
   }
