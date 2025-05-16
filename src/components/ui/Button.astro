@@ -1,15 +1,33 @@
 ---
 import { twMerge } from "tailwind-merge";
-const { type, href, rel, target, variant, className, id } = Astro.props;
+const {
+	type,
+	href: rawHref,
+	rel,
+	target,
+	variant,
+	className,
+	id,
+} = Astro.props;
+
+// Process the href to ensure it includes the base URL if it's a relative path
+// and not already prefixed with the base URL or an external URL
+const href = rawHref
+	? rawHref.startsWith("http") ||
+		rawHref.startsWith("mailto:") ||
+		rawHref.startsWith(`${import.meta.env.BASE_URL}`)
+		? rawHref
+		: `${import.meta.env.BASE_URL}${rawHref}`
+	: undefined;
 
 export interface Props {
-  type?: "button" | "submit" | "reset";
-  href?: string;
-  rel?: string;
-  target?: "_self" | "_blank" | "_parent" | "_top";
-  variant?: "primary" | "secondary" | "tertiary";
-  className?: string;
-  id?: string;
+	type?: "button" | "submit" | "reset";
+	href?: string;
+	rel?: string;
+	target?: "_self" | "_blank" | "_parent" | "_top";
+	variant?: "primary" | "secondary" | "tertiary";
+	className?: string;
+	id?: string;
 }
 
 /**
@@ -20,16 +38,16 @@ export interface Props {
  */
 
 const variants = {
-  primary:
-    "bg-teal-800 hover:bg-teal-800/80 focus:bg-teal-800/80 border border-transparent text-white",
-  secondary:
-    "hover:border-teal-700 hover:bg-teal-700 border-teal-800 border-2 text-slate-800 hover:text-white",
-  tertiary: "bg-teal-50 hover:bg-teal-50/80",
+	primary:
+		"bg-teal-800 hover:bg-teal-800/80 focus:bg-teal-800/80 border border-transparent text-white",
+	secondary:
+		"hover:border-teal-700 hover:bg-teal-700 border-teal-800 border-2 text-slate-800 hover:text-white",
+	tertiary: "bg-teal-50 hover:bg-teal-50/80",
 };
 ---
 
 {
-  /*
+	/*
 Button Component:
 This component dynamically renders either a `<button>` element or an `<a>` (link) element based on the provided `href` prop.
 
@@ -41,27 +59,27 @@ This component dynamically renders either a `<button>` element or an `<a>` (link
 }
 
 {
-  href ? (
-    <a
-      id={id}
-      href={href}
-      rel={rel ? rel : undefined}
-      target={target ? target : undefined}
-      class={twMerge(
-        `rounded-lg px-6 py-2.5 text-center font-medium transition-colors duration-300 focus:outline-hidden ${variants[variant ?? "primary"]} ${className || ""}`,
-      )}
-    >
-      <slot />
-    </a>
-  ) : (
-    <button
-      id={id}
-      type={type || "button"}
-      class={twMerge(
-        `rounded-lg px-6 py-2.5 text-center font-medium transition-colors duration-300 focus:outline-hidden ${variants[variant ?? "primary"]} ${className || ""}`,
-      )}
-    >
-      <slot />
-    </button>
-  )
+	href ? (
+		<a
+			id={id}
+			href={href}
+			rel={rel ? rel : undefined}
+			target={target ? target : undefined}
+			class={twMerge(
+				`rounded-lg px-6 py-2.5 text-center font-medium transition-colors duration-300 focus:outline-hidden ${variants[variant ?? "primary"]} ${className || ""}`
+			)}
+		>
+			<slot />
+		</a>
+	) : (
+		<button
+			id={id}
+			type={type || "button"}
+			class={twMerge(
+				`rounded-lg px-6 py-2.5 text-center font-medium transition-colors duration-300 focus:outline-hidden ${variants[variant ?? "primary"]} ${className || ""}`
+			)}
+		>
+			<slot />
+		</button>
+	)
 }

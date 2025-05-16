@@ -22,7 +22,7 @@ export const blogMenuStatic: BlogMenuStaticSection[] = [
       {
         title: "All Posts",
         description: "Browse all blog entries.",
-        href: "/blog", // Link to the main blog index
+        href: `${import.meta.env.BASE_URL}/blog`, // Link to the main blog index
         icon: "mdi:text-box-multiple-outline",
       },
       // Add other static links like categories if needed

@@ -3,6 +3,6 @@
   "name": "Networks of Cardiovascular Digital Twins (CVD-Net)",
   "icons": [],
   "display": "minimal-ui",
-  "id": "/",
-  "start_url": "/"
+  "id": "/cvd-net-website/",
+  "start_url": "/cvd-net-website/"
 }

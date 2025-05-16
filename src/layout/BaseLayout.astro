@@ -74,9 +74,15 @@ const defaultSchema: WithContext<Thing> = {
 			}}
 			extend={{
 				link: [
-					// { rel: "icon", href: "/icon.svg", type: "image/svg+xml" }, // TODO: Add CVD-Net favicon in Phase 6
-					{ rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
-					{ rel: "manifest", href: "/manifest.webmanifest" },
+					// { rel: "icon", href: `${import.meta.env.BASE_URL}/icon.svg`, type: "image/svg+xml" }, // TODO: Add CVD-Net favicon in Phase 6
+					{
+						rel: "apple-touch-icon",
+						href: `${import.meta.env.BASE_URL}/apple-touch-icon.png`,
+					},
+					{
+						rel: "manifest",
+						href: `${import.meta.env.BASE_URL}/manifest.webmanifest`,
+					},
 				],
 				meta: [
 					{ name: "viewport", content: "width=device-width" },
@@ -128,7 +134,9 @@ const defaultSchema: WithContext<Thing> = {
 			);
 		</script>
 	</head>
-	<body class="bg-off-white selection:bg-teal-400 selection:text-slate-700 min-h-screen flex flex-col">
+	<body
+		class="bg-off-white flex min-h-screen flex-col selection:bg-teal-400 selection:text-slate-700"
+	>
 		<Navbar />
 
 		<main class={`flex-grow ${isHomepage ? "" : "pt-32"}`}>

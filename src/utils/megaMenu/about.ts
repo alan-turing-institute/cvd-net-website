@@ -19,13 +19,13 @@ export const aboutMenu: AboutMenuSection[] = [
       {
         title: "Project Overview",
         description: "Understand the goals and vision of CVD-Net.",
-        href: "/about/project-overview",
+        href: `${import.meta.env.BASE_URL}/about/project-overview`,
         icon: "mdi:information-outline",
       },
       {
         title: "Work Packages",
         description: "Explore the different research areas within the project.",
-        href: "/about/work-packages",
+        href: `${import.meta.env.BASE_URL}/about/work-packages`,
         icon: "mdi:package-variant",
       },
     ],
@@ -33,16 +33,16 @@ export const aboutMenu: AboutMenuSection[] = [
   {
     sectionTitle: "Team & Contact", // Second section
     items: [
-       {
+      {
         title: "Project Team",
         description: "Meet the researchers and staff involved.",
-        href: "/about/project-team",
+        href: `${import.meta.env.BASE_URL}/about/project-team`,
         icon: "mdi:account-group",
       },
       {
         title: "Contact Us",
         description: "Get in touch with the project team.",
-        href: "/about/contact",
+        href: `${import.meta.env.BASE_URL}/about/contact`,
         icon: "mdi:email-outline",
       },
     ],

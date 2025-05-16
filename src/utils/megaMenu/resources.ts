@@ -19,13 +19,13 @@ export const resourcesMenu: ResourceMenuSection[] = [
       {
         title: "ModularCirc",
         description: "Information about the ModularCirc resource.",
-        href: "/resources/modularcirc",
+        href: `${import.meta.env.BASE_URL}/resources/modularcirc`,
         icon: "mdi:circle-slice-4",
       },
       {
         title: "Data Safe Haven",
         description: "Details on the secure data environment.",
-        href: "/resources/data-safe-haven",
+        href: `${import.meta.env.BASE_URL}/resources/data-safe-haven`,
         icon: "mdi:database-lock",
       },
     ],
@@ -35,14 +35,15 @@ export const resourcesMenu: ResourceMenuSection[] = [
     items: [
       {
         title: "TEA Platform",
-        description: "Learn about the Trustworthy and Ethical Assurance Platform.",
-        href: "/resources/tea-platform",
+        description:
+          "Learn about the Trustworthy and Ethical Assurance Platform.",
+        href: `${import.meta.env.BASE_URL}/resources/tea-platform`,
         icon: "mdi:shield-check",
       },
       {
         title: "All Resources",
         description: "View all available project resources.",
-        href: "/resources",
+        href: `${import.meta.env.BASE_URL}/resources`,
         icon: "mdi:view-grid",
       },
     ],
