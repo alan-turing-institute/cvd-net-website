@@ -133,6 +133,42 @@ const defaultSchema: WithContext<Thing> = {
 				].forEach((link) => link.remove())
 			);
 		</script>
+
+		<!-- Preline UI JavaScript -->
+		<script>
+			import "preline/dist/preline.js";
+			document.addEventListener("astro:page-load", () => {
+				// @ts-ignore
+				window.HSStaticMethods.autoInit();
+
+				// Custom hover functionality for mega menu dropdowns
+				document
+					.querySelectorAll(".hs-dropdown")
+					.forEach((dropdown) => {
+						if (window.innerWidth >= 1280) {
+							// xl breakpoint
+							const button = dropdown.querySelector(
+								".hs-dropdown-toggle"
+							);
+							const menu =
+								dropdown.querySelector(".hs-dropdown-menu");
+
+							// Only add hover functionality to desktop view
+							dropdown.addEventListener("mouseenter", () => {
+								button?.setAttribute("aria-expanded", "true");
+								menu?.classList.remove("hidden");
+								menu?.classList.add("opacity-100");
+							});
+
+							dropdown.addEventListener("mouseleave", () => {
+								button?.setAttribute("aria-expanded", "false");
+								menu?.classList.add("hidden");
+								menu?.classList.remove("opacity-100");
+							});
+						}
+					});
+			});
+		</script>
 	</head>
 	<body
 		class="bg-off-white flex min-h-screen flex-col selection:bg-teal-400 selection:text-slate-700"

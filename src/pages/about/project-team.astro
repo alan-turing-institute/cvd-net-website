@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layout/BaseLayout.astro";
 import teamData from "../../data/team.json";
+import { getAssetPath } from "../../utils/utils";
 
 // Group team members by section
 const groupedTeam = teamData.reduce(
@@ -29,18 +30,18 @@ const pageDescription =
 ---
 
 <style>
-/* Team member card styles */
-.team-role {
-  color: var(--color-teal-600);
-  margin-bottom: 0.5rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-}
+	/* Team member card styles */
+	.team-role {
+		color: var(--color-teal-600);
+		margin-bottom: 0.5rem;
+		font-size: 0.875rem;
+		font-weight: 500;
+	}
 
-.team-info {
-  color: #4B5563; /* Equivalent to slate-600 */
-  font-size: 0.875rem;
-}
+	.team-info {
+		color: #4b5563; /* Equivalent to slate-600 */
+		font-size: 0.875rem;
+	}
 </style>
 
 <BaseLayout seo={{ title: pageTitle, description: pageDescription }}>
@@ -78,8 +79,13 @@ const pageDescription =
 											<div class="mx-auto h-40 w-40 overflow-hidden rounded-full">
 												<img
 													src={
-														member.photoUrl ||
-														"/images/team/team-placeholder.jpeg"
+														member.photoUrl
+															? getAssetPath(
+																	member.photoUrl
+																)
+															: getAssetPath(
+																	"/images/team/team-placeholder.jpeg"
+																)
 													}
 													alt={`Photo of ${member.name}`}
 													class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"

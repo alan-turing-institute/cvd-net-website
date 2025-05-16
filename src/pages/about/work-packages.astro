@@ -2,6 +2,7 @@
 import BaseLayout from "../../layout/BaseLayout.astro";
 import teamData from "../../data/team.json";
 import Icon from "../../components/ui/icons/Icon.astro";
+import { getAssetPath } from "../../utils/utils";
 
 const pageTitle = "Work Packages | CVD-Net";
 const pageDescription =
@@ -195,8 +196,13 @@ const workPackages = [
 											<div class="flex items-center gap-3">
 												<img
 													src={
-														teamMember?.photoUrl ||
-														"/images/team/team-placeholder.jpeg"
+														teamMember?.photoUrl
+															? getAssetPath(
+																	teamMember.photoUrl
+																)
+															: getAssetPath(
+																	"/images/team/team-placeholder.jpeg"
+																)
 													}
 													alt={`Photo of ${leadName}`}
 													class="size-12 rounded-full border-2 border-slate-200 object-cover"

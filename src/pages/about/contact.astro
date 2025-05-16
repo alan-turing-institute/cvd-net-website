@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layout/BaseLayout.astro";
 import Icon from "../../components/ui/icons/Icon.astro";
+import { getAssetPath } from "../../utils/utils";
 // import { Image } from "astro:assets"; // Only needed if images are in src/assets and need optimization
 
 const pageTitle = "Contact Us | CVD-Net";
@@ -65,7 +66,13 @@ const keyContacts = [
 								{" "}
 								{/* Increased bottom margin */}
 								<img
-									src={contact.photoUrl}
+									src={
+										contact.photoUrl
+											? getAssetPath(contact.photoUrl)
+											: getAssetPath(
+													"/images/team/team-placeholder.jpeg"
+												)
+									}
 									alt={`Photo of ${contact.name}`}
 									class="size-20 flex-shrink-0 rounded-full border-2 border-slate-100 object-cover"
 									width="80"
