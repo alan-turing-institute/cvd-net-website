@@ -85,6 +85,11 @@
   [role="button"]:not(:disabled) {
     cursor: pointer;
   }
+
+  /* Style for links in paragraph text to make them visually distinguishable */
+  a:not([class]) {
+    @apply text-teal-600 transition-colors duration-200 hover:text-teal-500;
+  }
 }
 
 @utility card {
