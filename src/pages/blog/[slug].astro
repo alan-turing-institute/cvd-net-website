@@ -39,8 +39,8 @@ const seo = {
     <div class="mx-auto max-w-3xl">
       <!-- Post Header -->
       <header class="mb-8 text-center">
-        <h1 class="mb-4 text-4xl font-bold lg:text-5xl">{post.data.title}</h1>
-        <div class="text-sm text-muted-foreground">
+        <h1 class="mb-4 text-4xl font-bold text-slate-800 lg:text-5xl">{post.data.title}</h1>
+        <div class="text-sm text-slate-500">
           <span>Published on {formatDate(post.data.publishDate)}</span>
           {post.data.author && <span> by {post.data.author}</span>}
           <span class="mx-2">|</span>
@@ -65,9 +65,13 @@ const seo = {
       )}
 
       <!-- Post Content -->
-      <div class="prose prose-lg mx-auto max-w-none dark:prose-invert
-                  prose-headings:font-semibold prose-a:text-primary hover:prose-a:underline
-                  prose-img:rounded-lg prose-img:shadow-md">
+      <div class="prose prose-lg mx-auto max-w-none
+                  prose-headings:font-semibold prose-headings:text-slate-800
+                  prose-p:text-slate-600
+                  prose-a:text-blue-700 hover:prose-a:underline
+                  prose-img:rounded-lg prose-img:shadow-md
+                  prose-strong:text-slate-700
+                  prose-li:text-slate-600">
         <Content />
       </div>
 
