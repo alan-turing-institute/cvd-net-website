@@ -47,7 +47,7 @@ if (latestPost && latestPost.data.coverImage) {
 const combinedMenu = [];
 if (latestPostItem) {
 	combinedMenu.push({
-		sectionTitle: "Featured", // Section for the dynamic post
+		sectionTitle: "Latest", // Section for the dynamic post
 		items: [latestPostItem],
 	});
 }
@@ -70,7 +70,7 @@ combinedMenu.push(...blogMenuStatic);
 		aria-expanded="false"
 		aria-label="Blog Mega Menu"
 	>
-		Blog <Icon name="mdi:chevron-down" class="size-4 ml-1" />
+		Blog <Icon name="mdi:chevron-down" class="ml-1 size-4" />
 	</button>
 
 	<div
