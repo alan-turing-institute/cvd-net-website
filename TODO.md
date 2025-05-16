@@ -9,7 +9,7 @@
 - [x] Improve layout of work packages page
 - [x] Improve contact page
 - [x] Sort GitHub action to publish
-- [ ] Fix styling for links
+- [x] Fix styling for links
 
 ## Blocked
 
