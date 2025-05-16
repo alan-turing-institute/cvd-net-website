@@ -6,9 +6,10 @@
 - [x] Upload images for project team
 - [x] Ensure footer is sticky and always located at bottom of viewport (see `modularcirc.astro` page for an example of the issue)
 - [x] Update images for work packages
-- [ ] Improve layout of work packages page
+- [x] Improve layout of work packages page
 - [x] Improve contact page
-- [ ] Sort GitHub action to publish
+- [x] Sort GitHub action to publish
+- [ ] Fix styling for links
 
 ## Blocked
 
