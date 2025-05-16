@@ -11,9 +11,7 @@ const seo = {
 <BaseLayout seo={seo}>
 	<div class="container mx-auto max-w-4xl px-4 py-12">
 		<div class="mb-12 text-center">
-			<h1 class="mb-4 text-4xl font-bold lg:text-5xl">
-				Data Safe Haven
-			</h1>
+			<h1 class="mb-4 text-4xl font-bold lg:text-5xl">Data Safe Haven</h1>
 			<div class="mb-6 flex flex-wrap justify-center gap-2">
 				<a
 					href="https://github.com/alan-turing-institute/data-safe-haven"
@@ -69,43 +67,43 @@ const seo = {
 		</div>
 		<div class="mb-10">
 			<img
-				src="/images/data-safe-haven.jpg"
+				src={`${import.meta.env.BASE_URL}/images/data-safe-haven.jpg`}
 				alt="Data Safe Haven hero image"
 				class="h-auto w-full rounded-lg shadow-md"
 			/>
 		</div>
 
-		<div class="prose prose-lg mx-auto">
-			<p>
-				Project researchers need access to highly sensitive data
-				from real-world patients to develop cardiovascular digital
-				twins. For researchers to do their work securely, the Alan
-				Turing Institute is hosting these datasets in its own Secure
-				Research Environment (SRE): A computational environment with
-				technical and process controls for safe data access. The
-				technical controls are provided by the <a
+		<div class="mx-auto">
+			<p class="mb-4 text-lg leading-relaxed text-slate-600">
+				Project researchers need access to highly sensitive data from
+				real-world patients to develop cardiovascular digital twins. For
+				researchers to do their work securely, the Alan Turing Institute
+				is hosting these datasets in its own Secure Research Environment
+				(SRE): A computational environment with technical and process
+				controls for safe data access. The technical controls are
+				provided by the <a
 					href="https://github.com/alan-turing-institute/data-safe-haven"
 					>Turing Data Safe Haven</a
 				>, an open-source project for the deployment of SREs in the
-				Microsoft Azure cloud. The process controls are managed by
-				the Trusted Research team, a team within the Turing's <a
+				Microsoft Azure cloud. The process controls are managed by the
+				Trusted Research team, a team within the Turing's <a
 					href="https://www.turing.ac.uk/work-turing/research/research-engineering-group"
 					>Research Engineering Group</a
 				> in charge of secure data management.
 			</p>
-			<p>
+			<p class="mb-4 text-lg leading-relaxed text-slate-600">
 				For the CVD-Net project, we are using two SRE instances:
 				<ol>
 					<li>
-						The Staging SRE: This SRE receives the raw patient
-						data from our project partners. It is in this
-						environment that the <a
+						The Staging SRE: This SRE receives the raw patient data
+						from our project partners. It is in this environment
+						that the <a
 							href="https://www.turing.ac.uk/research/data-for-research"
 							>Data Wrangling team</a
 						> consolidates and anonymises the data so it can be safely
-						shared with the project researchers. Given its access
-						to real patient data, digital twin evaluation is also
-						performed in this environment.
+						shared with the project researchers. Given its access to
+						real patient data, digital twin evaluation is also performed
+						in this environment.
 					</li>
 					<li>
 						The Insights SRE: This SRE receives the processed
@@ -115,18 +113,20 @@ const seo = {
 					</li>
 				</ol>
 			</p>
-			<p>
-				As part of the project, we will contribute to the Turing
-				Data Safe Haven codebase by building features to make it
-				more cost-efficient and by making it easier to take data,
-				code and other resources from one SRE and use in the other.
+			<p class="mb-4 text-lg leading-relaxed text-slate-600">
+				As part of the project, we will contribute to the Turing Data
+				Safe Haven codebase by building features to make it more
+				cost-efficient and by making it easier to take data, code and
+				other resources from one SRE and use in the other.
 			</p>
 
-			<h2>Key Features</h2>
-			<ul>
+			<h2 class="mb-4 text-2xl font-semibold text-slate-700">
+				Key Features
+			</h2>
+			<ul class="mb-6 list-disc space-y-2 pl-5 text-lg text-slate-600">
 				<li>
-					Secure, isolated research environments for sensitive
-					data analysis
+					Secure, isolated research environments for sensitive data
+					analysis
 				</li>
 				<li>Controlled access management and data governance</li>
 				<li>Scalable infrastructure using Microsoft Azure</li>
@@ -134,18 +134,19 @@ const seo = {
 					Familiar data science and analysis tools for researchers
 				</li>
 				<li>
-					Compliance with data protection standards and
-					regulations
+					Compliance with data protection standards and regulations
 				</li>
 			</ul>
 
-			<h2>Community Resources</h2>
-			<p>
+			<h2 class="mb-4 text-2xl font-semibold text-slate-700">
+				Community Resources
+			</h2>
+			<p class="mb-4 text-lg leading-relaxed text-slate-600">
 				The Data Safe Haven is an open-source community project with
-				active development and support. For more information or to
-				get involved, you can:
+				active development and support. For more information or to get
+				involved, you can:
 			</p>
-			<ul>
+			<ul class="mb-6 list-disc space-y-2 pl-5 text-lg text-slate-600">
 				<li>
 					Visit the <a
 						href="https://data-safe-haven.readthedocs.io"

@@ -1,5 +1,5 @@
 export const navigationLinks = [
-  { href: `${import.meta.env.BASE_URL}/`, label: "Home" },
+  { href: `${import.meta.env.BASE_URL}`, label: "Home" },
   {
     href: `${import.meta.env.BASE_URL}/about/project-overview`,
     label: "About",

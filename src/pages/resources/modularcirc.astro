@@ -57,65 +57,64 @@ const seo = {
 		</div>
 		<div class="mb-10">
 			<img
-				src="/images/modularcirc.jpeg"
+				src={`${import.meta.env.BASE_URL}/images/modularcirc.jpeg`}
 				alt="ModularCirc hero image"
 				class="h-auto w-full rounded-lg shadow-md"
 			/>
 		</div>
 
-		<div class="prose prose-lg mx-auto">
-			<p>
-				ModularCirc is a software toolkit designed to help
-				scientists and engineers create computer simulations of the
-				heart and circulatory system. Think of it as a set of
-				digital building blocks that represent different parts of
-				our cardiovascular system, like heart chambers (e.g., atria
-				and ventricles), valves (which control blood flow
-				direction), and various blood vessels (like arteries and
-				veins).
+		<div class="mx-auto">
+			<p class="mb-4 text-lg leading-relaxed text-slate-600">
+				ModularCirc is a software toolkit designed to help scientists
+				and engineers create computer simulations of the heart and
+				circulatory system. Think of it as a set of digital building
+				blocks that represent different parts of our cardiovascular
+				system, like heart chambers (e.g., atria and ventricles), valves
+				(which control blood flow direction), and various blood vessels
+				(like arteries and veins).
 			</p>
 
-			<p>
+			<p class="mb-4 text-lg leading-relaxed text-slate-600">
 				The "modular" part of its name is key. Instead of building a
 				highly detailed 3D anatomical replica, ModularCirc uses a
-				simplified but effective approach. It treats each component
-				as a distinct module with specific functions and properties
-				(e.g., how elastic a heart chamber is, or how much
-				resistance a vessel offers to blood flow). Researchers can
-				then connect these modules, much like an electrical circuit,
-				to build a complete, functional model of how blood
-				circulates throughout the body.
+				simplified but effective approach. It treats each component as a
+				distinct module with specific functions and properties (e.g.,
+				how elastic a heart chamber is, or how much resistance a vessel
+				offers to blood flow). Researchers can then connect these
+				modules, much like an electrical circuit, to build a complete,
+				functional model of how blood circulates throughout the body.
 			</p>
 
-			<p>
-				This flexibility is powerful. Scientists can easily swap
-				modules or change their characteristics to simulate
-				different scenarios – for example, to study the impact of a
-				leaky heart valve, the stiffening of arteries, or the effect
-				of a potential new treatment. By running these simulations,
-				they can gain insights into how the cardiovascular system
-				works in health and disease, predict changes, and explore
-				"what-if" questions without needing invasive procedures.
-				This makes ModularCirc a valuable tool for those working
-				towards creating "digital twins" of the heart – virtual
-				replicas that can help us better understand, predict, and
-				manage cardiovascular health.
+			<p class="mb-4 text-lg leading-relaxed text-slate-600">
+				This flexibility is powerful. Scientists can easily swap modules
+				or change their characteristics to simulate different scenarios
+				– for example, to study the impact of a leaky heart valve, the
+				stiffening of arteries, or the effect of a potential new
+				treatment. By running these simulations, they can gain insights
+				into how the cardiovascular system works in health and disease,
+				predict changes, and explore "what-if" questions without needing
+				invasive procedures. This makes ModularCirc a valuable tool for
+				those working towards creating "digital twins" of the heart –
+				virtual replicas that can help us better understand, predict,
+				and manage cardiovascular health.
 			</p>
 
-			<h2>Getting Started</h2>
-			<p>
+			<h2 class="mb-4 text-2xl font-semibold text-slate-700">
+				Getting Started
+			</h2>
+			<p class="mb-4 text-lg leading-relaxed text-slate-600">
 				ModularCirc is available as a Python package and can be
 				installed via pip:
 			</p>
-			<pre><code>python -m pip install ModularCirc</code></pre>
+			<pre
+				class="mb-6 rounded-md bg-slate-100 p-4 text-sm text-slate-800"><code>python -m pip install ModularCirc</code></pre>
 
-			<p>
+			<p class="mb-4 text-lg leading-relaxed text-slate-600">
 				For more information and detailed documentation, visit the
 				<a
 					href="https://github.com/alan-turing-institute/ModularCirc"
 					target="_blank"
-					rel="noopener noreferrer"
-					>ModularCirc GitHub repository</a
+					rel="noopener noreferrer">ModularCirc GitHub repository</a
 				>.
 			</p>
 		</div>

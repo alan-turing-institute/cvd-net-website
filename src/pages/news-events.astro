@@ -1,19 +1,20 @@
 ---
-import BaseLayout from '@layout/BaseLayout.astro';
+import BaseLayout from "@layout/BaseLayout.astro";
 
 const seo = {
-  title: 'News & Events | CVD-Net',
-  description: 'Latest news and upcoming events from the CVD-Net project.',
+	title: "News & Events | CVD-Net",
+	description: "Latest news and upcoming events from the CVD-Net project.",
 };
 ---
+
 <!-- TODO: Content strategy needed (manual updates, CMS, collection?). -->
 <BaseLayout seo={seo}>
-  <section class="container py-16 lg:py-20">
-    <div class="mx-auto max-w-2xl text-center">
-      <h1 class="mb-4 text-4xl font-bold lg:text-5xl">News & Events</h1>
-      <p class="text-lg text-foreground/80">
-        News and upcoming events will be posted here soon.
-      </p>
-    </div>
-  </section>
+	<section class="py-16 lg:py-20">
+		<div class="mx-auto max-w-2xl px-4 text-center sm:px-6 lg:px-8">
+			<h1 class="mb-4 text-4xl font-bold lg:text-5xl">News & Events</h1>
+			<p class="text-foreground/80 text-lg">
+				News and upcoming events will be posted here soon.
+			</p>
+		</div>
+	</section>
 </BaseLayout>
