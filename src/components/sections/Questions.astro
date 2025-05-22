@@ -16,7 +16,7 @@ const tertiaryCTA = { text: "Learn More", href: "/about/project-overview" };
 ---
 
 <section
-	class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 md:py-14 lg:px-8 lg:py-20"
+	class="mx-auto max-w-[85rem] px-4 pt-4 pb-10 sm:px-6 sm:pt-6 md:pt-8 md:pb-14 lg:px-8 lg:pt-10 lg:pb-16"
 >
 	<div
 		class="relative isolate overflow-hidden rounded-3xl bg-teal-400 px-6 py-12 shadow-xl sm:px-16 lg:px-24"
@@ -43,7 +43,7 @@ const tertiaryCTA = { text: "Learn More", href: "/about/project-overview" };
 
 		<div class="flex flex-col space-y-10">
 			{/* Two column layout for titles and subtitles */}
-			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full">
+			<div class="grid w-full grid-cols-1 gap-8 lg:grid-cols-2">
 				{/* First column */}
 				<div class="text-left">
 					<h2
@@ -70,7 +70,7 @@ const tertiaryCTA = { text: "Learn More", href: "/about/project-overview" };
 			</div>
 
 			{/* CTA button (right aligned) */}
-			<div class="flex justify-end w-full">
+			<div class="flex w-full justify-end">
 				<Button
 					href={tertiaryCTA.href}
 					variant="tertiary"
