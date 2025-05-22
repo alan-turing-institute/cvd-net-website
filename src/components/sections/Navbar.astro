@@ -15,18 +15,24 @@ const primaryCTA = {
 ---
 
 <header
-	class="fixed start-1/2 top-5 z-50 mx-auto flex w-full max-w-sm -translate-x-1/2 transform flex-wrap rounded-2xl border-b border-slate-100 bg-white bg-linear-to-t/oklch from-teal-100 via-transparent to-white p-4 shadow-xs sm:max-w-xl md:max-w-4xl md:flex-nowrap md:justify-start lg:max-w-5xl xl:max-w-6xl xl:shadow-none xl:ring-teal-950/5 2xl:max-w-[81rem] 2xl:via-0%"
+	class="fixed start-0 top-0 z-50 mx-auto flex w-full transform flex-wrap border-b border-slate-100 bg-white bg-linear-to-t/oklch from-teal-100 via-transparent to-white p-2 shadow-xs md:flex-nowrap md:justify-start xl:shadow-none xl:ring-teal-950/5 2xl:via-0%"
 >
 	<nav
 		class="relative mx-auto w-full px-4 py-2 sm:px-6 lg:px-8 xl:flex xl:max-w-7xl xl:items-center xl:justify-between xl:gap-3 2xl:max-w-[85rem]"
 	>
 		<div class="flex items-center justify-between gap-x-1">
 			<a
-				class="dm-sans flex-none text-2xl font-semibold text-teal-700 focus:opacity-80 focus:outline-hidden"
+				class="flex-none focus:opacity-80 focus:outline-hidden"
 				href={import.meta.env.BASE_URL}
 				aria-label="CVD-Net Logo"
-				translate="no">CVD-Net</a
+				translate="no"
 			>
+				<img
+					src={`${import.meta.env.BASE_URL}/images/logo.png`}
+					alt="CVD-Net Logo"
+					class="h-10 w-auto sm:h-11"
+				/>
+			</a>
 
 			<button
 				type="button"
@@ -94,7 +100,7 @@ const primaryCTA = {
 										return (
 											<a
 												href={link.href}
-												class={`flex items-center rounded-lg p-2 font-medium text-slate-800 hover:bg-slate-100 focus:bg-slate-100 focus:outline-hidden ${
+												class={`flex items-center rounded-lg p-1.5 text-base font-medium text-slate-800 hover:bg-slate-100 focus:bg-slate-100 focus:outline-hidden ${
 													currentPath === link.href
 														? "underline underline-offset-4"
 														: ""
@@ -119,7 +125,7 @@ const primaryCTA = {
 										return (
 											<a
 												href={link.href}
-												class={`flex items-center rounded-lg p-2 font-medium text-slate-800 hover:bg-slate-100 focus:bg-slate-100 focus:outline-hidden ${
+												class={`flex items-center rounded-lg p-1.5 text-base font-medium text-slate-800 hover:bg-slate-100 focus:bg-slate-100 focus:outline-hidden ${
 													currentPath === link.href
 														? "underline underline-offset-4"
 														: ""
@@ -145,7 +151,7 @@ const primaryCTA = {
 						<Button
 							href={primaryCTA.href}
 							variant="primary"
-							className="inline-flex border-none py-2! text-nowrap"
+							className="inline-flex border-none py-2! text-base text-nowrap"
 							>{primaryCTA.text}</Button
 						>
 					</div>

@@ -4,33 +4,43 @@ import Button from "@ui/Button.astro";
 const title = "Networks of Cardiovascular Digital Twins";
 const subTitle =
 	"Pioneering personalised cardiovascular care through interconnected digital twins";
-// TODO: Add Hero Image placeholder (_being developed_)
 const primaryCTA = { text: "Find Out More", href: "/about/project-overview" }; // Astro's Button component will handle base URL prefix
 const secondaryCTA = { text: "Contact Us", href: "/about/contact" }; // Astro's Button component will handle base URL prefix
 ---
 
-{/* Hero Content */}
-<div class="mx-auto max-w-4xl text-left select-none sm:text-center">
-	<h1
-		class="block text-4xl text-balance text-slate-800 sm:text-5xl md:text-6xl lg:text-7xl"
-	>
-		{title}
-	</h1>
-</div>
+<div
+	class="w-full space-y-5 px-3 pb-4 text-center sm:px-4 md:w-3/5 md:space-y-6 md:pb-0 md:text-left lg:w-1/2"
+>
+	<div class="select-none">
+		<h1
+			class="block text-3xl leading-tight font-bold text-pretty text-slate-800 drop-shadow-xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl"
+		>
+			{title}
+		</h1>
+	</div>
 
-<div class="mx-auto max-w-3xl text-left sm:text-center">
-	<p class="text-lg text-pretty text-slate-700">
-		{subTitle}
-	</p>
-</div>
+	<div>
+		<p
+			class="text-base text-pretty text-slate-800 drop-shadow-md md:text-lg"
+		>
+			{subTitle}
+		</p>
+	</div>
 
-{/* CTA Buttons */}
-<div class="flex flex-col justify-center gap-5 sm:flex-row">
-	{
-		/* Note: Swapped primary/secondary variants to match the variable renaming */
-	}
-	<Button href={primaryCTA.href} variant="primary">{primaryCTA.text}</Button>
-	<Button href={secondaryCTA.href} variant="secondary"
-		>{secondaryCTA.text}</Button
+	{/* CTA Buttons */}
+	<div
+		class="flex flex-col justify-center gap-3 pt-2 sm:flex-row md:justify-start md:pt-4"
 	>
+		<Button
+			href={primaryCTA.href}
+			variant="primary"
+			className="text-sm shadow-md md:text-base">{primaryCTA.text}</Button
+		>
+		<Button
+			href={secondaryCTA.href}
+			variant="secondary"
+			className="bg-white/80 text-sm shadow-sm md:text-base"
+			>{secondaryCTA.text}</Button
+		>
+	</div>
 </div>

@@ -1,12 +1,43 @@
 ---
 import HeroContent from "@common/HeroContent.astro";
+import HeroBackground from "../../assets/images/hero_background.png";
+import HeroForeground from "../../assets/images/hero_foreground.svg";
 ---
 
-<section class="bg-linear-to-b/oklch from-teal-200 via-transparent to-white">
-  <div class="mx-auto max-w-[85rem] space-y-8 px-4 pb-12 pt-48 sm:px-6 lg:px-8">
+<section
+	class="hero-section relative min-h-[70vh] bg-cover bg-center pt-20 sm:pt-20 md:min-h-[75vh] md:pt-10 lg:pt-10"
+	style={`background-image: url(${HeroBackground.src})`}
+>
+	{/* Content container with z-index to position on top of image */}
+	<div
+		class="relative z-10 mx-auto flex min-h-[60vh] max-w-[85rem] flex-col items-center px-4 py-6 sm:px-6 md:min-h-[65vh] md:flex-row md:items-center md:py-12 lg:px-8 lg:py-16"
+	>
+		<HeroContent />
 
-    {/* Hero Content */}
-    <HeroContent />
-
-  </div>
+		<div class="mx-auto mt-6 w-full md:mx-0 md:mt-0 md:w-2/5 md:pl-4">
+			<img
+				src={HeroForeground.src}
+				alt="Cardiovascular Digital Twin Illustration"
+				class="mx-auto h-auto w-full max-w-full object-contain drop-shadow-xl md:w-full"
+			/>
+		</div>
+	</div>
 </section>
+
+<style>
+	.hero-section::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(
+			to bottom,
+			rgba(255, 255, 255, 0) 70%,
+			rgba(255, 255, 255, 0.8) 90%,
+			rgba(255, 255, 255, 1) 100%
+		);
+		pointer-events: none; /* Ensures clicks pass through to elements beneath */
+	}
+</style>
