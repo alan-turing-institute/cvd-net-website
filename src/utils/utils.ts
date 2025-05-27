@@ -27,7 +27,12 @@ function getAssetPath(path?: string): string {
   // For paths that start with /, prefix with BASE_URL
   // Otherwise return the path as is (for relative paths)
   if (path.startsWith("/")) {
-    return `${import.meta.env.BASE_URL}${path}`;
+    const baseUrl = import.meta.env.BASE_URL;
+    // If BASE_URL is root ("/"), just return the path
+    if (baseUrl === "/") {
+      return path;
+    }
+    return `${baseUrl}${path}`;
   }
 
   // For other cases, return as is

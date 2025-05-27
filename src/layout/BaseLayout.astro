@@ -7,6 +7,7 @@ import { Schema } from "astro-seo-schema";
 import type { WithContext, Thing } from "schema-dts";
 import { AstroFont } from "astro-font";
 import "@styles/global.css";
+import { getAssetPath } from "@utils/utils";
 
 interface Props {
 	seo?: SEOProps; // Optional SEO properties to customize meta tags
@@ -77,11 +78,11 @@ const defaultSchema: WithContext<Thing> = {
 					// { rel: "icon", href: `${import.meta.env.BASE_URL}/icon.svg`, type: "image/svg+xml" }, // TODO: Add CVD-Net favicon in Phase 6
 					{
 						rel: "apple-touch-icon",
-						href: `${import.meta.env.BASE_URL}/apple-touch-icon.png`,
+						href: getAssetPath("/apple-touch-icon.png"),
 					},
 					{
 						rel: "manifest",
-						href: `${import.meta.env.BASE_URL}/manifest.webmanifest`,
+						href: getAssetPath("/manifest.webmanifest"),
 					},
 				],
 				meta: [

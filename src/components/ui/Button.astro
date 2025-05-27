@@ -10,6 +10,12 @@ const {
 	id,
 } = Astro.props;
 
+// Helper function to properly join base URL with path
+function joinPath(base: string, path: string): string {
+  if (base === '/') return path;
+  return base + path;
+}
+
 // Process the href to ensure it includes the base URL if it's a relative path
 // and not already prefixed with the base URL or an external URL
 const href = rawHref
@@ -17,7 +23,7 @@ const href = rawHref
 		rawHref.startsWith("mailto:") ||
 		rawHref.startsWith(`${import.meta.env.BASE_URL}`)
 		? rawHref
-		: `${import.meta.env.BASE_URL}${rawHref}`
+		: joinPath(import.meta.env.BASE_URL, rawHref)
 	: undefined;
 
 export interface Props {

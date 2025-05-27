@@ -4,13 +4,20 @@ import Resources from "@megaMenu/Resources.astro";
 import Blog from "@megaMenu/Blog.astro";
 import Button from "@ui/Button.astro";
 import { navigationLinks } from "@utils/navigation";
+import { getAssetPath } from "@utils/utils";
 
 const currentPath = Astro.url.pathname;
+
+// Helper function to properly join base URL with path
+function joinPath(base: string, path: string): string {
+  if (base === '/') return path;
+  return base + path;
+}
 
 // Call-to-action configuration for the primary button
 const primaryCTA = {
 	text: "Contact",
-	href: `${import.meta.env.BASE_URL}/about/contact`,
+	href: joinPath(import.meta.env.BASE_URL, "/about/contact"),
 };
 ---
 
@@ -28,7 +35,7 @@ const primaryCTA = {
 				translate="no"
 			>
 				<img
-					src={`${import.meta.env.BASE_URL}/images/logo.png`}
+					src={getAssetPath("/images/logo.png")}
 					alt="CVD-Net Logo"
 					class="h-10 w-auto sm:h-11"
 				/>
