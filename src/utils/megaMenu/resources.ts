@@ -1,4 +1,5 @@
 // No need to import Icons since we're using string literals for icons
+import { joinPath } from "../navigation";
 
 interface ResourceMenuItem {
   title: string;
@@ -19,13 +20,13 @@ export const resourcesMenu: ResourceMenuSection[] = [
       {
         title: "ModularCirc",
         description: "Information about the ModularCirc resource.",
-        href: `${import.meta.env.BASE_URL}/resources/modularcirc`,
+        href: joinPath(import.meta.env.BASE_URL, "/resources/modularcirc"),
         icon: "mdi:circle-slice-4",
       },
       {
         title: "Data Safe Haven",
         description: "Details on the secure data environment.",
-        href: `${import.meta.env.BASE_URL}/resources/data-safe-haven`,
+        href: joinPath(import.meta.env.BASE_URL, "/resources/data-safe-haven"),
         icon: "mdi:database-lock",
       },
     ],
@@ -37,13 +38,13 @@ export const resourcesMenu: ResourceMenuSection[] = [
         title: "TEA Platform",
         description:
           "Learn about the Trustworthy and Ethical Assurance Platform.",
-        href: `${import.meta.env.BASE_URL}/resources/tea-platform`,
+        href: joinPath(import.meta.env.BASE_URL, "/resources/tea-platform"),
         icon: "mdi:shield-check",
       },
       {
         title: "All Resources",
         description: "View all available project resources.",
-        href: `${import.meta.env.BASE_URL}/resources`,
+        href: joinPath(import.meta.env.BASE_URL, "/resources"),
         icon: "mdi:view-grid",
       },
     ],

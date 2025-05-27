@@ -1,4 +1,5 @@
 // No need to import Icons since we're using string literals for icons
+import { joinPath } from "../navigation";
 
 // Interface for static items that might remain (like 'All Posts')
 interface BlogStaticMenuItem {
@@ -22,7 +23,7 @@ export const blogMenuStatic: BlogMenuStaticSection[] = [
       {
         title: "All Posts",
         description: "Browse all blog entries.",
-        href: `${import.meta.env.BASE_URL}/blog`, // Link to the main blog index
+        href: joinPath(import.meta.env.BASE_URL, "/blog"), // Link to the main blog index
         icon: "mdi:text-box-multiple-outline",
       },
       // Add other static links like categories if needed

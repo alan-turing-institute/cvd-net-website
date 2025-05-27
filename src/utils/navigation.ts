@@ -1,6 +1,18 @@
 // Helper function to properly join base URL with path
-function joinPath(base: string, path: string): string {
+export function joinPath(base: string, path: string): string {
+  // In development, BASE_URL is "/" so we just return the path
   if (base === '/') return path;
+  // In production, BASE_URL is the full domain, so we need to extract the path part
+  if (base.startsWith('http')) {
+    try {
+      const url = new URL(base);
+      const basePath = url.pathname === '/' ? '' : url.pathname;
+      return basePath + path;
+    } catch {
+      // Fallback if URL parsing fails
+      return path;
+    }
+  }
   return base + path;
 }
 

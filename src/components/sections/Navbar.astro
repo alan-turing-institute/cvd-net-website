@@ -4,7 +4,7 @@ import Resources from "@megaMenu/Resources.astro";
 import Blog from "@megaMenu/Blog.astro";
 import Button from "@ui/Button.astro";
 import { navigationLinks } from "@utils/navigation";
-import { getAssetPath } from "@utils/utils";
+import logoImage from "../../assets/images/logo.png";
 
 const currentPath = Astro.url.pathname;
 
@@ -35,7 +35,7 @@ const primaryCTA = {
 				translate="no"
 			>
 				<img
-					src={getAssetPath("/images/logo.png")}
+					src={logoImage.src}
 					alt="CVD-Net Logo"
 					class="h-10 w-auto sm:h-11"
 				/>

@@ -6,7 +6,7 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://cvd-net-website-enpt.vercel.app",
+  site: "https://cvd-net.com",
   prefetch: true,
   trailingSlash: "never",
   experimental: {
