@@ -10,6 +10,9 @@
 - [x] Improve contact page
 - [x] Sort GitHub action to publish
 - [x] Fix styling for links
+- [x] Update WP copy
+- [x] Update resource copy
+- [x] Add hero image to `index.astro`
 
 ## Blocked
 
@@ -18,15 +21,10 @@
 - [ ] Update social buttons (and icons) at the bottom of the page
 - [ ] Add information about partners
 
-<!-- Waiting on copy review -->
-
-- [ ] Update WP copy
-- [ ] Update resource copy
-
-<!-- Waiting logo and illustration from Jonny -->
-
-- [ ] Add hero image to `index.astro`
-
 <!-- Notion page incomplete -->
 
 - [ ] Update `team.json` with all project team members
+
+<!-- Nice to have -->
+
+- [ ] Be consistent with image imports across pages, rather than using the public folder
