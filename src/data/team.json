@@ -1,7 +1,6 @@
 [
   {
     "name": "Steven Niederer",
-    "title": "Prof.",
     "affiliation": "Imperial College London",
     "position": "Chair in Biomechanical Engineering",
     "role": "Principal Investigator",
@@ -11,7 +10,6 @@
   },
   {
     "name": "Alex Rothman",
-    "title": "Prof.",
     "affiliation": "University of Sheffield",
     "position": "Professor of Cardiology",
     "role": "Co-Investigator",
@@ -23,7 +21,6 @@
   },
   {
     "name": "Martin Wilkins",
-    "title": "Prof.",
     "affiliation": "Imperial College London",
     "position": "Professor of Clinical Pharmacology",
     "role": "Co-Investigator",
@@ -35,7 +32,6 @@
   },
   {
     "name": "Wenjia Bai",
-    "title": "Dr.",
     "affiliation": "Imperial College London",
     "position": "Senior Lecturer in Artificial Intelligence in Medicine",
     "role": "Co-Investigator",
@@ -47,7 +43,6 @@
   },
   {
     "name": "Camila Rangel Smith ",
-    "title": "Dr.",
     "affiliation": "Alan Turing Institute",
     "position": "Senior Research Data Scientist",
     "role": "Co-Investigator",
@@ -59,7 +54,6 @@
   },
   {
     "name": "David Wagg",
-    "title": "Prof.",
     "affiliation": "University of Sheffield",
     "position": "Professor of Non Linear Dynamics",
     "role": "Co-Investigator",
@@ -71,7 +65,6 @@
   },
   {
     "name": "Richard Wilkinson",
-    "title": "Prof.",
     "affiliation": "University of Nottingham",
     "position": "Professor of Statistics",
     "role": "Co-Investigator",
@@ -83,7 +76,6 @@
   },
   {
     "name": "Richard Clayton",
-    "title": "Prof.",
     "affiliation": "University of Sheffield",
     "position": "Professor of Computational Physiology",
     "role": "Co-Investigator",
@@ -95,7 +87,6 @@
   },
   {
     "name": "Keith Worden",
-    "title": "Prof.",
     "affiliation": "University of Sheffield",
     "position": "Professor of Mechanical Engineering",
     "role": "Co-Investigator",
@@ -107,7 +98,6 @@
   },
   {
     "name": "Elizabeth Cross",
-    "title": "Prof.",
     "affiliation": "University of Sheffield",
     "position": "Professor of Structural Dynamics",
     "role": "Co-Investigator",
@@ -119,7 +109,6 @@
   },
   {
     "name": "Christopher Burr",
-    "title": "Dr.",
     "affiliation": "Alan Turing Institute",
     "position": "Senior Researcher in Trustworthy Systems",
     "role": "WP6 Co-Lead",
@@ -131,7 +120,6 @@
   },
   {
     "name": "Tim Chico",
-    "title": "Prof.",
     "affiliation": "University of Sheffield",
     "position": "Professor of Cardiovascular Medicine",
     "role": "Co-Investigator",
@@ -143,17 +131,15 @@
   },
   {
     "name": "Maximilian Balmus",
-    "title": "Dr.",
     "affiliation": "Alan Turing Institute",
     "position": "Research Associate",
-    "role": "CVD-Net Project Manager",
+    "role": "Postdoctoral Researcher",
     "profileURL": "https://scholar.google.com/citations?user=ip_DQGAAAAAJ&hl=en",
     "photoUrl": "/images/team/max-balmus.jpg",
     "section": "Research Team"
   },
   {
     "name": "Harry Saxton",
-    "title": "Dr.",
     "affiliation": "University of Sheffield",
     "position": "Research Associate in Computational Tools for Cardiovascular Digital Twins",
     "role": "Postdoctoral Researcher",
@@ -165,7 +151,6 @@
   },
   {
     "name": "André Piza",
-    "title": "Dr.",
     "affiliation": "Alan Turing Institute",
     "position": "Senior Research Community Manager",
     "role": "Senior Research Community Manager",
@@ -177,10 +162,9 @@
   },
   {
     "name": "Fay Frost",
-    "title": "Dr.",
     "affiliation": "University of Nottingham",
     "position": "Research Fellow",
-    "role": "Post Doc",
+    "role": "Postdoctoral Researcher",
     "work_package": 3,
     "profileURL": "https://www.nottingham.ac.uk/mathematics/people/fay.frost",
     "photoUrl": "/images/team/fay-frost.jpg",
@@ -188,7 +172,6 @@
   },
   {
     "name": "Mojiba Khanum",
-    "title": "Ms",
     "affiliation": "Imperial College London",
     "position": "Project Manager",
     "role": "Imperial Project Manager",
@@ -198,7 +181,6 @@
   },
   {
     "name": "May Yong",
-    "title": "",
     "affiliation": "Alan Turing Institute",
     "position": "Lead Research Software Engineer",
     "role": "Research Engineering Group",
@@ -208,7 +190,6 @@
   },
   {
     "name": "James Robinson",
-    "title": "",
     "affiliation": "Alan Turing Institute",
     "position": "",
     "role": "Research Engineering Group",
@@ -218,7 +199,6 @@
   },
   {
     "name": "Mahwish Mohammad",
-    "title": "Ms",
     "affiliation": "Alan Turing Institute",
     "position": "Data Wrangler",
     "role": "Data Wrangler, Research Engineering Group",
@@ -228,7 +208,6 @@
   },
   {
     "name": "Carlos Gavidia-Calderon",
-    "title": "Dr.",
     "affiliation": "Alan Turing Institute",
     "position": "Research Software Engineer",
     "role": "Research Engineering Group",
@@ -238,7 +217,6 @@
   },
   {
     "name": "Karen de Cesare",
-    "title": "",
     "affiliation": "Alan Turing Institute",
     "position": "Research Project Manager",
     "role": "Turing Project Manager",
@@ -248,7 +226,6 @@
   },
   {
     "name": "Andy Swift",
-    "title": "",
     "affiliation": "University of Sheffield",
     "position": "",
     "role": "Collaborator",
@@ -258,7 +235,6 @@
   },
   {
     "name": "Frankie Varian",
-    "title": "",
     "affiliation": "University of Sheffield",
     "position": "",
     "role": "Collaborator",
@@ -268,7 +244,6 @@
   },
   {
     "name": "Hamza Zafar",
-    "title": "",
     "affiliation": "University of Sheffield",
     "position": "",
     "role": "Collaborator",
@@ -278,7 +253,6 @@
   },
   {
     "name": "Ellen Dowell",
-    "title": "Ms",
     "affiliation": "Imperial College London",
     "position": "Creative Director",
     "role": "Patient Engagement and Involvement",
