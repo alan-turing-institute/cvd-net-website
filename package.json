@@ -14,10 +14,6 @@
     "@astrojs/check": "^0.9.4",
     "@astrojs/markdoc": "^0.15.0",
     "@astrojs/react": "^4.2.3",
-    "@astrojs/svelte": "^7.0.10",
-    "@iconify-json/carbon": "^1.2.8",
-    "@iconify-json/healthicons": "^1.2.8",
-    "@iconify-json/tabler": "^1.2.17",
     "@tailwindcss/vite": "^4.1.4",
     "@types/react": "^19.1.4",
     "@types/react-dom": "^19.1.2",
@@ -32,7 +28,6 @@
     "react-dom": "^19.1.0",
     "reading-time": "^1.5.0",
     "schema-dts": "^1.1.2",
-    "svelte": "^5.28.3",
     "tailwind-merge": "^3.2.0",
     "tailwindcss": "^4.1.4",
     "typescript": "^5.8.3"
