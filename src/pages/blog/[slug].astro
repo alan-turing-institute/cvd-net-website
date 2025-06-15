@@ -1,5 +1,5 @@
 ---
-import { type CollectionEntry, getCollection } from 'astro:content';
+import { type CollectionEntry, getCollection, render } from 'astro:content';
 import { Image } from 'astro:assets';
 import BaseLayout from '../../layout/BaseLayout.astro';
 import { formatDate } from '../../utils/utils';
@@ -14,17 +14,17 @@ interface Props {
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
   return posts.map((post) => ({
-    params: { slug: post.slug },
+    params: { slug: post.id },
     props: { post },
   }));
 }
 
 // Get the post data from props passed by getStaticPaths
 const { post } = Astro.props;
-const { Content } = await post.render(); // Render the Markdown content
+const { Content } = await render(post); // Render the Markdown content
 
 // Calculate reading time
-const estimatedReadingTime = getReadingTime(post.body); // Pass the raw Markdown body
+const estimatedReadingTime = post.body ? getReadingTime(post.body) : '5 min read'; // Pass the raw Markdown body
 
 // Define SEO properties for this specific post
 const seo = {

@@ -30,7 +30,7 @@ if (latestPost && latestPost.data.coverImage) {
 	latestPostItem = {
 		title: latestPost.data.title,
 		description: latestPost.data.description,
-		href: joinPath(import.meta.env.BASE_URL, `/blog/${latestPost.slug}`),
+		href: joinPath(import.meta.env.BASE_URL, `/blog/${latestPost.id}`),
 		image: latestPost.data.coverImage, // Pass the metadata object
 	};
 } else if (latestPost) {
@@ -39,7 +39,7 @@ if (latestPost && latestPost.data.coverImage) {
 	latestPostItem = {
 		title: latestPost.data.title,
 		description: latestPost.data.description,
-		href: joinPath(import.meta.env.BASE_URL, `/blog/${latestPost.slug}`),
+		href: joinPath(import.meta.env.BASE_URL, `/blog/${latestPost.id}`),
 		icon: "mdi:text-box-multiple-outline", // Fallback icon
 	};
 }

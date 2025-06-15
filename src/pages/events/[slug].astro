@@ -1,0 +1,148 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '@layout/BaseLayout.astro';
+import type { GetStaticPaths } from 'astro';
+import type { CollectionEntry } from 'astro:content';
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const events = await getCollection('events');
+  return events.map(event => ({
+    params: { slug: event.id },
+    props: { event }
+  }));
+};
+
+interface Props {
+  event: CollectionEntry<'events'>;
+}
+
+const { event } = Astro.props;
+const { Content } = await render(event);
+
+const seo = {
+  title: `${event.data.title} | CVD-Net`,
+  description: event.data.description
+};
+---
+
+<BaseLayout seo={seo}>
+  <div class="container mx-auto max-w-4xl px-4 py-12">
+    <!-- Back navigation -->
+    <div class="mb-8">
+      <a href="/news-events" class="inline-flex items-center text-emerald-600 hover:text-emerald-700 transition-colors">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        Back to News & Events
+      </a>
+    </div>
+
+    <!-- Event header -->
+    <div class="mb-12 text-center">
+      <h1 class="mb-4 text-4xl font-bold lg:text-5xl">{event.data.title}</h1>
+      <div class="mb-6 flex flex-wrap justify-center gap-2">
+        {event.data.links && event.data.links.length > 0 && (
+          event.data.links.map((link) => (
+            <a
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={`https://img.shields.io/badge/${encodeURIComponent(link.text.replace(/\s+/g, '_'))}-0F76B8?style=flat`}
+                alt={link.text}
+              />
+            </a>
+          ))
+        )}
+      </div>
+    </div>
+
+    <!-- Event content -->
+    <div class="prose prose-lg max-w-none markdown-content">
+      <Content />
+    </div>
+  </div>
+</BaseLayout>
+
+<style is:global>
+  .markdown-content h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #374151;
+    font-family: "DM Sans", sans-serif;
+  }
+  
+  .markdown-content h3 {
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #374151;
+    font-family: "DM Sans", sans-serif;
+  }
+  
+  .markdown-content h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #374151;
+    font-family: "DM Sans", sans-serif;
+  }
+  
+  .markdown-content p {
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+    line-height: 1.75;
+    color: #64748b;
+  }
+  
+  .markdown-content ul, .markdown-content ol {
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+    color: #64748b;
+  }
+  
+  .markdown-content li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .markdown-content a {
+    color: #0d9488;
+    text-decoration: underline;
+  }
+  
+  .markdown-content a:hover {
+    color: #0f766e;
+  }
+  
+  .markdown-content strong {
+    font-weight: 600;
+    color: #374151;
+  }
+  
+  .markdown-content em {
+    font-style: italic;
+  }
+  
+  .markdown-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+  }
+  
+  .markdown-content th {
+    border: 1px solid #e2e8f0;
+    background-color: #f8fafc;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: #374151;
+  }
+  
+  .markdown-content td {
+    border: 1px solid #e2e8f0;
+    padding: 0.75rem 1rem;
+    color: #64748b;
+  }
+</style>
