@@ -23,7 +23,7 @@ export const navigationLinks = [
     label: "About",
   }, // Link to the main overview page
   { href: joinPath(import.meta.env.BASE_URL, "/resources"), label: "Resources" },
-  { href: joinPath(import.meta.env.BASE_URL, "/blog"), label: "Blog" },
+  // { href: joinPath(import.meta.env.BASE_URL, "/blog"), label: "Blog" }, // Temporarily hidden - no blog posts yet
   { href: joinPath(import.meta.env.BASE_URL, "/news-events"), label: "News & Events" },
   // Contact is handled by the CTA button now
 ];
