@@ -12,7 +12,10 @@ const seo = {
 };
 
 // Fetch blog posts, sort by publish date (newest first)
-const posts = (await getCollection("blog")).sort(
+const posts = (await getCollection("blog", ({ data }) => {
+	// Filter out drafts in production
+	return import.meta.env.PROD ? data.draft !== true : true;
+})).sort(
 	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
 );
 ---

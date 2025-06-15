@@ -8,11 +8,9 @@ import { joinPath } from "@utils/navigation";
 const currentPath = Astro.url.pathname;
 
 // 1. Fetch and sort blog posts
-const allPosts = await getCollection("blog", () => {
-	// Removed unused 'data' parameter
-	// Filter out drafts if necessary, assuming a 'draft' property exists
-	// return data.draft !== true;
-	return true; // Include all for now
+const allPosts = await getCollection("blog", ({ data }) => {
+	// Filter out drafts in production
+	return import.meta.env.PROD ? data.draft !== true : true;
 });
 
 const sortedPosts = allPosts.sort(

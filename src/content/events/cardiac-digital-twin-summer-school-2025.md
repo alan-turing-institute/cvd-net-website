@@ -4,7 +4,7 @@ date: 2025-10-06
 endDate: 2025-10-10
 dateDisplay: "6-10 October 2025"
 location: "The Alan Turing Institute, London"
-type: "summer-school"
+type: "event"
 description: "A week-long intensive summer school focused on the development and application of digital twins in healthcare, covering topics from segmentation to model analysis."
 excerpt: "Join leading experts for a comprehensive training program on cardiac digital twins, designed for MSc/PhD students and Early Career Researchers. Free to attend with limited places available."
 links:
@@ -25,12 +25,15 @@ CaDiTSS is delivered as part of [Networks of Cardiovascular Digital Twins](https
 
 **Attendance**: In-person only. The course is free to attend, but places are extremely limited and offered via a simplified application process.
 
-## Schedule
+## How to apply
 
-|                 | Monday 06/10                                                                                   | Tuesday 07/10                                                                                                                    | Wednesday 08/10                                                                                                                | Thursday 09/10                                                                              | Friday 10/10                                                                                  |
-| --------------- | ---------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| AM 9 \- 12:30   | **Segmentation & Model Fitting** [Alistair Young](https://www.kcl.ac.uk/people/alistair-young) | **Motion** [Abdul Qayyum](https://www.linkedin.com/in/abdul-qayyum-phd-a5876ab1/)                                                | **Cardiac Contraction Models** [Steven Niederer](https://www.imperial.ac.uk/news/245775/professor-steven-niederer-joins-nhli/) | **Electrophysiology Simulator** [Martin Bishop](https://www.kcl.ac.uk/people/martin-bishop) | **Model Analysis** [Caroline Roney](https://www.cpm.qmul.ac.uk/people/croney)                 |
-| PM 1:30 \- 5:00 | **Shape** [Pablo Lamata](https://www.kcl.ac.uk/people/pablo-lamata-de-la-orden)                | **Gaussian Process Emulators** [Richard Wilkinson](https://www.nottingham.ac.uk/science/research/take-10/richard-wilkinson.aspx) | **Cellular Electrophysiology** [Gary Mirams](https://www.maths.nottingham.ac.uk/plp/pmzgm/)                                    | **Mechanics Model** [Team CEMRG](https://www.cemrg.com/)                                    | **Clinical Application** [Steven Williams](https://www.kcl.ac.uk/people/steve-williams-ioppn) |
+Applications to attend the CaDiTSS can be submitted via the link below.
+
+Submissions will help us select a diverse group that will be able to make the most of the event and use their learning to advance their research in a range of topics and applications of cardiac digital twin technology. We are looking for candidates who have a real interest in cardiac digital twins and can demonstrate how the summer school can make a difference to their career journey, whether they are an MSc, PhD student, or early-career researcher (see below).
+
+Applications will be reviewed by the CVDNet team and expectations about experience will be assessed within the applicant's training or career stage. The key criterion for selection is not level of experience but interest in cardiac digital twins and the anticipated benefits the summer school could bring to the participants' professional and research development.
+
+[Apply to attend](https://imperial.eu.qualtrics.com/jfe/form/SV_d5VkbSPsdGM4gGW)
 
 ## Programme
 
@@ -39,6 +42,11 @@ Bringing together international-level experts in their fields, the programme con
 To be the first to receive updates on the programme and other details, [sign up to our mailing list here](https://forms.office.com/e/sSR6HVPfy4). If you have questions about the activity, check our FAQ below and if you cannot find an answer, write to our inbox [caditss@turing.ac.uk](mailto:caditss@turing.ac.uk). The Summer School is free to attend, but places are limited and will be offered based on a simplified application process.
 
 Participants must bring their own laptops to all sessions to be able to participate in the practical sessions. More information about other potential requirements, such as the installation of software that may need to be done in advance will be shared with confirmed participants ahead of the event.
+
+|                 | Monday 06/10                                                                                   | Tuesday 07/10                                                                                                                    | Wednesday 08/10                                                                                                                | Thursday 09/10                                                                              | Friday 10/10                                                                                  |
+| --------------- | ---------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| AM 9 \- 12:30   | **Segmentation & Model Fitting** [Alistair Young](https://www.kcl.ac.uk/people/alistair-young) | **Motion** [Abdul Qayyum](https://www.linkedin.com/in/abdul-qayyum-phd-a5876ab1/)                                                | **Cardiac Contraction Models** [Steven Niederer](https://www.imperial.ac.uk/news/245775/professor-steven-niederer-joins-nhli/) | **Electrophysiology Simulator** [Martin Bishop](https://www.kcl.ac.uk/people/martin-bishop) | **Model Analysis** [Caroline Roney](https://www.cpm.qmul.ac.uk/people/croney)                 |
+| PM 1:30 \- 5:00 | **Shape** [Pablo Lamata](https://www.kcl.ac.uk/people/pablo-lamata-de-la-orden)                | **Gaussian Process Emulators** [Richard Wilkinson](https://www.nottingham.ac.uk/science/research/take-10/richard-wilkinson.aspx) | **Cellular Electrophysiology** [Gary Mirams](https://www.maths.nottingham.ac.uk/plp/pmzgm/)                                    | **Mechanics Model** [Team CEMRG](https://www.cemrg.com/)                                    | **Clinical Application** [Steven Williams](https://www.kcl.ac.uk/people/steve-williams-ioppn) |
 
 ### Segmentation and Model Fitting
 
@@ -101,42 +109,21 @@ Led by a team from the Cardiac Electro-Mechanics Research group (CEMRG), this se
 ### Model Analysis
 
 [**Caroline Roney, Lecturer in Computational Medicine**](https://www.cpm.qmul.ac.uk/people/croney)**, Queen Mary University of London**
-**More information to be confirmed soon**
+
+_More information to be confirmed soon_
 
 ### Clinical Application
 
 [**Steven Williams, Professor of Neuroimaging**](https://www.kcl.ac.uk/people/steve-williams-ioppn)**, King’s College London**
-**More information to be confirmed soon**
 
-## How to apply
-
-Applications to attend the CaDiTSS can be submitted via the link below.
-
-Submissions will help us select a diverse group that will be able to make the most of the event and use their learning to advance their research in a range of topics and applications of cardiac digital twin technology. We are looking for candidates who have a real interest in cardiac digital twins and can demonstrate how the summer school can make a difference to their career journey, whether they are an MSc, PhD student, or early-career researcher (see below).
-
-Applications will be reviewed by the CVDNet team and expectations about experience will be assessed within the applicant's training or career stage. The key criterion for selection is not level of experience but interest in cardiac digital twins and the anticipated benefits the summer school could bring to the participants' professional and research development.
-
-[Apply to attend](https://imperial.eu.qualtrics.com/jfe/form/SV_d5VkbSPsdGM4gGW)
+_More information to be confirmed soon_
 
 ## FAQ
 
-**Can anyone attend the programme?**
-The programme is designed for MSc, PhD students and early career researchers with an interest in cardiac digital twins. Sessions do not presume that participants will have experience in the particular topics covered. If you have questions about whether they will be suitable for your experience, write to our inbox [caditss@turing.ac.uk](mailto:caditss@turing.ac.uk)
-
-**Is there a fee to attend?**
-No. The Cardiac Digital Twin Summer School is free to attend but places are limited and will be offered via a simplified application process.
-
-**Can I attend online?**
-Unfortunately, due to the nature of the sessions, attendance is only possible in-person.
-
-**Can I attend only a few selected sessions?**
-CaDiTSS is designed for participants to attend it in full, and it is expected that participants will participate in all sessions. The objective is to provide training that enables participants to engage in cardiac digital twins research effectively. By attending all sessions, participants will gain insight into multiple and crucial issues for the advancement of this field.
-
-**Is catering provided?**
-Yes, lunch will be provided alongside tea and coffee during the sessions. Upon registration you will be asked about any dietary requirements you may have.
-
-**Is there any accessibility support available?**
-We can consider requests for reasonable adjustments. Upon registration, attendees will be asked about their accessibility requirements.
-
-**What is our definition of an Early Career Researcher?**
-Early career researchers are usually defined by a number of years from their PhD submission (e.g. 7 years following submission of a PhD thesis). We are not establishing a rigid criteria based on career stage for attendance. This information is only to provide general guidance about the attendee’s level of experience the summer school is likely to be relevant for. Anyone, independently of their career stage can apply to attend, but be mindful that it may not be suitable for senior positions like Senior Lecturers or Professors.
+- **Can anyone attend the programme?** The programme is designed for MSc, PhD students and early career researchers with an interest in cardiac digital twins. Sessions do not presume that participants will have experience in the particular topics covered. If you have questions about whether they will be suitable for your experience, write to our inbox [caditss@turing.ac.uk](mailto:caditss@turing.ac.uk)
+- **Is there a fee to attend?** No. The Cardiac Digital Twin Summer School is free to attend but places are limited and will be offered via a simplified application process.
+- **Can I attend online?** Unfortunately, due to the nature of the sessions, attendance is only possible in-person.
+- **Can I attend only a few selected sessions?** CaDiTSS is designed for participants to attend it in full, and it is expected that participants will participate in all sessions. The objective is to provide training that enables participants to engage in cardiac digital twins research effectively. By attending all sessions, participants will gain insight into multiple and crucial issues for the advancement of this field.
+- **Is catering provided?** Yes, lunch will be provided alongside tea and coffee during the sessions. Upon registration you will be asked about any dietary requirements you may have.
+- **Is there any accessibility support available?** We can consider requests for reasonable adjustments. Upon registration, attendees will be asked about their accessibility requirements.
+- **What is our definition of an Early Career Researcher?** Early career researchers are usually defined by a number of years from their PhD submission (e.g. 7 years following submission of a PhD thesis). We are not establishing a rigid criteria based on career stage for attendance. This information is only to provide general guidance about the attendee’s level of experience the summer school is likely to be relevant for. Anyone, independently of their career stage can apply to attend, but be mindful that it may not be suitable for senior positions like Senior Lecturers or Professors.

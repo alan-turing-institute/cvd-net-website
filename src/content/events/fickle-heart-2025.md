@@ -3,7 +3,7 @@ title: "Fickle Heart Workshop"
 date: 2025-09-08
 dateDisplay: "8-9 September 2025"
 location: "Sheffield"
-type: "workshop"
+type: "event"
 description: "The Fickle Heart is a series of events partly funded by the CVD-Net project which aim to share best practice and raise the profile of uncertainty quantification (UQ) in cardiac and cardiovascular modelling and simulation."
 excerpt: "A workshop series focused on uncertainty quantification in cardiac and cardiovascular modelling, sharing best practices and raising the profile of UQ in the field."
 links:

@@ -1,7 +1,7 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 
-// Define the schema for the blog collection
+// Define the schema for the blog collection  
 const blog = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/blog' }),
   schema: ({ image }) => z.object({ 
@@ -10,26 +10,43 @@ const blog = defineCollection({
     publishDate: z.date(),
     author: z.string().optional(), 
     coverImage: image().optional(),
+    draft: z.boolean().default(false)
   }),
 });
 
-// Define the schema for events collection
+// Define the events collection that supports both events and news
 const events = defineCollection({
   loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/events' }),
   schema: z.object({
     title: z.string(),
-    date: z.date(),
-    endDate: z.date().optional(),
-    dateDisplay: z.string(),
-    location: z.string().optional(),
-    type: z.enum(['event', 'workshop', 'conference', 'summer-school', 'news']),
+    type: z.enum(['event', 'news']),
     description: z.string(),
     excerpt: z.string().optional(),
+    draft: z.boolean().default(false),
+    
+    // Event-specific fields
+    date: z.date().optional(),
+    endDate: z.date().optional(),
+    dateDisplay: z.string().optional(),
+    location: z.string().optional(),
     links: z.array(z.object({
       text: z.string(),
       url: z.string().url()
     })).optional(),
-    draft: z.boolean().default(false)
+    
+    // News-specific fields  
+    publishDate: z.date().optional(),
+    author: z.string().optional(),
+  }).refine((data) => {
+    if (data.type === 'event') {
+      return data.date !== undefined && data.dateDisplay !== undefined;
+    }
+    if (data.type === 'news') {
+      return data.publishDate !== undefined;
+    }
+    return false;
+  }, {
+    message: "Events must have 'date' and 'dateDisplay'. News items must have 'publishDate'."
   })
 });
 
