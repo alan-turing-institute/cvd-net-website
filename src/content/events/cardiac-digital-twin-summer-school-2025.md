@@ -21,13 +21,13 @@ The **Cardiac Digital Twin Summer School (CaDiTSS)** is a series of workshops fo
 
 Open to MSc or PhD students and Early Career Researchers with an interest in cardiac digital twins, the course is designed to foster a growing community of digital twin experts across the UK.
 
-CaDiTSS is delivered as part of [Networks of Cardiovascular Digital Twins](https://cvd-net.com) (CVD Net)—an EPSRC funded project that aims to revolutionise healthcare by harnessing the power of digital twin (DT) technology, using real-time health data to accurately monitor disease progression and treatment responses for Pulmonary Arterial Hypertension (PAH).
+CaDiTSS is delivered as part of [Networks of Cardiovascular Digital Twins](https://cvd-net.com) (CVD Net). Read more about CVDNet [here](../../pages/about/project-overview.astro)
 
 **Attendance**: In-person only. The course is free to attend, but places are extremely limited and offered via a simplified application process.
 
 ## How to apply
 
-Applications to attend the CaDiTSS can be submitted via the link below.
+Applications to attend the CaDiTSS can be submitted via the link below. **Deadline for submission is August 10th 2025**.
 
 Submissions will help us select a diverse group that will be able to make the most of the event and use their learning to advance their research in a range of topics and applications of cardiac digital twin technology. We are looking for candidates who have a real interest in cardiac digital twins and can demonstrate how the summer school can make a difference to their career journey, whether they are an MSc, PhD student, or early-career researcher (see below).
 
@@ -125,5 +125,5 @@ _More information to be confirmed soon_
 - **Can I attend online?** Unfortunately, due to the nature of the sessions, attendance is only possible in-person.
 - **Can I attend only a few selected sessions?** CaDiTSS is designed for participants to attend it in full, and it is expected that participants will participate in all sessions. The objective is to provide training that enables participants to engage in cardiac digital twins research effectively. By attending all sessions, participants will gain insight into multiple and crucial issues for the advancement of this field.
 - **Is catering provided?** Yes, lunch will be provided alongside tea and coffee during the sessions. Upon registration you will be asked about any dietary requirements you may have.
-- **Is there any accessibility support available?** We can consider requests for reasonable adjustments. Upon registration, attendees will be asked about their accessibility requirements.
+- **Is there any accessibility support available?** We can consider requests for reasonable adjustments. Attendees will be asked about their accessibility requirements following their place offer.
 - **What is our definition of an Early Career Researcher?** Early career researchers are usually defined by a number of years from their PhD submission (e.g. 7 years following submission of a PhD thesis). We are not establishing a rigid criteria based on career stage for attendance. This information is only to provide general guidance about the attendee’s level of experience the summer school is likely to be relevant for. Anyone, independently of their career stage can apply to attend, but be mindful that it may not be suitable for senior positions like Senior Lecturers or Professors.
