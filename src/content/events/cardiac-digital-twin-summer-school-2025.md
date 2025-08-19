@@ -8,8 +8,6 @@ type: "event"
 description: "A week-long intensive summer school focused on the development and application of digital twins in healthcare, covering topics from segmentation to model analysis."
 excerpt: "Join leading experts for a comprehensive training program on cardiac digital twins, designed for MSc/PhD students and Early Career Researchers. Free to attend with limited places available."
 links:
-  - text: "Apply Now"
-    url: "https://imperial.eu.qualtrics.com/jfe/form/SV_d5VkbSPsdGM4gGW"
   - text: "Sign Up for Updates"
     url: "https://forms.office.com/e/sSR6HVPfy4"
 draft: false
@@ -23,17 +21,15 @@ Open to MSc or PhD students and Early Career Researchers with an interest in car
 
 CaDiTSS is delivered as part of [Networks of Cardiovascular Digital Twins](https://cvd-net.com) (CVD Net). Read more about CVDNet [here](../../pages/about/project-overview.astro)
 
-**Attendance**: In-person only. The course is free to attend, but places are extremely limited and offered via a simplified application process.
+**Attendance**: In-person only. Applications are now closed.
 
-## How to apply
+## Application Process (now closed)
 
-Applications to attend the CaDiTSS can be submitted via the link below. **Deadline for submission is August 10th 2025**.
+Applications have closed on August 10th 2025.
 
 Submissions will help us select a diverse group that will be able to make the most of the event and use their learning to advance their research in a range of topics and applications of cardiac digital twin technology. We are looking for candidates who have a real interest in cardiac digital twins and can demonstrate how the summer school can make a difference to their career journey, whether they are an MSc, PhD student, or early-career researcher (see below).
 
 Applications will be reviewed by the CVDNet team and expectations about experience will be assessed within the applicant's training or career stage. The key criterion for selection is not level of experience but interest in cardiac digital twins and the anticipated benefits the summer school could bring to the participants' professional and research development.
-
-[Apply to attend](https://imperial.eu.qualtrics.com/jfe/form/SV_d5VkbSPsdGM4gGW)
 
 ## Programme
 
@@ -108,9 +104,9 @@ Led by a team from the Cardiac Electro-Mechanics Research group (CEMRG), this se
 
 ### Model Analysis
 
-[**Caroline Roney, Lecturer in Computational Medicine**](https://www.cpm.qmul.ac.uk/people/croney)**, Queen Mary University of London**
+[**Caroline Roney, Reader in Computational Medicine**](https://www.sems.qmul.ac.uk/staff/c.roney/)**, Queen Mary University of London**
 
-_More information to be confirmed soon_
+This session will focus on generating atrial models from imaging or electrical data. We will demonstrate how to produce atrial meshes for electrophysiological simulations, incorporating atrial regions, fibres, and transmural variations across the atrial wall, using atrialmtk. We will then show how to run simulations in these meshes for different atrial rhythms. Finally, we will show some example post-processing approaches for how to analyse atrial electrophysiology simulation data. The session will be mostly practical.
 
 ### Clinical Application
 
