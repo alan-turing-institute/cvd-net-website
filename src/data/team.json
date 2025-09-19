@@ -269,5 +269,15 @@
 		"profileURL": "",
 		"photoUrl": "",
 		"section": "Research Team"
-	}
+	},
+	{
+		"name": "Levan Bokeria",
+		"affiliation": "Alan Turing Institute",
+		"position": "Research Data Scientist",
+		"role": "Research Data Scientist",
+		"work_package": 3,
+		"profileURL": "https://www.linkedin.com/in/levan-bokeria1991/",
+		"photoUrl": "/images/team/levan-bokeria.jpg",
+		"section": "Research Team"
+	}		
 ]
