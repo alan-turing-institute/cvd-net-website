@@ -46,7 +46,7 @@ Participants must bring their own laptops to all sessions to be able to particip
 
 ### Segmentation and Model Fitting
 
-[**Alistair Young, Professor of Cardiovascular Data Analytics and Artificial Intelligence**](https://www.kcl.ac.uk/people/alistair-young)**, King’s College London**
+**[Alistair Young, Professor of Cardiovascular Data Analytics and Artificial Intelligence](https://www.kcl.ac.uk/people/alistair-young), King’s College London**
 
 This session will provide hands-on experience with a pipeline for constructing cardiac biventricular surface meshes from cardiovascular magnetic resonance (CMR) DICOM images. The code used will be available for public download, alongside a test dataset, before the session. Participants will be guided through the following steps:
 
@@ -58,13 +58,13 @@ Participants are expected to bring their own laptop to run the pipeline. We will
 
 ### Shape
 
-[**Pablo Lamata, Professor and Director of the Centre for Doctoral Training in Digital Twins for Healthcare**](https://www.kcl.ac.uk/people/pablo-lamata-de-la-orden)**, King’s College London**
+**[Pablo Lamata, Professor and Director of the Centre for Doctoral Training in Digital Twins for Healthcare](https://www.kcl.ac.uk/people/pablo-lamata-de-la-orden), King’s College London**
 
 This session will teach you how to analyse cardiac morphology, how to build statistical shape models, and use principal component analysis (PCA) to learn an unsupervised compact representation from data. PCA offers the ability to describe each anatomy by a set of coefficients, potential biomarkers to then study their link with any other relevant aspect of your research, such as function or clinical outcomes.
 
 ### Motion
 
-[**Abdul Qayyum**](https://www.linkedin.com/in/abdul-qayyum-phd-a5876ab1/)**, National Heart and Lung Institute, Imperial College London**
+**[Abdul Qayyum](https://www.linkedin.com/in/abdul-qayyum-phd-a5876ab1/), National Heart and Lung Institute, Imperial College London**
 
 This session provides a comprehensive introduction to key image analysis techniques in cardiac imaging, focusing on segmentation, registration, and motion tracking. Participants will learn how to process and analyse cardiac MRI and CT data to extract clinically relevant information.
 
@@ -72,13 +72,13 @@ Through hands-on coding exercises and real-world datasets, attendees will explor
 
 ### Gaussian Process Emulators (GPE)
 
-[**Richard Wilkinson, Professor of Statistics**](https://www.nottingham.ac.uk/science/research/take-10/richard-wilkinson.aspx)**, University of Nottingham**
+**[Richard Wilkinson, Professor of Statistics](https://www.nottingham.ac.uk/science/research/take-10/richard-wilkinson.aspx), University of Nottingham**
 
 Complex computer models are often too computationally intensive for us to use them in downstream statistical analyses (e.g. in sensitivity analysis or parameter estimation). Instead, we can build a cheap statistical approximation to the model called an “emulator” or “surrogate model”. In this session, we will focus on Gaussian Process (GP) emulators. We will cover some of the basic theory behind GPs and how to use GPyTorch’s Python implementation of Gaussian processes to build emulators of cardiac models. The session will be a mix of lecture and hands-on workshop where participants will build their own emulators.
 
 ### Understanding the Heart's Engine: Cardiac Contraction Models & Hands-on Implementation
 
-[**Steven Niederer, Professor and Chair in Biomedical Engineering**](https://www.imperial.ac.uk/news/245775/professor-steven-niederer-joins-nhli/)**, Imperial College London and The Alan Turing Institute**
+**[Steven Niederer, Professor and Chair in Biomedical Engineering](https://www.imperial.ac.uk/news/245775/professor-steven-niederer-joins-nhli/), Imperial College London and The Alan Turing Institute**
 
 In this session we will review cardiac mechanics and the evolution of mathematical models that simulate the heart's contractile function. This session will explain the iterative development of these models, from foundational concepts in muscle physiology to patient-specific simulations. We will explore the physiology of cardiac muscle contraction, including the roles of key proteins, calcium signalling, and the mechanisms that regulate force generation at the sarcomere level.
 
@@ -86,35 +86,35 @@ The session includes a practical workshop where participants will have the oppor
 
 ### Cellular Electrophysiology
 
-[**Gary Mirams, Professor of Mathematical Physiology**](https://www.maths.nottingham.ac.uk/plp/pmzgm/)**, University of Nottingham**
+**[Gary Mirams, Professor of Mathematical Physiology](https://www.maths.nottingham.ac.uk/plp/pmzgm/), University of Nottingham**
 
 This session will cover the basics of ion channel modelling and cellular electrophysiology modelling. We will be looking at how differential equation models for ion channels and cellular voltage and concentrations are derived, and how their parameter values can be fitted to data from real experiments.
 
 ### Electrophysiology (EP) Simulator
 
-[**Martin Bishop, Reader in Computational Cardiac Electrophysiology**](https://www.kcl.ac.uk/people/martin-bishop)**, King’s College London**
+**[Martin Bishop, Reader in Computational Cardiac Electrophysiology](https://www.kcl.ac.uk/people/martin-bishop), King’s College London**
 
 This session will summarise the entirety of cardiac electrophysiology, including the underlying physiology and biophysics to its representation by physics-based equations and their simulation of clinically-relevant phenomena. We will introduce and discuss everything from single- (and sub-) cellular electrophysiology, through to the formation of the clinical ECG. In the practical session, we will simulate propagation of an electrical stimulus down a 1D cardiac fibre (the monodomain equation). We will use this setup to perform in-silico experiments that help understand the effects of restitution of single cell ionic properties (action potential duration) as well as tissue level properties (conduction velocity).
 
-[**Fernando Campos, Research Associate**](https://www.kcl.ac.uk/people/dr-fernando-campos)**, King's College London**
+**[Fernando Campos, Research Associate**](https://www.kcl.ac.uk/people/dr-fernando-campos), King's College London**
 
 Dr Fernando Campos is a Research Associate at the School of Biomedical Engineering and Imaging Sciences. He conducts research on the field of computational cardiology using the Digital Twin technology to understand arrhythmia mechanisms in heart diseases and improve clinical practice.
 
 ### Mechanics Model
 
-[**Cardiac Electro-Mechanics Research group (CEMRG)**](https://www.cemrg.com/)**, Imperial College London and King’s College London**
+**[Cardiac Electro-Mechanics Research group (CEMRG)](https://www.cemrg.com/), Imperial College London and King’s College London**
 
 Led by a team from the Cardiac Electro-Mechanics Research group (CEMRG), this session will explore the modelling of cardiac mechanics, combining theoretical concepts with practical examples. We will introduce different boundary conditions, including displacement, pressure, and spring-based approaches, and apply these in guided exercises. The session will end with a four-chamber free contraction model, demonstrating how the methods scale from simple example geometries to whole-heart simulations. Participants will also gain experience using ParaView to visualise and analyse biomechanics simulation results.
 
 ### Model Analysis
 
-[**Caroline Roney, Reader in Computational Medicine**](https://www.sems.qmul.ac.uk/staff/c.roney/)**, Queen Mary University of London**
+**[Caroline Roney, Reader in Computational Medicine](https://www.sems.qmul.ac.uk/staff/c.roney/), Queen Mary University of London**
 
 This session will focus on generating atrial models from imaging or electrical data. We will demonstrate how to produce atrial meshes for electrophysiological simulations, incorporating atrial regions, fibres, and transmural variations across the atrial wall, using atrialmtk. We will then show how to run simulations in these meshes for different atrial rhythms. Finally, we will show some example post-processing approaches for how to analyse atrial electrophysiology simulation data. The session will be mostly practical.
 
 ### Clinical Application
 
-[**Steven Williams, Professor of Neuroimaging**](https://www.kcl.ac.uk/people/steve-williams-ioppn)**, King’s College London**
+**[Steven Williams, Professor of Neuroimaging](https://www.kcl.ac.uk/people/steve-williams-ioppn), King’s College London**
 
 _More information to be confirmed soon_
 
