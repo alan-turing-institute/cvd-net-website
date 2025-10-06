@@ -1,5 +1,9 @@
 ---
 import BaseLayout from "../../layout/BaseLayout.astro";
+import { joinPath } from "../../utils/navigation";
+import modularCircImage from "../../assets/images/modularcirc.jpeg";
+import dataSafeHavenImage from "../../assets/images/data-safe-haven.jpg";
+import teaPlatformImage from "../../assets/images/tea-platform.png";
 
 // Resource data - dynamically gathering information about our resources
 const resources = [
@@ -8,7 +12,7 @@ const resources = [
 		slug: "modularcirc",
 		description:
 			"A modular software toolkit for creating simulations of the heart and circulatory system, providing a simplified yet powerful approach to cardiovascular modeling.",
-		image: "/images/modularcirc.jpeg",
+		image: modularCircImage,
 		badges: [
 			{
 				text: "GitHub",
@@ -27,7 +31,7 @@ const resources = [
 		slug: "data-safe-haven",
 		description:
 			"A secure research environment with technical and process controls for safe data access, allowing researchers to work securely with sensitive patient data.",
-		image: "/images/data-safe-haven.jpg",
+		image: dataSafeHavenImage,
 		badges: [
 			{
 				text: "GitHub",
@@ -46,7 +50,7 @@ const resources = [
 		slug: "tea-platform",
 		description:
 			"The Trustworthy and Ethical Assurance platform helps researchers demonstrate that data-driven technologies uphold important ethical principles throughout their lifecycle.",
-		image: "/images/tea-platform.png",
+		image: teaPlatformImage,
 		badges: [
 			{
 				text: "GitHub",
@@ -88,7 +92,7 @@ const seo = {
 					<div class="group flex h-full flex-col overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm transition-all hover:shadow-md">
 						<div class="relative aspect-video overflow-hidden">
 							<img
-								src={`${import.meta.env.BASE_URL}${resource.image}`}
+								src={resource.image.src}
 								alt={`${resource.title} illustration`}
 								class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
 							/>
@@ -114,7 +118,7 @@ const seo = {
 							</p>
 
 							<a
-								href={`${import.meta.env.BASE_URL}/resources/${resource.slug}`}
+								href={joinPath(import.meta.env.BASE_URL, `/resources/${resource.slug}`)}
 								class="inline-flex items-center justify-center rounded-md bg-teal-600 px-4 py-2 text-sm font-medium text-white shadow transition-colors hover:bg-teal-700 focus:ring-2 focus:ring-teal-500/40 focus:outline-none"
 							>
 								Learn more
