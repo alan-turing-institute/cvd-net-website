@@ -1,0 +1,83 @@
+name: News or Event Update
+description: Request a news item or event to be added to the website
+title: "[Content]: "
+labels: ["content"]
+body:
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      description: Is this an event or a news item?
+      options:
+        - Event
+        - News
+    validations:
+      required: true
+
+  - type: input
+    id: title
+    attributes:
+      label: Title
+      description: The title of the event or news item.
+      placeholder: e.g. "Fickle Heart Workshop"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A short summary used in listings and previews (1-2 sentences).
+      placeholder: A brief description of the event or news item...
+    validations:
+      required: true
+
+  - type: input
+    id: dates
+    attributes:
+      label: Date(s)
+      description: >
+        For events: the date or date range (e.g. "8-9 September 2025").
+        For news: the publish date (e.g. "3 March 2026").
+      placeholder: e.g. "8-9 September 2025"
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Location
+      description: Where the event takes place (optional, events only).
+      placeholder: e.g. "The Alan Turing Institute, London"
+    validations:
+      required: false
+
+  - type: textarea
+    id: links
+    attributes:
+      label: Links
+      description: >
+        Related links, one per line in the format: Link text | URL
+      placeholder: |
+        Conference Page | https://example.com
+        Registration | https://example.com/register
+    validations:
+      required: false
+
+  - type: textarea
+    id: content
+    attributes:
+      label: Content
+      description: The full body text for the page. Markdown is supported.
+      placeholder: Write the main content here...
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Any other information, images, or attachments.
+      placeholder: Add any other context, images, or files here...
+    validations:
+      required: false
