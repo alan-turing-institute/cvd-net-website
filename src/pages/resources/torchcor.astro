@@ -1,0 +1,116 @@
+---
+import BaseLayout from "../../layout/BaseLayout.astro";
+import torchcorImage from "../../assets/images/torchcor.png";
+
+const seo = {
+	title: "TorchCor | CVD-Net Resources",
+	description:
+		"TorchCor is a Python library for GPU-accelerated simulation of cardiac electrophysiology, built on PyTorch.",
+};
+---
+
+<BaseLayout seo={seo}>
+	<div class="container mx-auto max-w-4xl px-4 py-12">
+		<div class="mb-12 text-center">
+			<h1 class="mb-4 text-4xl font-bold lg:text-5xl">TorchCor</h1>
+			<div class="mb-6 flex flex-wrap justify-center gap-2">
+				<a
+					href="https://github.com/sagebei/torchcor"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<img
+						src="https://img.shields.io/badge/GitHub-TorchCor-blue?logo=github"
+						alt="GitHub Repository"
+					/>
+				</a>
+				<a
+					href="https://pypi.org/project/torchcor"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<img
+						src="https://img.shields.io/pypi/v/torchcor"
+						alt="PyPI version"
+					/>
+				</a>
+				<a
+					href="https://pypi.org/project/torchcor"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<img
+						src="https://img.shields.io/pypi/pyversions/torchcor"
+						alt="PyPI platforms"
+					/>
+				</a>
+				<a
+					href="https://arxiv.org/html/2510.12011v1"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<img
+						src="https://img.shields.io/badge/arXiv-2510.12011-b31b1b?logo=arxiv"
+						alt="arXiv paper"
+					/>
+				</a>
+			</div>
+		</div>
+		<div class="mb-10">
+			<img
+				src={torchcorImage.src}
+				alt="TorchCor hero image"
+				class="h-auto w-full rounded-lg shadow-md"
+			/>
+		</div>
+
+		<div class="mx-auto">
+			<p class="mb-4 text-lg leading-relaxed text-slate-600">
+				TorchCor is a Python library for simulating how electrical signals
+				travel through the heart. These signals coordinate each heartbeat,
+				and when they go wrong, dangerous rhythm disorders called
+				arrhythmias can result. Simulating this process helps researchers
+				and clinicians understand what causes these disorders and how to
+				treat them — but traditionally, it has required access to expensive
+				supercomputing clusters with many processors.
+			</p>
+
+			<p class="mb-4 text-lg leading-relaxed text-slate-600">
+				TorchCor removes this barrier by running simulations on GPUs
+				(graphics processing units), the same type of hardware used in
+				gaming and artificial intelligence. Built on top of PyTorch, a
+				widely used machine learning framework, it can perform large-scale
+				heart simulations on a single desktop workstation significantly
+				faster than conventional CPU-based tools. This also makes it
+				straightforward to combine traditional physics-based models with
+				newer AI-driven approaches within a single environment. TorchCor
+				has been rigorously verified against established solvers and
+				benchmark problems and is freely available for academic and
+				commercial use.
+			</p>
+
+			<h2 class="mb-4 text-2xl font-semibold text-slate-700">
+				Getting Started
+			</h2>
+			<p class="mb-4 text-lg leading-relaxed text-slate-600">
+				TorchCor can be installed via pip:
+			</p>
+			<pre
+				class="mb-6 rounded-md bg-slate-100 p-4 text-sm text-slate-800"><code>python -m pip install torchcor</code></pre>
+
+			<p class="mb-4 text-lg leading-relaxed text-slate-600">
+				For more information, visit the
+				<a
+					href="https://github.com/sagebei/torchcor"
+					target="_blank"
+					rel="noopener noreferrer">TorchCor GitHub repository</a
+				> or read the
+				<a
+					href="https://arxiv.org/html/2510.12011v1"
+					target="_blank"
+					rel="noopener noreferrer">accompanying paper on arXiv</a
+				>.
+			</p>
+		</div>
+	</div>
+</BaseLayout>

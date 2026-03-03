@@ -4,9 +4,29 @@ import { joinPath } from "../../utils/navigation";
 import modularCircImage from "../../assets/images/modularcirc.jpeg";
 import dataSafeHavenImage from "../../assets/images/data-safe-haven.jpg";
 import teaPlatformImage from "../../assets/images/tea-platform.png";
+import torchcorImage from "../../assets/images/torchcor.png";
 
 // Resource data - dynamically gathering information about our resources
 const resources = [
+	{
+		title: "TorchCor",
+		slug: "torchcor",
+		description:
+			"A Python library for GPU-accelerated simulation of cardiac electrophysiology, built on PyTorch for fast, large-scale heart simulations on a single desktop workstation.",
+		image: torchcorImage,
+		badges: [
+			{
+				text: "GitHub",
+				url: "https://github.com/sagebei/torchcor",
+				img: "https://img.shields.io/badge/GitHub-TorchCor-blue?logo=github",
+			},
+			{
+				text: "PyPI",
+				url: "https://pypi.org/project/torchcor",
+				img: "https://img.shields.io/pypi/v/torchcor",
+			},
+		],
+	},
 	{
 		title: "ModularCirc",
 		slug: "modularcirc",
@@ -69,7 +89,7 @@ const resources = [
 const seo = {
 	title: "Resources | CVD-Net",
 	description:
-		"Resources developed by the CVD-Net project, including ModularCirc, Data Safe Haven, and the TEA Platform.",
+		"Resources developed by the CVD-Net project, including TorchCor, ModularCirc, Data Safe Haven, and the TEA Platform.",
 };
 ---
 

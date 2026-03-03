@@ -18,6 +18,12 @@ export const resourcesMenu: ResourceMenuSection[] = [
     sectionTitle: "Core Resources", // First section
     items: [
       {
+        title: "TorchCor",
+        description: "GPU-accelerated cardiac electrophysiology simulation.",
+        href: joinPath(import.meta.env.BASE_URL, "/resources/torchcor"),
+        icon: "mdi:heart-pulse",
+      },
+      {
         title: "ModularCirc",
         description: "Information about the ModularCirc resource.",
         href: joinPath(import.meta.env.BASE_URL, "/resources/modularcirc"),

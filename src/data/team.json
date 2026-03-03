@@ -147,7 +147,7 @@
 		"WP_lead": false,
 		"profileURL": "https://www.sheffield.ac.uk/cs/people/research-staff/harry-saxton",
 		"photoUrl": "/images/team/harry-saxton.jpg",
-		"section": "Research Team"
+		"section": "Past Team Members"
 	},
 	{
 		"name": "André Piza",
@@ -158,7 +158,7 @@
 		"WP_lead": false,
 		"profileURL": "https://www.turing.ac.uk/people/business-team/andre-piza",
 		"photoUrl": "/images/team/andre-piza.jpg",
-		"section": "Research Team"
+		"section": "Past Team Members"
 	},
 	{
 		"name": "Fay Frost",
@@ -168,7 +168,7 @@
 		"work_package": 3,
 		"profileURL": "https://www.nottingham.ac.uk/mathematics/people/fay.frost",
 		"photoUrl": "/images/team/fay-frost.jpg",
-		"section": "Research Team"
+		"section": "Past Team Members"
 	},
 	{
 		"name": "Mojiba Khanum",
@@ -278,6 +278,42 @@
 		"work_package": 3,
 		"profileURL": "https://www.linkedin.com/in/levan-bokeria1991/",
 		"photoUrl": "/images/team/levan-bokeria.jpg",
+		"section": "Past Team Members"
+	},
+	{
+		"name": "Ayodotun Ibrahim",
+		"affiliation": "University of Sheffield",
+		"position": "PhD Student in Mechanical Engineering",
+		"role": "PhD Student",
+		"profileURL": "https://www.linkedin.com/in/ayo-ibrahim",
+		"photoUrl": "/images/team/ayodotun-ibrahim.jpg",
 		"section": "Research Team"
-	}		
+	},
+	{
+		"name": "Edward Ashton",
+		"affiliation": "Imperial College London",
+		"position": "Postgraduate Research Fellow",
+		"role": "Postgraduate Researcher",
+		"profileURL": "https://www.linkedin.com/in/edward-ashton-528112262/",
+		"photoUrl": "/images/team/edward-ashton.jpg",
+		"section": "Research Team"
+	},
+	{
+		"name": "Xiaoxue Shen",
+		"affiliation": "",
+		"position": "Research Associate",
+		"role": "Postdoctoral Researcher",
+		"profileURL": "https://www.linkedin.com/in/xiaoxue-shen-8b15781b3/",
+		"photoUrl": "/images/team/xiaoxue-shen.png",
+		"section": "Research Team"
+	},
+	{
+		"name": "Ze Ming Goh",
+		"affiliation": "",
+		"position": "Academic Clinical Fellow in Cardiology",
+		"role": "Research Fellow",
+		"profileURL": "https://www.researchgate.net/profile/Ze-Ming-Goh",
+		"photoUrl": "/images/team/ze-ming-go.jpg",
+		"section": "Research Team"
+	}
 ]
