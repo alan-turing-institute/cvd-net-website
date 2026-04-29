@@ -114,6 +114,75 @@ const seo = {
     <div class="prose prose-lg max-w-none markdown-content">
       <Content />
     </div>
+
+    <!-- Thank-you banner and photo gallery (shown for past events with photos) -->
+    {event.data.showGallery && event.data.galleryPhotos && event.data.galleryPhotos.length > 0 && (
+      <div class="mt-16">
+        <!-- Thank-you banner -->
+        <div class="mb-10 rounded-2xl bg-teal-50 border border-teal-200 px-8 py-7 text-center">
+          <p class="text-2xl mb-1">&#127881;</p>
+          <h2 class="text-xl font-semibold text-teal-800 mb-2">Thank you for joining us!</h2>
+          <p class="text-gray-600 max-w-xl mx-auto">
+            It was wonderful to bring the community together in Sheffield for the Fickle Heart 2025 conference.
+            A few highlights from the two days are below — scroll down to take a look.
+          </p>
+        </div>
+
+        <!-- Photo gallery -->
+        <h3 class="text-lg font-semibold text-gray-700 mb-5" id="conference-photos">Conference Photos</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {event.data.galleryPhotos.map((photo, index) => (
+            <a
+              href={photo.src}
+              data-hs-overlay={`#photo-lightbox-${index}`}
+              class="group block overflow-hidden rounded-xl bg-gray-100 aspect-[4/3] cursor-zoom-in"
+              aria-label={`View photo: ${photo.alt}`}
+            >
+              <img
+                src={photo.src}
+                alt={photo.alt}
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+              />
+            </a>
+          ))}
+        </div>
+
+        <!-- Lightbox modals -->
+        {event.data.galleryPhotos.map((photo, index) => (
+          <div
+            id={`photo-lightbox-${index}`}
+            class="hs-overlay hidden fixed inset-0 z-[80] overflow-x-hidden overflow-y-auto"
+            role="dialog"
+            aria-modal="true"
+            aria-label={photo.alt}
+          >
+            <div class="hs-overlay-open:opacity-100 hs-overlay-open:duration-500 opacity-0 transition-all flex min-h-full items-center justify-center p-4">
+              <div class="relative max-w-5xl w-full bg-black rounded-2xl overflow-hidden shadow-2xl">
+                <button
+                  type="button"
+                  class="absolute top-3 right-3 z-10 inline-flex items-center justify-center w-9 h-9 rounded-full bg-black/60 text-white hover:bg-black/80 transition-colors"
+                  data-hs-overlay={`#photo-lightbox-${index}`}
+                  aria-label="Close"
+                >
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+                <img
+                  src={photo.src}
+                  alt={photo.alt}
+                  class="w-full h-auto max-h-[85vh] object-contain"
+                />
+                {photo.alt && (
+                  <p class="px-6 py-3 text-sm text-gray-300 text-center bg-black/80">{photo.alt}</p>
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    )}
   </div>
 </BaseLayout>
 

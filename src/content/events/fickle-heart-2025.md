@@ -9,11 +9,23 @@ excerpt: "A workshop series focused on uncertainty quantification in cardiac and
 links:
   - text: "Conference Page"
     url: "https://sites.google.com/sheffield.ac.uk/fickleheart2025/home?pli=1"
-  - text: "Registration"
-    url: "https://onlineshop.shef.ac.uk/conferences-and-events/faculty-of-engineering/computer-science/fickle-heart-2025"
   - text: "Past Meetings"
     url: "https://sites.google.com/sheffield.ac.uk/fickleheart2025/home/past-meetings?authuser=0"
 draft: false
+showGallery: true
+galleryPhotos:
+  - src: "/images/events/fickle-heart-2025/Fickle heart 2025.png"
+    alt: "Fickle Heart 2025 conference group"
+  - src: "/images/events/fickle-heart-2025/20250908_155549.jpg"
+    alt: "Participants at the Fickle Heart 2025 workshop"
+  - src: "/images/events/fickle-heart-2025/20250908_164634.jpg"
+    alt: "Session at the Fickle Heart 2025 workshop"
+  - src: "/images/events/fickle-heart-2025/b144cd06-b23c-4392-89f4-b19ea99779f1.jpg"
+    alt: "Fickle Heart 2025 conference moment"
+  - src: "/images/events/fickle-heart-2025/f3b96bd1-3c7f-4b54-b22f-c5ce8462b951.JPG"
+    alt: "Fickle Heart 2025 attendees"
+  - src: "/images/events/fickle-heart-2025/processed-94742C3E-C5B0-4098-BA50-C964A1B9935C.jpeg"
+    alt: "Fickle Heart 2025 workshop activity"
 ---
 
 As cardiac models have become more widespread, there has been increasing interest in building personalised models that can be used for both hypothesis testing and forecasting. Taking account of uncertainties in both data and models is a key aspect of linking computational models to real hearts and safety-critical decision making.
@@ -29,10 +41,6 @@ The Fickle Heart workshop series is partly funded by the CVD-Net project and aim
 - Data and model uncertainties
 - Safety-critical decision making in cardiovascular applications
 - Best practices in cardiac simulation
-
-## Registration
-
-Registration is now open for the 2025 workshop. Please visit the [registration page](https://onlineshop.shef.ac.uk/conferences-and-events/faculty-of-engineering/computer-science/fickle-heart-2025) for more information on fees and deadlines.
 
 ## Previous Events
 

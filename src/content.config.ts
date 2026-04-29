@@ -34,9 +34,16 @@ const events = defineCollection({
       url: z.string().url()
     })).optional(),
     
-    // News-specific fields  
+    // News-specific fields
     publishDate: z.date().optional(),
     author: z.string().optional(),
+
+    // Gallery fields (optional, for past events)
+    showGallery: z.boolean().optional(),
+    galleryPhotos: z.array(z.object({
+      src: z.string(),
+      alt: z.string(),
+    })).optional(),
   }).refine((data) => {
     if (data.type === 'event') {
       return data.date !== undefined && data.dateDisplay !== undefined;
