@@ -41,8 +41,8 @@ Participants must bring their own laptops to all sessions to be able to particip
 
 |                 | Monday 05/10                                                                         | Tuesday 06/10                                                                                                                    | Wednesday 07/10                                                                                                    | Thursday 08/10                                                                                                                                                  | Friday 09/10                                                                  |
 | --------------- | ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| AM 9:30 \- 12:30   | **Image Analysis & Model Fitting** [Wenjia Bai](https://profiles.imperial.ac.uk/w.bai), [Qiang Ma](https://scholar.google.com/citations?user=BNKFwqoAAAAJ) | **Motion** [Abdul Qayyum](https://www.linkedin.com/in/abdul-qayyum-phd-a5876ab1/)                                                | **Clinical Application** [Steven Williams](https://www.research.ed.ac.uk/en/persons/steven-williams/) | **Electrophysiology Simulator** [Martin Bishop](https://www.kcl.ac.uk/people/martin-bishop), [Fernando Campos](https://www.kcl.ac.uk/people/dr-fernando-campos) | **Model Analysis** [Caroline Roney](https://www.cpm.qmul.ac.uk/people/croney) |
-| PM 1:30 \- 4:30 | **Shape** [Pablo Lamata](https://www.kcl.ac.uk/people/pablo-lamata-de-la-orden)      | **Gaussian Process Emulators** [Richard Wilkinson](https://www.nottingham.ac.uk/science/research/take-10/richard-wilkinson.aspx) | **Cellular Electrophysiology** [Gary Mirams](https://www.maths.nottingham.ac.uk/plp/pmzgm/)                        | **Cell Mechanics** [Steven Niederer](https://www.imperial.ac.uk/news/245775/professor-steven-niederer-joins-nhli/)                                                           | **Mechanics Model** [Team CEMRG](https://www.cemrg.com/)                      |
+| AM 9:30 \- 12:30   | **Image Analysis & Model Fitting** [Wenjia Bai](https://profiles.imperial.ac.uk/w.bai), [Qiang Ma](https://scholar.google.com/citations?user=BNKFwqoAAAAJ) | **Shape** [Pablo Lamata](https://www.kcl.ac.uk/people/pablo-lamata-de-la-orden)                                                | **Clinical Application** [Steven Williams](https://www.research.ed.ac.uk/en/persons/steven-williams/) | **Electrophysiology Simulator** [Martin Bishop](https://www.kcl.ac.uk/people/martin-bishop), [Fernando Campos](https://www.kcl.ac.uk/people/dr-fernando-campos) | **Model Analysis** [Caroline Roney](https://www.cpm.qmul.ac.uk/people/croney) |
+| PM 1:30 \- 4:30 | **Motion** [Abdul Qayyum](https://www.linkedin.com/in/abdul-qayyum-phd-a5876ab1/)      | **Gaussian Process Emulators** [Richard Wilkinson](https://www.nottingham.ac.uk/science/research/take-10/richard-wilkinson.aspx) | **Cellular Electrophysiology** [Gary Mirams](https://www.maths.nottingham.ac.uk/plp/pmzgm/)                        | **Cell Mechanics** [Steven Niederer](https://www.imperial.ac.uk/news/245775/professor-steven-niederer-joins-nhli/)                                                           | **Mechanics Model** [Team CEMRG](https://www.cemrg.com/)                      |
 
 ### Image Analysis and Model Fitting
 
@@ -52,12 +52,6 @@ Participants must bring their own laptops to all sessions to be able to particip
 
 This session will provide an overview of recent developments in cardiac image analysis and anatomical shape modelling, with their applications to population data analysis, such as for the UK Biobank. After the lecture, a practical session will provide hands-on experiences in cardiac image analysis and shape modelling, using a public dataset as an example. Participants are expected to bring their own laptops for the practical session.
 
-### Shape
-
-**[Pablo Lamata, Professor and Director of the Centre for Doctoral Training in Digital Twins for Healthcare](https://www.kcl.ac.uk/people/pablo-lamata-de-la-orden), King's College London**
-
-This session will teach you how to analyse cardiac morphology, how to build statistical shape models, and use principal component analysis (PCA) to learn an unsupervised compact representation from data. PCA offers the ability to describe each anatomy by a set of coefficients, potential biomarkers to then study their link with any other relevant aspect of your research, such as function or clinical outcomes.
-
 ### Motion
 
 **[Abdul Qayyum](https://www.linkedin.com/in/abdul-qayyum-phd-a5876ab1/), National Heart and Lung Institute, Imperial College London**
@@ -65,6 +59,12 @@ This session will teach you how to analyse cardiac morphology, how to build stat
 This session provides a comprehensive introduction to key image analysis techniques in cardiac imaging, focusing on segmentation, registration, and motion tracking. Participants will learn how to process and analyse cardiac MRI and CT data to extract clinically relevant information.
 
 Through hands-on coding exercises and real-world datasets, attendees will explore methods to segment cardiac structures, register temporal image sequences, and track heart motion across the cardiac sequences. This session is ideal for those interested in applying image analysis to cardiovascular research or clinical applications.
+
+### Shape
+
+**[Pablo Lamata, Professor and Director of the Centre for Doctoral Training in Digital Twins for Healthcare](https://www.kcl.ac.uk/people/pablo-lamata-de-la-orden), King's College London**
+
+This session will teach you how to analyse cardiac morphology, how to build statistical shape models, and use principal component analysis (PCA) to learn an unsupervised compact representation from data. PCA offers the ability to describe each anatomy by a set of coefficients, potential biomarkers to then study their link with any other relevant aspect of your research, such as function or clinical outcomes.
 
 ### Gaussian Process Emulators (GPE)
 
