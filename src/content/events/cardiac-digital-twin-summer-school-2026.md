@@ -41,14 +41,14 @@ Participants must bring their own laptops to all sessions to be able to particip
 
 |                 | Monday 05/10                                                                         | Tuesday 06/10                                                                                                                    | Wednesday 07/10                                                                                                    | Thursday 08/10                                                                                                                                                  | Friday 09/10                                                                  |
 | --------------- | ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| AM 9 \- 12:30   | **Image Analysis & Model Fitting** [Wenjia Bai](https://profiles.imperial.ac.uk/w.bai) | **Motion** [Abdul Qayyum](https://www.linkedin.com/in/abdul-qayyum-phd-a5876ab1/)                                                | **Cell Mechanics** [Steven Niederer](https://www.imperial.ac.uk/news/245775/professor-steven-niederer-joins-nhli/) | **Electrophysiology Simulator** [Martin Bishop](https://www.kcl.ac.uk/people/martin-bishop), [Fernando Campos](https://www.kcl.ac.uk/people/dr-fernando-campos) | **Model Analysis** [Caroline Roney](https://www.cpm.qmul.ac.uk/people/croney) |
-| PM 1:30 \- 5:00 | **Shape** [Pablo Lamata](https://www.kcl.ac.uk/people/pablo-lamata-de-la-orden)      | **Gaussian Process Emulators** [Richard Wilkinson](https://www.nottingham.ac.uk/science/research/take-10/richard-wilkinson.aspx) | **Cellular Electrophysiology** [Gary Mirams](https://www.maths.nottingham.ac.uk/plp/pmzgm/)                        | **Clinical Application** [Steven Williams](https://www.research.ed.ac.uk/en/persons/steven-williams/)                                                           | **Mechanics Model** [Team CEMRG](https://www.cemrg.com/)                      |
+| AM 9 \- 12:30   | **Image Analysis & Model Fitting** [Wenjia Bai](https://profiles.imperial.ac.uk/w.bai), [Qiang Ma](https://scholar.google.com/citations?user=BNKFwqoAAAAJ) | **Motion** [Abdul Qayyum](https://www.linkedin.com/in/abdul-qayyum-phd-a5876ab1/)                                                | **Clinical Application** [Steven Williams](https://www.research.ed.ac.uk/en/persons/steven-williams/) | **Electrophysiology Simulator** [Martin Bishop](https://www.kcl.ac.uk/people/martin-bishop), [Fernando Campos](https://www.kcl.ac.uk/people/dr-fernando-campos) | **Model Analysis** [Caroline Roney](https://www.cpm.qmul.ac.uk/people/croney) |
+| PM 1:30 \- 5:00 | **Shape** [Pablo Lamata](https://www.kcl.ac.uk/people/pablo-lamata-de-la-orden)      | **Gaussian Process Emulators** [Richard Wilkinson](https://www.nottingham.ac.uk/science/research/take-10/richard-wilkinson.aspx) | **Cellular Electrophysiology** [Gary Mirams](https://www.maths.nottingham.ac.uk/plp/pmzgm/)                        | **Cell Mechanics** [Steven Niederer](https://www.imperial.ac.uk/news/245775/professor-steven-niederer-joins-nhli/)                                                           | **Mechanics Model** [Team CEMRG](https://www.cemrg.com/)                      |
 
 ### Image Analysis and Model Fitting
 
 **[Wenjia Bai, Reader in Artificial Intelligence in Medicine](https://profiles.imperial.ac.uk/w.bai), Imperial College London**
 
-**Qiang Ma, Research Associate, Imperial College London**
+**[Qiang Ma, Research Associate](https://scholar.google.com/citations?user=BNKFwqoAAAAJ), Imperial College London**
 
 This session will provide an overview of recent developments in cardiac image analysis and anatomical shape modelling, with their applications to population data analysis, such as for the UK Biobank. After the lecture, a practical session will provide hands-on experiences in cardiac image analysis and shape modelling, using a public dataset as an example. Participants are expected to bring their own laptops for the practical session.
 
@@ -72,13 +72,17 @@ Through hands-on coding exercises and real-world datasets, attendees will explor
 
 Complex computer models are often too computationally intensive for us to use them in downstream statistical analyses (e.g. in sensitivity analysis or parameter estimation). Instead, we can build a cheap statistical approximation to the model called an "emulator" or "surrogate model". In this session, we will focus on Gaussian Process (GP) emulators. We will cover some of the basic theory behind GPs and how to use GPyTorch's Python implementation of Gaussian processes to build emulators of cardiac models. The session will be a mix of lecture and hands-on workshop where participants will build their own emulators.
 
-### Understanding the Heart's Engine: Cardiac Contraction Models & Hands-on Implementation
+### Clinical Application
 
-**[Steven Niederer, Professor and Chair in Biomedical Engineering](https://www.imperial.ac.uk/news/245775/professor-steven-niederer-joins-nhli/), Imperial College London and The Alan Turing Institute**
+**[Dr Steven Williams, Senior Lecturer in Cardiac Electrophysiology](https://www.research.ed.ac.uk/en/persons/steven-williams/), The University of Edinburgh**
 
-In this session we will review cardiac mechanics and the evolution of mathematical models that simulate the heart's contractile function. This session will explain the iterative development of these models, from foundational concepts in muscle physiology to patient-specific simulations. We will explore the physiology of cardiac muscle contraction, including the roles of key proteins, calcium signalling, and the mechanisms that regulate force generation at the sarcomere level.
+This session will introduce the clinical context of atrial arrhythmias, including their mechanisms, diagnosis, and current challenges in treatment. We will explore the types of intracardiac electrophysiology data collected during clinical procedures and discuss the opportunities these datasets offer for research, analysis, and patient-specific modelling.
 
-The session includes a practical workshop where participants will have the opportunity to implement computational models of cardiac contraction. You'll gain experience in implementing your own cardiac contraction models, providing insight into how these tools are constructed and utilized in research. This lecture and tutorial will cover cardiovascular physiology, biomedical engineering, and computational modelling.
+Participants will gain hands-on experience with two electrophysiology analysis tools: OpenEP and EP Workbench. These platforms enable visualisation, processing, and quantification of electrophysiology data. Through practical exercises, we will demonstrate how to import and interpret electrogram data, annotate activation times, generate activation maps, and compute key electrophysiological metrics.
+
+This session is ideal for participants interested in applying data-driven approaches to understand atrial arrhythmias and to support computational modelling and evaluate clinical decision support algorithms. No prior experience with electrophysiology data is required, but a basic understanding of cardiac electrophysiology will be helpful.
+
+Further information about OpenEP Research Laboratory is available at: [https://www.openep.org/](https://www.openep.org/)
 
 ### Cellular Electrophysiology
 
@@ -96,11 +100,13 @@ This session will summarise the entirety of cardiac electrophysiology, including
 
 Dr Fernando Campos is a Research Associate at the School of Biomedical Engineering and Imaging Sciences. He conducts research on the field of computational cardiology using the Digital Twin technology to understand arrhythmia mechanisms in heart diseases and improve clinical practice.
 
-### Mechanics Model
+### Understanding the Heart's Engine: Cardiac Contraction Models & Hands-on Implementation
 
-**[Cardiac Electro-Mechanics Research group (CEMRG)](https://www.cemrg.com/), Imperial College London and King's College London**
+**[Steven Niederer, Professor and Chair in Biomedical Engineering](https://www.imperial.ac.uk/news/245775/professor-steven-niederer-joins-nhli/), Imperial College London and The Alan Turing Institute**
 
-Led by a team from the Cardiac Electro-Mechanics Research group (CEMRG), this session will explore the modelling of cardiac mechanics, combining theoretical concepts with practical examples. We will introduce different boundary conditions, including displacement, pressure, and spring-based approaches, and apply these in guided exercises. The session will end with a four-chamber free contraction model, demonstrating how the methods scale from simple example geometries to whole-heart simulations. Participants will also gain experience using ParaView to visualise and analyse biomechanics simulation results.
+In this session we will review cardiac mechanics and the evolution of mathematical models that simulate the heart's contractile function. This session will explain the iterative development of these models, from foundational concepts in muscle physiology to patient-specific simulations. We will explore the physiology of cardiac muscle contraction, including the roles of key proteins, calcium signalling, and the mechanisms that regulate force generation at the sarcomere level.
+
+The session includes a practical workshop where participants will have the opportunity to implement computational models of cardiac contraction. You'll gain experience in implementing your own cardiac contraction models, providing insight into how these tools are constructed and utilized in research. This lecture and tutorial will cover cardiovascular physiology, biomedical engineering, and computational modelling.
 
 ### Model Analysis
 
@@ -108,17 +114,11 @@ Led by a team from the Cardiac Electro-Mechanics Research group (CEMRG), this se
 
 This session will focus on generating atrial models from imaging or electrical data. We will demonstrate how to produce atrial meshes for electrophysiological simulations, incorporating atrial regions, fibres, and transmural variations across the atrial wall, using atrialmtk. We will then show how to run simulations in these meshes for different atrial rhythms. Finally, we will show some example post-processing approaches for how to analyse atrial electrophysiology simulation data. The session will be mostly practical.
 
-### Clinical Application
+### Mechanics Model
 
-**[Dr Steven Williams, Senior Lecturer in Cardiac Electrophysiology](https://www.research.ed.ac.uk/en/persons/steven-williams/), The University of Edinburgh**
+**[Cardiac Electro-Mechanics Research group (CEMRG)](https://www.cemrg.com/), Imperial College London and King's College London**
 
-This session will introduce the clinical context of atrial arrhythmias, including their mechanisms, diagnosis, and current challenges in treatment. We will explore the types of intracardiac electrophysiology data collected during clinical procedures and discuss the opportunities these datasets offer for research, analysis, and patient-specific modelling.
-
-Participants will gain hands-on experience with two electrophysiology analysis tools: OpenEP and EP Workbench. These platforms enable visualisation, processing, and quantification of electrophysiology data. Through practical exercises, we will demonstrate how to import and interpret electrogram data, annotate activation times, generate activation maps, and compute key electrophysiological metrics.
-
-This session is ideal for participants interested in applying data-driven approaches to understand atrial arrhythmias and to support computational modelling and evaluate clinical decision support algorithms. No prior experience with electrophysiology data is required, but a basic understanding of cardiac electrophysiology will be helpful.
-
-Further information about OpenEP Research Laboratory is available at: [https://www.openep.org/](https://www.openep.org/)
+Led by a team from the Cardiac Electro-Mechanics Research group (CEMRG), this session will explore the modelling of cardiac mechanics, combining theoretical concepts with practical examples. We will introduce different boundary conditions, including displacement, pressure, and spring-based approaches, and apply these in guided exercises. The session will end with a four-chamber free contraction model, demonstrating how the methods scale from simple example geometries to whole-heart simulations. Participants will also gain experience using ParaView to visualise and analyse biomechanics simulation results.
 
 ## FAQ
 
