@@ -83,7 +83,7 @@
 		"WP_lead": true,
 		"profileURL": "https://www.sheffield.ac.uk/cs/people/academic/richard-clayton",
 		"photoUrl": "/images/team/richard-clayton.jpg",
-		"section": "Leadership Team"
+		"section": "Past Team Members"
 	},
 	{
 		"name": "Keith Worden",
@@ -333,6 +333,15 @@
 		"role": "Research Fellow",
 		"profileURL": "https://www.researchgate.net/profile/Ze-Ming-Goh",
 		"photoUrl": "/images/team/ze-ming-go.jpg",
+		"section": "Research Team"
+	},
+	{
+		"name": "Xu Xu",
+		"affiliation": "University of Sheffield",
+		"position": "Senior Lecturer in Complex Systems Modelling",
+		"role": "Co-Investigator",
+		"profileURL": "",
+		"photoUrl": "/images/team/xu-xu.jpg",
 		"section": "Research Team"
 	}
 ]
